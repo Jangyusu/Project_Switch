@@ -64,5 +64,49 @@
                 "link": "sub/software.html"
             }
         }
+    ],
+    "howToPlay": [
+        {
+            "ko": {
+                "mode": "TV 모드",
+                "manual": "TV로 다함께 즐기는 모드<br>모임이나 홈 파티에 적합",
+                "img": "img/HOW_TO_PLAY00_TV.jpg",
+                "alt": "switch TV mode"
+            },
+            "en": {
+                "mode": "TV mode",
+                "manual": "Ideal for TV mode<br>meetings or home parties",
+                "img": "img/HOW_TO_PLAY00_TV.jpg",
+                "alt": "switch TV mode"
+            }
+        },
+        {
+            "ko": {
+                "mode": "테이블 모드",
+                "manual": "본체 스탠드를 세워 즐기는 모드<br>「Joy-Con」을 하나씩 나눠 들고 화면을 공유해서 플레이",
+                "img": "img/HOW_TO_PLAY01_Tabletop.jpg",
+                "alt": "switch Tabletop mode"
+            },
+            "en": {
+                "mode": "TV mode",
+                "manual": "a mode of entertainment by erecting a body stand<br>Play「Joy-Con」in groups and share the screen",
+                "img": "img/HOW_TO_PLAY01_Tabletop.jpg",
+                "alt": "switch Tabletop mode"
+            }
+        },
+        {
+            "ko": {
+                "mode": "휴대 모드",
+                "manual": "손 안에서 게임을 즐기는 모드<br>짜릿한 게임을 언제 어디서나 즐기기",
+                "img": "img/HOW_TO_PLAY02_Handheld.jpg",
+                "alt": "switch Handheld mode"
+            },
+            "en": {
+                "mode": "TV mode",
+                "manual": "A mode of playing games in your hands<br>Enjoy thrilling games anytime, anywhere",
+                "img": "img/HOW_TO_PLAY02_Handheld.jpg",
+                "alt": "switch Handheld mode"
+            }
+        }
     ]
 }

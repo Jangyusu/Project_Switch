@@ -8,7 +8,6 @@
 /* common */
 html, body {
     margin: 0px;
-    background-color: #fff;
 }
 
 span, em, strong, a {
@@ -76,6 +75,11 @@ header {
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    z-index: 2;
+    transition: transform .5s;
+}
+header.active {
+    transform: translateY(-100%);
 }
 .logo {
     z-index: 2;
@@ -109,10 +113,12 @@ nav > ul::after {
     top: 100%;
     visibility: hidden;
     opacity: 0;
-    transition: .5s;
+    transform: translateY(-20%);
+    transition: .7s;
     z-index: -1;
 }
 nav > ul:hover::after {
+    transform: translateY(0);
     visibility: visible;
     opacity: 1;
 }
@@ -217,7 +223,7 @@ nav > ul:hover .nav_details {
 .burger__button {
     width: 16px;
     height: 10px;
-    position: relative;
+    position: relative;    
 }
 .burger__button span {
     width: 16px;
@@ -226,10 +232,21 @@ nav > ul:hover .nav_details {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    transition: .5s;
 }
 .burger__button span:nth-of-type(1) {
     top: 0;
 }
 .burger__button span:nth-of-type(2) {
     bottom: 0;
+}
+.burger__button.active span:nth-of-type(1) {
+    left: 0;
+    top: 50%;
+    transform: rotate(135deg) translateY(50%);
+}
+.burger__button.active span:nth-of-type(2) {
+    left: 0;
+    bottom: 50%;
+    transform: rotate(-135deg) translateY(-50%);
 }

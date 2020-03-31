@@ -10,6 +10,7 @@ main {
     padding-top: 96px;
 }
 
+/* visual */
 .visual {
     width: 100%;
     padding-left: 25%;
@@ -100,13 +101,56 @@ main {
     opacity: 1;
 }
 
-.how_to_play {}
+
+.how_to_play {
+    width: 100%;
+    text-align: center;
+}
+.how_to_play h2 {
+    padding: 130px 0 50px;
+    font-size: 2.25rem;
+    font-weight: 800;
+    background: transparent;
+}
+.how_to_play ul {
+    width: 100%;
+    padding: 50px 10% 50px;
+    background: #f9f9fb;
+    display: flex;
+    justify-content: space-between;
+}
+.how_to_play ul li {
+    width: 33.333333%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.how_to_play__mode__img {
+    width: 260px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+}
+.how_to_play__mode {
+    font-size: 1.875rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.how_to_play__manual{
+    color: #404040;
+    font-size: 1rem;
+    line-height: 30px;
+    word-break: keep-all;
+}
+
 
 .about_switch {}
 
+
 .joy_con {}
 
+
 .software {}
+
 
 .news {}
 
