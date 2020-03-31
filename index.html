@@ -9,34 +9,45 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" />
     <link rel="icon" href="img/favicon.png" type="image/png" />
     <script src="https://kit.fontawesome.com/60a06f6dc3.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/index.js"></script>
 </head>
 
 <body>
 
-    <header>
-        <a href="index.html" class="logo"><img src="img/logo.png" alt="Nintendo"></a>
-        <div class="nav">
-            <a href="sub/Nintendo_switch.html"><span>닌텐도 스위치</span></a>
-            <a href="sub/Software.html"><span>소프트웨어</span></a>
-        </div>
-        <div class="burger">
-            <ul class="language">
-                <li><a href="index.html" class="active">KO</a></li>
-                <li><a href="index_en.html">EN</a></li>
-            </ul>
-            <button type="button" class="burger__button">
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
+    <header></header>
 
     <main>
-        <div class="visual"></div>
+        <div class="visual">
+            <figure>
+                <figcaption class="visual__text">
+                    <small class="visual__console">Nintendo Switch</small>
+                    <strong class="visual__title">모여봐요 동물의 숲</strong>
+                    <a href="#" class="more">
+                        <span></span>
+                        <p>더보기</p>
+                    </a>
+                </figcaption>
+                <div class="visual__control_box">
+                    <p><span class="visual__current">01</span><span class="visual__total">06</span></p>
+                    <div class="visual__controls">
+                        <button type="button"><img src="img/left_arrow.png" alt="#"></button>
+                        <button type="button"><img src="img/pause.png" alt="#"></button>
+                        <button type="button"><img src="img/right_arrow.png" alt="#"></button>
+                    </div>
+                </div>
+            </figure>
+        </div>
+        <section class="how_to_play"></section>
+        <section class="about_switch"></section>
+        <section class="joy_con"></section>
+        <section class="software"></section>
+        <section class="news"></section>
     </main>
 
     <footer></footer>
+
 
 </body>
 

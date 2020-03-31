@@ -1,0 +1,68 @@
+{
+    "software": [
+        {
+            "ko": {
+                "title": "모여봐요 동물의 숲",
+                "console": "Nintendo Switch",
+                "genre": "커뮤니케이션 게임",
+                "img": "img/visual00.jpg",
+                "link": "sub/software.html"
+            },
+            "en": {
+                "title": "Animal Crossing: New Horizons",
+                "console": "Nintendo Switch",
+                "genre": "Communication game",
+                "img": "img/visual00.jpg",
+                "link": "sub/software.html"
+            }
+        },
+        {
+            "ko": {
+                "title": "링피트 어드벤처",
+                "console": "Nintendo Switch",
+                "genre": "피트니스 어드벤처",
+                "img": "img/visual01.jpg",
+                "link": "sub/software.html"
+            },
+            "en": {
+                "title": "Ring Fit Adventure",
+                "console": "Nintendo Switch",
+                "genre": "Fitness Adventure",
+                "img": "img/visual01.jpg",
+                "link": "sub/software.html"
+            }
+        },
+        {
+            "ko": {
+                "title": "마리오카트8 디럭스",
+                "console": "Nintendo Switch",
+                "genre": "레이싱",
+                "img": "img/visual02.jpg",
+                "link": "sub/software.html"
+            },
+            "en": {
+                "title": "Mario Kart 8 Deluxe",
+                "console": "Nintendo Switch",
+                "genre": "Racing",
+                "img": "img/visual02.jpg",
+                "link": "sub/software.html"
+            }
+        },
+        {
+            "ko": {
+                "title": "슈퍼 스매시 브라더스 얼티밋",
+                "console": "Nintendo Switch",
+                "genre": "난투형 액션",
+                "img": "img/visual03.jpg",
+                "link": "sub/software.html"
+            },
+            "en": {
+                "title": "Super Smash Bros. Ultimate",
+                "console": "Nintendo Switch",
+                "genre": "Fighting",
+                "img": "img/visual03.jpg",
+                "link": "sub/software.html"
+            }
+        }
+    ]
+}
