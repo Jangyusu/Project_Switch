@@ -236,8 +236,9 @@ main {
     font-weight: 700;
 }
 
-.more_long {    
-    padding: 5px 0;
+.more_long {
+    width: max-content;
+    padding: 5px 10px 0 5px;
     display: inline-flex;
     align-items: center;
 }

@@ -183,8 +183,7 @@ $(function () {
             }
 
             function aboutSwitchleave() {
-                aboutSwitchIndex = 0;
-                $aboutSwitch.css({ "background": "url(img/ABOUT_SWITCH0" + aboutSwitchIndex + ".jpg)", "background-repeat": "no-repeat", "background-position": "center center", "background-size": "cover" });
+                $aboutSwitch.css({ "background": "url(img/ABOUT_SWITCH00.jpg)", "background-repeat": "no-repeat", "background-position": "center center", "background-size": "cover" });
 
                 $aboutSwitchList.removeClass("active");
                 $aboutSwitchList.eq(0).addClass("active");
