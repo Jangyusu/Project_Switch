@@ -17,16 +17,16 @@ main {
 }
 .visual figure {
     width: 100%;
+    background: url("../img/visual00.jpg") no-repeat right top / cover;
     display: flex;
     flex-direction: row-reverse;
     position: relative;
+    transition: background 1.5s;
 }
 .visual figure::before {
     content: "";
     width: 100%;
     padding-top: 840px;
-    display: block;
-    background: url("../img/visual00.jpg") no-repeat top right / cover;
 }
 .visual__img {
     width: 100%;
@@ -38,12 +38,20 @@ main {
     flex-direction: column;
     position: absolute;
     left: -20%;
-    top: 0;
+    top: -20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
 }
-.visual__console {
+.visual__text.active {
+    top: 0;
+    visibility: visible;
+    opacity: 1;
+}
+.visual__device {
     font-size: 1.25rem;
     font-weight: 700;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     opacity: .8;
 }
 .visual__title {
@@ -81,23 +89,21 @@ main {
 .visual__controls {
     display: flex;
 }
-.visual__controls button {
-    padding: 12px;
-    margin-left: 6px;
+.visual__controls input {
+    width: 30px;
+    padding: 10px;
+    margin-left: 16px;
     display: flex;
     align-items: center;
-}
-.visual__controls button:first-of-type {
-    margin-left: 0;
-}
-.visual__controls button img {
-    width: 8px;
     opacity: .5;
 }
-.visual__controls button:hover img {
+.visual__controls input:hover {
     opacity: 1;
 }
-.visual__controls button:nth-of-type(2) img {
+.visual__controls input:nth-of-type(1) {
+    margin-left: 0;
+}
+.visual__controls input:nth-of-type(2) {
     opacity: 1;
 }
 
@@ -143,7 +149,59 @@ main {
 }
 
 
-.about_switch {}
+.about_switch {
+    width: 100%;
+    text-align: center;
+    padding-top: 100px;
+}
+.about_switch > h2 {
+    font-size: 2.25rem;
+    font-weight: 800;
+}
+.about_switch > p {
+    font-size: 1.25rem;
+    line-height: 3rem;
+    margin: 60px 0;
+}
+.about_switch__box {
+    width: 80%;
+    margin: 0 auto;
+    background: url("../img/ABOUT_SWITCH00.jpg") no-repeat center center / cover;
+    display: flex;
+    transition: background 1s;
+}
+.about_switch__content {
+    flex: 1;
+    height: 520px;
+    background: rgba(0, 0, 0, .5);
+    text-align: start;
+    padding: 150px 50px 0;
+    display: flex;
+    flex-direction: column;
+    opacity: .7;
+    transition: 1s;
+}
+.about_switch__content.active {
+    flex: 1.2;
+    background: rgba(0, 0, 0, .7);
+    opacity: 1;
+}
+.about_switch__content small {
+    font-size: 1.25rem;
+    color: #f00;
+    margin-bottom: 14px;
+}
+.about_switch__content strong {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 28px;
+}
+.about_switch__content > p {
+    margin-bottom: 80px;
+    color: #fff;
+    word-break: keep-all;
+}
 
 
 .joy_con {}
@@ -176,4 +234,30 @@ main {
 .more p {
     font-size: 1.25rem;
     font-weight: 700;
+}
+
+.more_long {    
+    padding: 5px 0;
+    display: inline-flex;
+    align-items: center;
+}
+.more_long span {
+    width: 20px;
+    height: 1px;
+    margin-right: 13px;
+    background: #f00;
+    transition: .5s;
+}
+.more_long:hover span {
+    width: 50px;
+    background: #fff;
+}
+.more_long p {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.loading {
+    display: none;
 }

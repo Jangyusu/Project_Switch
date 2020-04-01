@@ -3,14 +3,14 @@
         {
             "ko": {
                 "title": "모여봐요 동물의 숲",
-                "console": "Nintendo Switch",
+                "device": "Nintendo Switch",
                 "genre": "커뮤니케이션 게임",
                 "img": "img/visual00.jpg",
                 "link": "sub/software.html"
             },
             "en": {
                 "title": "Animal Crossing: New Horizons",
-                "console": "Nintendo Switch",
+                "device": "Nintendo Switch",
                 "genre": "Communication game",
                 "img": "img/visual00.jpg",
                 "link": "sub/software.html"
@@ -19,14 +19,14 @@
         {
             "ko": {
                 "title": "링피트 어드벤처",
-                "console": "Nintendo Switch",
+                "device": "Nintendo Switch",
                 "genre": "피트니스 어드벤처",
                 "img": "img/visual01.jpg",
                 "link": "sub/software.html"
             },
             "en": {
                 "title": "Ring Fit Adventure",
-                "console": "Nintendo Switch",
+                "device": "Nintendo Switch",
                 "genre": "Fitness Adventure",
                 "img": "img/visual01.jpg",
                 "link": "sub/software.html"
@@ -35,14 +35,14 @@
         {
             "ko": {
                 "title": "마리오카트8 디럭스",
-                "console": "Nintendo Switch",
+                "device": "Nintendo Switch",
                 "genre": "레이싱",
                 "img": "img/visual02.jpg",
                 "link": "sub/software.html"
             },
             "en": {
                 "title": "Mario Kart 8 Deluxe",
-                "console": "Nintendo Switch",
+                "device": "Nintendo Switch",
                 "genre": "Racing",
                 "img": "img/visual02.jpg",
                 "link": "sub/software.html"
@@ -51,14 +51,14 @@
         {
             "ko": {
                 "title": "슈퍼 스매시 브라더스 얼티밋",
-                "console": "Nintendo Switch",
+                "device": "Nintendo Switch",
                 "genre": "난투형 액션",
                 "img": "img/visual03.jpg",
                 "link": "sub/software.html"
             },
             "en": {
                 "title": "Super Smash Bros. Ultimate",
-                "console": "Nintendo Switch",
+                "device": "Nintendo Switch",
                 "genre": "Fighting",
                 "img": "img/visual03.jpg",
                 "link": "sub/software.html"
@@ -106,6 +106,64 @@
                 "manual": "A mode of playing games in your hands<br>Enjoy thrilling games anytime, anywhere",
                 "img": "img/HOW_TO_PLAY02_Handheld.jpg",
                 "alt": "switch Handheld mode"
+            }
+        }
+    ],
+    "aboutSwitch": [
+        {
+            "ko": {
+                "number": "01",
+                "name": "닌텐도 스위치 본체 라인업",
+                "subName": "Lineup",
+                "img": "img/ABOUT_SWITCH00.jpg"
+            },
+            "en": {
+                "number": "01",
+                "name": "Nintendo Switch Console Lineup",
+                "subName": "Lineup",
+                "img": "img/ABOUT_SWITCH00.jpg"
+            }
+        },
+        {
+            "ko": {
+                "number": "02",
+                "name": "닌텐도 스위치 기능 및 사양",
+                "subName": "Tech Specs",
+                "img": "img/ABOUT_SWITCH01.jpg"
+            },
+            "en": {
+                "number": "02",
+                "name": "Nintendo Switch Function And Specification",
+                "subName": "Tech Specs",
+                "img": "img/ABOUT_SWITCH01.jpg"
+            }
+        },
+        {
+            "ko": {
+                "number": "03",
+                "name": "닌텐도 스위치 주변기기",
+                "subName": "Accessories",
+                "img": "img/ABOUT_SWITCH02.jpg"
+            },
+            "en": {
+                "number": "03",
+                "name": "Nintendo Switch Peripherals",
+                "subName": "Accessories",
+                "img": "img/ABOUT_SWITCH02.jpg"
+            }
+        },
+        {
+            "ko": {
+                "number": "04",
+                "name": "닌텐도 스위치 온라인",
+                "subName": "Online",
+                "img": "img/ABOUT_SWITCH03.jpg"
+            },
+            "en": {
+                "number": "04",
+                "name": "Nintendo Switch Online",
+                "subName": "Online",
+                "img": "img/ABOUT_SWITCH03.jpg"
             }
         }
     ]
