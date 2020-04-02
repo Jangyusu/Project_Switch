@@ -152,7 +152,7 @@ main {
 .about_switch {
     width: 100%;
     text-align: center;
-    padding-top: 100px;
+    padding: 100px;
 }
 .about_switch > h2 {
     font-size: 2.25rem;
@@ -171,19 +171,20 @@ main {
     transition: background 1s;
 }
 .about_switch__content {
-    flex: 1;
+    width: 25%;    
     height: 520px;
     background: rgba(0, 0, 0, .5);
     text-align: start;
     padding: 150px 50px 0;
     display: flex;
+    flex: 1;
     flex-direction: column;
     opacity: .7;
     transition: 1s;
 }
-.about_switch__content.active {
-    flex: 1.2;
-    background: rgba(0, 0, 0, .7);
+.about_switch__content.active {    
+    background: rgba(0, 0, 0, .8);
+    flex: 1.5;
     opacity: 1;
 }
 .about_switch__content small {
@@ -204,20 +205,195 @@ main {
 }
 
 
-.joy_con {}
+.joy_con {
+    width: 100%;
+    margin: 90px 0;
+    background: url("../img/joy_con_background.jpg") no-repeat center / cover;
+}
+.joy_con h2 {
+    display: none;
+}
+.joy_con__box {
+    width: 100%;
+    padding: 200px 0 250px 10%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, .5);
+}
+.joy_con__box > p {
+    width: 600px;
+    margin-bottom: 60px;
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 6rem;
+}
+.joy_con__box small {
+    margin-bottom: 60px;
+    color: #fff;
+    font-size: 1.125rem;
+    line-height: 2rem;
+}
+.joy_con__box img {
+    width: 600px;
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    transform: translateY(50%);
+}
+.joy_con__box .more p {
+    color: #fff;
+}
 
 
-.software {}
+.software {
+    padding: 200px 0 50px;
+    text-align: center;
+}
+.software h2 {
+    font-size: 2.625rem;
+    font-weight: 800;
+}
+.software__box {
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+    text-align: start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.software__text {
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+}
+.software__text > p {
+    width: 400px;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+.software__text > p span {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #f00;
+}
+.software__text > small {
+    margin: 50px 0;
+}
+.software__list {
+    width: 47%;
+    margin-bottom: 150px; 
+}
+.software__list:nth-of-type(even) {
+    margin-top: -540px;
+}
+.software__list:last-of-type {
+    margin-bottom: 0;
+}
+.software__list a {
+    width: 100%;
+    height: 900px;
+    position: relative;
+}
+.software__list a::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+.software__list a:hover::before,
+.software__list a:hover .plus {
+    visibility: visible;
+    opacity: 1;
+}
+.software__list figcaption {
+    padding-top: 25px;
+}
+.software__device {
+    color: #666;
+    font-size: 1.125rem;
+}
+.software__title {
+    margin-top: 20px;
+    font-size: 1.75rem;
+    font-weight: 800;
+}
 
 
-.news {}
-
+.news {
+    width: 100%;
+    padding: 50px 10%;
+    text-align: end;
+}
+.news h2 {
+    font-size: 2.625rem;
+    font-weight: 800;
+    text-align: center;
+}
+.news__box {
+    width: 100%;
+    padding: 40px 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.news__list {
+    width: 32%;
+    text-align: start;
+}
+.news__list a {
+    width: 100%;
+    height: 270px;
+    margin-bottom: 10px;
+    background: url("../img/NEWS00.png") no-repeat center / cover;
+    position: relative;    
+}
+.news__list a::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+.news__list a:hover::before,
+.news__list a:hover .plus {
+    visibility: visible;
+    opacity: 1;
+}
+.news__kind {
+    color: #666;    
+}
+.news__title {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+    word-break: keep-all;
+}
+.news__date {
+    font-size: 0.9375rem;
+    color: #999;
+    font-weight: 700;
+}
+.news > a {
+    width: 120px;
+}
 
 
 
 
 /* common */
-.more {    
+.more {
+    width: max-content;
     display: inline-flex;
     align-items: center;
 }
@@ -261,4 +437,16 @@ main {
 
 .loading {
     display: none;
+}
+
+.plus {
+    width: 60px;
+    padding: 12px;
+    background: #f00;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
 }

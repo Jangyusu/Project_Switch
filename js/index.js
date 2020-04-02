@@ -11,18 +11,31 @@ $(function () {
             var softwareData = data.software,
                 howToPlayData = data.howToPlay,
                 aboutSwitchData = data.aboutSwitch,
-                title, device, genre, link, img, alt, mode, manual, number, name, subName,
+                newsData = data.news,
+                title, device, genre, link, img, alt, mode, manual, number, name, subName, kind, date,
+
                 $visual = $(".visual figure"),
                 visualAppend = "",
+
                 $howToPlay = $(".how_to_play ul"),
                 howToPlayAppend = "",
+
                 $aboutSwitch = $(".about_switch__box"),
-                aboutSwitchAppend = "";
+                aboutSwitchAppend = "",
+
+                $software = $(".software__box"),
+                $softwareList, $softwareImg, softwareImg,
+                softwareAppend = "",
+                softwareIndex = 0,
+
+                $news = $(".news__box"),
+                $newsList, $newsImg, newsImg, newsTitle,
+                newsAppend = "",
+                newsIndex = 0;
 
             $.each(softwareData, function () { //visual html 추가
                 title = this.ko.title,
                     device = this.ko.device,
-                    genre = this.ko.genre,
                     link = this.ko.link;
 
                 visualAppend +=
@@ -56,8 +69,7 @@ $(function () {
             $.each(aboutSwitchData, function () {  //about switch Html 추가
                 number = this.ko.number,
                     name = this.ko.name,
-                    subName = this.ko.subName,
-                    img = this.ko.img;
+                    subName = this.ko.subName;
 
                 aboutSwitchAppend +=
                     `<li class="about_switch__content">
@@ -72,6 +84,61 @@ $(function () {
             });
             $aboutSwitch.append(aboutSwitchAppend);
             $aboutSwitch.find(".about_switch__content").eq(0).addClass("active");
+
+            $.each(softwareData, function () { //software html 추가
+                title = this.ko.title,
+                    device = this.ko.device,
+                    genre = this.ko.genre,
+                    link = this.ko.link;
+
+                softwareAppend +=
+                    `<figure class="software__list">
+                        <a href="${link}">
+                            <img src="img/plus.png" alt="plus" class="plus">
+                        </a>
+                        <figcaption>
+                            <small class="software__device">${device} : ${genre}</small>
+                            <p class="software__title">${title}</p>
+                        </figcaption>
+                    </figure>`;
+            });
+            $software.append(softwareAppend);
+            $softwareList = $(".software__list");
+
+            $.each($softwareList, function () { //software img 추가
+                $softwareImg = $(this).find("a");
+                softwareIndex = $(this).index() - 1;
+
+                softwareImg = softwareData[softwareIndex].ko.img;
+                $softwareImg.css({ "background": "url(" + softwareImg + ")", "background-repeat": "no-repeat", "background-position": "center", "background-size": "cover" });
+            });
+
+            $.each(newsData, function () { //news html 추가
+                kind = this.ko.kind,
+                    newsTitle = this.ko.title,
+                    date = this.ko.date;
+
+                newsAppend +=
+                    `<li class="news__list">
+                        <a href="#">
+                            <img src="img/plus.png" alt="plus" class="plus">
+                        </a>
+                        <small class="news__kind">${kind}</small>
+                        <p class="news__title">${newsTitle}</p>
+                        <time class="news__date">${date}</time>
+                    </li>`;
+            });
+
+            $news.append(newsAppend);
+            $newsList = $(".news__list");
+
+            $.each($newsList, function () { //news img 추가
+                $newsImg = $(this).find("a");
+                newsIndex = $(this).index();
+                newsImg = newsData[newsIndex].ko.img;
+
+                $newsImg.css({ "background": "url(" + newsImg + ")", "background-repeat": "no-repeat", "background-position": "center", "background-size": "cover" });
+            });
 
 
 
@@ -101,6 +168,7 @@ $(function () {
 
                 $aboutSwitchList = $(".about_switch__content"),
                 aboutSwitchIndex = 0;
+
 
 
 
@@ -176,18 +244,19 @@ $(function () {
 
             function aboutSwitchenter() {
                 aboutSwitchIndex = $(this).index();
-                $aboutSwitch.css({ "background": "url(img/ABOUT_SWITCH0" + aboutSwitchIndex + ".jpg)", "background-repeat": "no-repeat", "background-position": "center center", "background-size": "cover" });
+                $aboutSwitch.css({ "background": "url(img/ABOUT_SWITCH0" + aboutSwitchIndex + ".jpg)", "background-repeat": "no-repeat", "background-position": "center", "background-size": "cover" });
 
                 $aboutSwitchList.removeClass("active");
                 $(this).addClass("active");
             }
 
             function aboutSwitchleave() {
-                $aboutSwitch.css({ "background": "url(img/ABOUT_SWITCH00.jpg)", "background-repeat": "no-repeat", "background-position": "center center", "background-size": "cover" });
+                $aboutSwitch.css({ "background": "url(img/ABOUT_SWITCH00.jpg)", "background-repeat": "no-repeat", "background-position": "center", "background-size": "cover" });
 
                 $aboutSwitchList.removeClass("active");
                 $aboutSwitchList.eq(0).addClass("active");
             }
+
             //End
         }
     });

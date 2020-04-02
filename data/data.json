@@ -166,5 +166,49 @@
                 "img": "img/ABOUT_SWITCH03.jpg"
             }
         }
+    ],
+    "news": [
+        {
+            "ko": {
+                "kind": "NEWS",
+                "title": "무료 업데이트로 더욱 폭넓어지는 섬 생활.『모여봐요 동물의 숲』에서 계절 이벤트 「이스터」 개최!",
+                "date": "2020-03-30",
+                "img": "img/NEWS00.png"
+            },
+            "en": {
+                "kind": "NEWS",
+                "title": "Island life becomes more widespread with free updates. Hold season event「yster」in『Animal Crossing: New Horizons』",
+                "date": "2020-03-30",
+                "img": "img/NEWS00.png"
+            }
+        },
+        {
+            "ko": {
+                "kind": "NEWS",
+                "title": "Nintendo Switch 소프트웨어 「Good Job!」의 상세 소개 페이지가 공개되었습니다.",
+                "date": "2020-03-27",
+                "img": "img/NEWS01.jpg"
+            },
+            "en": {
+                "kind": "NEWS",
+                "title": "The Nintendo Switch software「Good Job!」detailed landing page has been released",
+                "date": "2020-03-27",
+                "img": "img/NEWS01.jpg"
+            }
+        },
+        {
+            "ko": {
+                "kind": "NEWS",
+                "title": "『ARMS』를 무료로 마음껏 즐기자! Nintendo Switch Online 가입자 한정 이벤트 「게임 트라이얼」개최!",
+                "date": "2020-03-27",
+                "img": "img/NEWS02.jpg"
+            },
+            "en": {
+                "kind": "NEWS",
+                "title": "Enjoy『ARMS』for free! Nintendo Switch Online Subscriber Only Event「Game Trials」Open!",
+                "date": "2020-03-27",
+                "img": "img/NEWS02.jpg"
+            }
+        }
     ]
 }
