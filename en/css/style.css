@@ -17,7 +17,7 @@ main {
 }
 .visual figure {
     width: 100%;
-    background: url("../img/visual00.jpg") no-repeat right top / cover;
+    background: url("../img/visual00_en.jpg") no-repeat right top / cover;
     display: flex;
     flex-direction: row-reverse;
     position: relative;
