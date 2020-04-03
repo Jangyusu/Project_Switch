@@ -239,8 +239,7 @@ main {
     width: 600px;
     position: absolute;
     left: 10%;
-    bottom: 0;
-    transform: translateY(50%);
+    bottom: -180px;
 }
 .joy_con__box .more p {
     color: #fff;
@@ -386,67 +385,4 @@ main {
 }
 .news > a {
     width: 120px;
-}
-
-
-
-
-/* common */
-.more {
-    width: max-content;
-    display: inline-flex;
-    align-items: center;
-}
-.more span {
-    width: 20px;
-    height: 2px;
-    margin-right: 13px;
-    background: #f00;
-    transition: .5s;
-}
-.more:hover span {
-    width: 40px;
-}
-.more p {
-    font-size: 1.25rem;
-    font-weight: 700;
-}
-
-.more_long {
-    width: max-content;
-    padding: 5px 10px 0 5px;
-    display: inline-flex;
-    align-items: center;
-}
-.more_long span {
-    width: 20px;
-    height: 1px;
-    margin-right: 13px;
-    background: #f00;
-    transition: .5s;
-}
-.more_long:hover span {
-    width: 50px;
-    background: #fff;
-}
-.more_long p {
-    color: #fff;
-    font-size: 1.25rem;
-    font-weight: 700;
-}
-
-.loading {
-    display: none;
-}
-
-.plus {
-    width: 60px;
-    padding: 12px;
-    background: #f00;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    visibility: hidden;
-    opacity: 0;
-    transition: .5s;
 }

@@ -33,10 +33,14 @@ $(function () {
                 newsAppend = "",
                 newsIndex = 0;
 
+
+
+
+
             $.each(softwareData, function () { //visual html 추가
-                title = this.ko.title,
-                    device = this.ko.device,
-                    link = this.ko.link;
+                title = this[localStorage.language].title,
+                    device = this[[localStorage.language]].device,
+                    link = this[[localStorage.language]].link;
 
                 visualAppend +=
                     `<figcaption class="visual__text">
@@ -52,10 +56,10 @@ $(function () {
             $visual.find("figcaption").eq(0).addClass("active");
 
             $.each(howToPlayData, function () {  //how to play Html 추가
-                img = this.ko.img,
-                    alt = this.ko.alt,
-                    mode = this.ko.mode,
-                    manual = this.ko.manual;
+                img = this[[localStorage.language]].img,
+                    alt = this[[localStorage.language]].alt,
+                    mode = this[[localStorage.language]].mode,
+                    manual = this[[localStorage.language]].manual;
 
                 howToPlayAppend +=
                     `<li>
@@ -67,9 +71,9 @@ $(function () {
             $howToPlay.append(howToPlayAppend);
 
             $.each(aboutSwitchData, function () {  //about switch Html 추가
-                number = this.ko.number,
-                    name = this.ko.name,
-                    subName = this.ko.subName;
+                number = this[[localStorage.language]].number,
+                    name = this[[localStorage.language]].name,
+                    subName = this[[localStorage.language]].subName;
 
                 aboutSwitchAppend +=
                     `<li class="about_switch__content">
@@ -86,13 +90,13 @@ $(function () {
             $aboutSwitch.find(".about_switch__content").eq(0).addClass("active");
 
             $.each(softwareData, function () { //software html 추가
-                title = this.ko.title,
-                    device = this.ko.device,
-                    genre = this.ko.genre,
-                    link = this.ko.link;
+                title = this[[localStorage.language]].title,
+                    device = this[[localStorage.language]].device,
+                    genre = this[[localStorage.language]].genre,
+                    link = this[[localStorage.language]].link;
 
                 softwareAppend +=
-                    `<figure class="software__list">
+                    `<figure class="software__list slide_up">
                         <a href="${link}">
                             <img src="img/plus.png" alt="plus" class="plus">
                         </a>
@@ -109,14 +113,14 @@ $(function () {
                 $softwareImg = $(this).find("a");
                 softwareIndex = $(this).index() - 1;
 
-                softwareImg = softwareData[softwareIndex].ko.img;
+                softwareImg = softwareData[softwareIndex][[localStorage.language]].img;
                 $softwareImg.css({ "background": "url(" + softwareImg + ")", "background-repeat": "no-repeat", "background-position": "center", "background-size": "cover" });
             });
 
             $.each(newsData, function () { //news html 추가
-                kind = this.ko.kind,
-                    newsTitle = this.ko.title,
-                    date = this.ko.date;
+                kind = this[[localStorage.language]].kind,
+                    newsTitle = this[[localStorage.language]].title,
+                    date = this[[localStorage.language]].date;
 
                 newsAppend +=
                     `<li class="news__list">
@@ -135,7 +139,7 @@ $(function () {
             $.each($newsList, function () { //news img 추가
                 $newsImg = $(this).find("a");
                 newsIndex = $(this).index();
-                newsImg = newsData[newsIndex].ko.img;
+                newsImg = newsData[newsIndex][[localStorage.language]].img;
 
                 $newsImg.css({ "background": "url(" + newsImg + ")", "background-repeat": "no-repeat", "background-position": "center", "background-size": "cover" });
             });
@@ -167,26 +171,43 @@ $(function () {
                 visualBln = true,
 
                 $aboutSwitchList = $(".about_switch__content"),
-                aboutSwitchIndex = 0;
+                aboutSwitchIndex = 0,
+
+                $slideContents = $(".slide_up"),
+                $windowTop = $(window).height(),
+                $scrollTop = 0,
+                $scrollBottom = 0,
+                $slideTop = 0;
 
 
 
 
 
-
-
-
-
-
+            $(window).scroll(scrollEvent); //scroll 이벤트
             $visualTotal.text("0" + softwareData.length); //visual 총 갯수
             $visualControl.click(visualControl); //visual 컨트롤
             $aboutSwitchList.hover(aboutSwitchenter, aboutSwitchleave) //aboutSwitch 마우스 엔터/리브
 
 
 
+            $
 
+            function scrollEvent() {
+                $scrollTop = $(this).scrollTop();
+                $scrollBottom = $windowTop + $scrollTop;
 
+                $slideContents.each(elementsSlide);
+            }
 
+            function elementsSlide() {
+                $slideTop = $(this).offset().top;
+
+                if ($scrollBottom - 200 > $slideTop) {
+                    $(this).addClass("active");
+                } else {
+                    $(this).removeClass("active");
+                }
+            }
 
             function visualControl(e) {
                 if (visualBln == true) {
