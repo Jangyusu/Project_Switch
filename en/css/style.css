@@ -17,7 +17,7 @@ main {
 }
 .visual figure {
     width: 100%;
-    background: url("../img/visual00_en.jpg") no-repeat right top / cover;
+    background: url("../img/visual00.jpg") no-repeat right top / cover;
     display: flex;
     flex-direction: row-reverse;
     position: relative;
@@ -230,6 +230,7 @@ main {
     line-height: 6rem;
 }
 .joy_con__box small {
+    width: 610px;
     margin-bottom: 60px;
     color: #fff;
     font-size: 1.125rem;
@@ -239,7 +240,7 @@ main {
     width: 600px;
     position: absolute;
     left: 10%;
-    bottom: -180px;
+    bottom: -230px;
 }
 .joy_con__box .more p {
     color: #fff;
@@ -384,5 +385,5 @@ main {
     font-weight: 700;
 }
 .news > a {
-    width: 120px;
+    width: 160px;
 }

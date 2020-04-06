@@ -9,7 +9,6 @@ $(function () {
             $nav = $("nav"),
             $burgerButton = $(".burger__button"),
             $language = $(".language a"),
-            $languageText,
             firstScroll = 0,
             lastScroll = 0;
 
@@ -24,12 +23,10 @@ $(function () {
 
 
 
+
         function languageChange() {
             $language.removeClass("active");
             $(this).addClass("active");
-
-            $languageText = $(".language a.active").html();
-            localStorage.language = $languageText;
         }
 
         function headerScroll() {
@@ -54,9 +51,7 @@ $(function () {
                 return false;
             });
         }
-
-
-
+        
         // end
     }, 100)
 

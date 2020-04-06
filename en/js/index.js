@@ -38,9 +38,9 @@ $(function () {
 
 
             $.each(softwareData, function () { //visual html 추가
-                title = this[localStorage.language].title,
-                    device = this[[localStorage.language]].device,
-                    link = this[[localStorage.language]].link;
+                title = this.en.title,
+                    device = this.en.device,
+                    link = this.en.link;
 
                 visualAppend +=
                     `<figcaption class="visual__text">
@@ -48,7 +48,7 @@ $(function () {
                         <strong class="visual__title">${title}</strong>
                         <a href="${link}" class="more">
                             <span></span>
-                            <p>더보기</p>
+                            <p>View more</p>
                         </a>
                     </figcaption>`
             });
@@ -56,10 +56,10 @@ $(function () {
             $visual.find("figcaption").eq(0).addClass("active");
 
             $.each(howToPlayData, function () {  //how to play Html 추가
-                img = this[[localStorage.language]].img,
-                    alt = this[[localStorage.language]].alt,
-                    mode = this[[localStorage.language]].mode,
-                    manual = this[[localStorage.language]].manual;
+                img = this.en.img,
+                    alt = this.en.alt,
+                    mode = this.en.mode,
+                    manual = this.en.manual;
 
                 howToPlayAppend +=
                     `<li>
@@ -71,9 +71,9 @@ $(function () {
             $howToPlay.append(howToPlayAppend);
 
             $.each(aboutSwitchData, function () {  //about switch Html 추가
-                number = this[[localStorage.language]].number,
-                    name = this[[localStorage.language]].name,
-                    subName = this[[localStorage.language]].subName;
+                number = this.en.number,
+                    name = this.en.name,
+                    subName = this.en.subName;
 
                 aboutSwitchAppend +=
                     `<li class="about_switch__content">
@@ -82,7 +82,7 @@ $(function () {
                         <p>${name}</p>
                         <a href="#" class="more_long">
                             <span></span>
-                            <p>더보기</p>
+                            <p>View more</p>
                         </a>
                     </li>`
             });
@@ -90,10 +90,10 @@ $(function () {
             $aboutSwitch.find(".about_switch__content").eq(0).addClass("active");
 
             $.each(softwareData, function () { //software html 추가
-                title = this[[localStorage.language]].title,
-                    device = this[[localStorage.language]].device,
-                    genre = this[[localStorage.language]].genre,
-                    link = this[[localStorage.language]].link;
+                title = this.en.title,
+                    device = this.en.device,
+                    genre = this.en.genre,
+                    link = this.en.link;
 
                 softwareAppend +=
                     `<figure class="software__list slide_up">
@@ -113,14 +113,14 @@ $(function () {
                 $softwareImg = $(this).find("a");
                 softwareIndex = $(this).index() - 1;
 
-                softwareImg = softwareData[softwareIndex][[localStorage.language]].img;
+                softwareImg = softwareData[softwareIndex].en.img;
                 $softwareImg.css({ "background": "url(" + softwareImg + ")", "background-repeat": "no-repeat", "background-position": "center", "background-size": "cover" });
             });
 
             $.each(newsData, function () { //news html 추가
-                kind = this[[localStorage.language]].kind,
-                    newsTitle = this[[localStorage.language]].title,
-                    date = this[[localStorage.language]].date;
+                kind = this.en.kind,
+                    newsTitle = this.en.title,
+                    date = this.en.date;
 
                 newsAppend +=
                     `<li class="news__list">
@@ -139,7 +139,7 @@ $(function () {
             $.each($newsList, function () { //news img 추가
                 $newsImg = $(this).find("a");
                 newsIndex = $(this).index();
-                newsImg = newsData[newsIndex][[localStorage.language]].img;
+                newsImg = newsData[newsIndex].en.img;
 
                 $newsImg.css({ "background": "url(" + newsImg + ")", "background-repeat": "no-repeat", "background-position": "center", "background-size": "cover" });
             });
