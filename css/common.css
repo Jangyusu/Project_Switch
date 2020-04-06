@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap'); /* 나눔고딕 */
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap'); /* Roboto */
-@font-face { font-family: 'yg-jalnan'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff'); font-weight: normal; font-style: normal; } /* 잘난체 */
 
 
 
 
 
 /* common */
-html, body {
-    margin: 0px;
+html, body, dl, dt {
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -19,8 +19,16 @@ span, em, strong, a {
     display: inline-block;
 }
 
+p, span {
+    word-break: keep-all;
+}
+
 ul, li {
     list-style-type: none;
+}
+
+dt, dd {
+    display: inline-block;
 }
 
 em {
