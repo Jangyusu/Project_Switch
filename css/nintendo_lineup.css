@@ -1,0 +1,143 @@
+@import url(common.css);
+
+
+
+
+
+/* main */
+main {
+    width: 100%;
+    padding: 96px 12% 80px;
+    background: #fff;
+}
+.sub_header {
+    margin: 100px 0 30px 0;
+}
+.sub_header h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.4;
+}
+.sub_header span {
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: block;
+}
+.visual {
+    width: 100%;
+    height: 400px;
+    background: url("../img/sub01/visual00.jpg") no-repeat center bottom / cover;
+}
+.visual__text {
+    width: 100%;
+    height: 100%;
+    padding: 80px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.visual__text p {
+    color: #fff;
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 3rem;
+}
+.visual__text span {
+    width: 36px;
+    height: 1px;
+    background: #fff;
+}
+.contents {
+    width: 100%;
+}
+.contents__header {
+    width: 100%;
+    padding: 80px 0 0 0;
+    border-bottom: 4px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contents__header p {
+    font-size: 1.25rem;
+}
+.contents__number {
+    font-size: 1.25rem;
+}
+.contents__header button {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+.contents__selected {
+    font-size: 1.25rem;
+    line-height: 3rem;
+    margin-right: 60px;
+}
+.contents__header img {
+    width: 16px;
+}
+.content_2019 {
+    width: 100%;
+    padding: 50px 0 0 0;
+}
+.content_2019 h2 {
+    margin-bottom: 50px;
+    font-size: 3rem;
+    font-weight: 800;
+}
+.content_2019__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.content_2019__list figure {
+    width: 33%;
+    margin-bottom: 100px;
+}
+.content_2019__list figure img {
+    width: 80%;
+}
+.content_2019__list figure figcaption {
+    width: 100%;
+    padding-left: 60px;
+}
+.content__sub_title {
+    color: #787878;
+}
+.content__title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin: 20px 0 10px;
+}
+.content_2019__list figure figcaption dl {
+    width: 100%;
+}
+.content_2019__list figure figcaption dl dt {
+    width: 150px;
+    margin-top: 20px;
+}
+.content_2019__list figure figcaption dl dd {
+    color: #787878;   
+}
+.more_button {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #787878;
+    display: block;
+}
+.more_button::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #787878;
+    display: block;
+    opacity: 0;
+    transition: .5s;
+}
+.more_button:hover::after {
+    opacity: 1;
+}

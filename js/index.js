@@ -8,6 +8,7 @@ $(function () {
             type: 'get',
             success: function (data) {
                 //start
+
                 var softwareData = data.software,
                     howToPlayData = data.howToPlay,
                     aboutSwitchData = data.aboutSwitch,
