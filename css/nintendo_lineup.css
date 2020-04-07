@@ -27,7 +27,7 @@ main {
 .visual {
     width: 100%;
     height: 400px;
-    background: url("../img/sub01/visual00.jpg") no-repeat center bottom / cover;
+    background: url("../img/lineup/visual00.jpg") no-repeat center bottom / cover;
 }
 .visual__text {
     width: 100%;
@@ -65,42 +65,83 @@ main {
 .contents__number {
     font-size: 1.25rem;
 }
-.contents__header button {
+.contents__header input {
+    width: 300px;
+    padding: 0 20px;
+    border: 1px solid #eee;
+    line-height: 50px;
+}
+.contents__button {
+    position: relative;
+}
+.contents__button button {
+    width: 220px;
     padding: 0 20px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 .contents__selected {
     font-size: 1.25rem;
     line-height: 3rem;
-    margin-right: 60px;
 }
-.contents__header img {
+.contents__button img {
     width: 16px;
 }
-.content_2019 {
+.contents__button.active img {
+    transform: rotate(180deg);
+}
+.contents__button_lists {
+    width: 100%;
+    border: 1px solid #eee;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 6px);
+}
+.contents__button_lists li {
+    width: 100%;
+    padding-left: 20px;
+    font-size: 1.25rem;
+    line-height: 3rem;
+    cursor: pointer;
+    display: none;
+}
+.contents__button.active li {
+    display: block;
+}
+.contents__button_lists li:hover {
+    color: #f00;
+}
+.contents__list {
+    display: flex;
+    flex-direction: column;
+}
+.contents__list.active {
+    flex-direction: column-reverse;    
+}
+.content {
     width: 100%;
     padding: 50px 0 0 0;
 }
-.content_2019 h2 {
+.content h2 {
     margin-bottom: 50px;
     font-size: 3rem;
     font-weight: 800;
 }
-.content_2019__list {
+.content__list {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
-.content_2019__list figure {
+.content__list figure {
     width: 33%;
     margin-bottom: 100px;
 }
-.content_2019__list figure img {
+.content__list figure img {
     width: 80%;
 }
-.content_2019__list figure figcaption {
+.content__list figure figcaption {
     width: 100%;
     padding-left: 60px;
 }
@@ -112,14 +153,14 @@ main {
     font-weight: 800;
     margin: 20px 0 10px;
 }
-.content_2019__list figure figcaption dl {
+.content__list figure figcaption dl {
     width: 100%;
 }
-.content_2019__list figure figcaption dl dt {
+.content__list figure figcaption dl dt {
     width: 150px;
     margin-top: 20px;
 }
-.content_2019__list figure figcaption dl dd {
+.content__list figure figcaption dl dd {
     color: #787878;   
 }
 .more_button {
