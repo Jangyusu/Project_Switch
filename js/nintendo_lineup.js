@@ -54,7 +54,7 @@ $(function () {
                     var text = $(this).val();
                     $(".content__list figure").hide();
 
-                    var $result = $(".content__title:contains('" + text + "')");
+                    var $result = $(".content__title:contains(" + text + ")");
                     $result.parent().parent().show();
                 }
 

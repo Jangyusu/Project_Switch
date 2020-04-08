@@ -27,14 +27,51 @@
 
         <div class="kinds">
             <div class="kinds__header">
-                <ul>
-                    <li>Nintendo Switch 본체</li>
-                    <li>Nintendo Switch 독</li>
-                    <li>Joy-Con</li>
-                    <li>Joy-Con 스트랩</li>
-                    <li>Joy-Con 그립</li>
+                <ul class="kinds__list">
+                    <li data-selector="1">Nintendo Switch 본체</li>
+                    <li data-selector="2">Nintendo Switch 독</li>
+                    <li data-selector="3">Joy-Con</li>
+                    <li data-selector="4">Joy-Con 스트랩</li>
+                    <li data-selector="5">Joy-Con 그립</li>
                 </ul>
-                <span></span>
+                <span class="kinds__bar"></span>
+            </div>
+            <img src="" alt="Nintendo Switch spec" class="kinds__img">
+            <div class="kinds__controls">
+                <button type="button" class="kinds__controls_front" data-num="1">
+                    <img src="img/features_and_specifications/bg_switch_device_tab_ov.gif" alt="tab">
+                    정면
+                </button>
+                <button type="button" class="kinds__controls_back" data-num="2">
+                    <img src="img/features_and_specifications/bg_switch_device_tab.gif" alt="tab">
+                    뒷면
+                </button>
+            </div>
+        </div>
+
+        <div class="home">
+            <h2 class="home__title">HOME 메뉴</h2>
+            <p class="home__sub_title">게임이나 각종 기능을 기동하는 Nintendo Switch의 중심이 되는 화면입니다. 친구나 어카운트의 관리를 비롯해 각종 설정도 변경할 수
+                있습니다.</p>
+            <div class="home__contents">
+                <div class="home__img">
+                    <img src="img/features_and_specifications/img_switch_device_spec00.jpg" alt="Nintendo Switch">
+                    <p>게임에 관한 최신 정보 등을 Nintendo Switch 본체에 수신합니다.</p>
+                </div>
+                <ul class="home__list">
+                    <li>
+                        <img src="img/features_and_specifications/ico_switch_device_func01.jpg" alt="news">
+                        뉴스
+                    </li>
+                    <li>
+                        <img src="img/features_and_specifications/ico_switch_device_func02.jpg" alt="Nintendo eshop">
+                        닌텐도 e숍
+                    </li>
+                    <li>
+                        <img src="img/features_and_specifications/ico_switch_device_func03.jpg" alt="album">
+                        앨범
+                    </li>
+                </ul>
             </div>
         </div>
     </main>
