@@ -1,7 +1,7 @@
 $(function () {
     setTimeout(function () {
         $.ajax({
-            url: 'data/lineup.json',
+            url: 'data/nintendo_lineup.json',
             dataType: 'json',
             type: 'get',
             success: function (data) {
