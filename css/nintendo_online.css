@@ -1,0 +1,54 @@
+@import url(common.css);
+
+
+
+
+
+/* main */
+main {
+    background: url("../img/online/elsetge.cat_nintendo-switch-wallpaper_356306..jpg") no-repeat center / cover;
+    background-attachment: fixed;
+}
+.visual {
+    width: 100%;
+    height: 100vh;
+}
+.visual video {
+    width: 100%;
+}
+.contents {
+    width: 100%;
+}
+.service {
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 10%;
+    background: #fff;
+    display: flex;
+}
+.service article {
+    width: 25%;
+}
+.service__title {
+    position: relative;
+}
+.service__title::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: url("../img/online/mini_nintendo.png") no-repeat center / cover;
+    display: block;
+    position: absolute;
+    left: -40px;
+    top: -20px;
+    transform: rotate(-45deg);
+}
+.service__title h1 {
+    font-size: 3.125rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.service__title small {
+    font-size: 1.25rem;
+    line-height: 2rem;
+}

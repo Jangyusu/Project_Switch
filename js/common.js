@@ -1,6 +1,7 @@
 $(function () {
     $("header").load("common/header.html");
     $("footer").load("common/footer.html");
+    $("aside").load("common/aside.html");
 
     setTimeout(function () { //html 로드 후 실행
         //start
@@ -10,7 +11,8 @@ $(function () {
             $burgerButton = $(".burger__button"),
             $language = $(".language a"),
             firstScroll = 0,
-            lastScroll = 0;
+            lastScroll = 0,
+            $scrollBar = $(".scroll_bar");
 
 
 
@@ -19,6 +21,7 @@ $(function () {
         $(window).scroll(headerScroll); //스크롤시 헤더 on/off
         $burgerButton.click(burgerMenu); //버거메뉴 on/off
         $language.click(languageChange); //언어 변경
+        $(window).scroll(scrollSlide); //스크롤 바 변경
 
 
 
@@ -50,9 +53,19 @@ $(function () {
                 e.stopPropagation();
                 return false;
             });
+
+            $scrollBar.toggleClass("active");
         }
-        
+
+        function scrollSlide() {
+            var $docHeight = $(document).height() - ($(window).height());
+
+            $scrollBar.css({
+                "top": `${$(window).scrollTop() / $docHeight * 100}%`
+            })
+        }
+
         // end
-    }, 100)
+    }, 500)
 
 })

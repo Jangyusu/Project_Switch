@@ -70,7 +70,7 @@ button {
 /* body */
 body {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     background: url("../img/background_grid.png") fixed;
 }
 
@@ -89,7 +89,7 @@ header {
     align-items: center;
     position: fixed;
     z-index: 2;
-    transition: transform .5s;
+    transition: .5s;
 }
 header.active {
     transform: translateY(-100%);
@@ -303,6 +303,55 @@ nav.active .nav_details li a {
     left: 0;
     bottom: 50%;
     transform: rotate(-135deg) translateY(-50%);
+}
+
+/*header_online*/
+header.online {
+    background: transparent;
+}
+header.online nav > ul > li > a {
+    color: #fff;
+}
+header.online nav > ul > li > a::after {
+    background: #fff;
+}
+header.online .language li a {
+    color: #aaa;
+}
+header.online .language li a.active {
+    color: #fff;
+}
+header.online .burger__button span {
+    background: #fff;
+}
+
+
+
+
+/* aside */
+aside {
+    height: calc(100% - 140px);
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+.scroll_bar {
+    width: 5px;
+    height: 140px;
+    border-radius: 5px;
+    background: #f00;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    transition: .5s;
+}
+.scroll_bar.active {
+    opacity: 0;
+}
+::-webkit-scrollbar {
+    display: none;
 }
 
 

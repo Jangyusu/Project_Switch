@@ -1,9 +1,7 @@
 @import url(common.css);
 
 
-::-webkit-scrollbar {
-    display: none;
-}
+
 
 
 /* main */
@@ -144,23 +142,4 @@ main {
 }
 .contents__explanation {
     line-height: 2rem;
-}
-
-/* aside */
-aside {
-    height: 100vh;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 2;
-}
-.scroll_bar {
-    width: 5px;
-    height: 100px;
-    border-radius: 5px;
-    background: #f00;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: .5s;
 }

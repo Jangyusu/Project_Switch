@@ -82,10 +82,7 @@ $(function () {
 
 
 
-            var $imgBox = $(".contents__first_img_box"),
-                $scrollBar = $(".scroll_bar");
-
-            console.log($scrollBar);
+            var $imgBox = $(".contents__first_img_box");
 
 
 
@@ -94,7 +91,7 @@ $(function () {
             $imgBox.mouseenter(imgZoomIn); //이미지 확대 이벤트
             $imgBox.mouseleave(imgZoomOut);
             $imgBox.mousemove(imgZoomMove);
-            $(window).scroll(scrollSlide);
+
 
 
 
@@ -116,12 +113,6 @@ $(function () {
                 $(this).children("img").css({
                     'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 + '%'
                 });
-            }
-
-            function scrollSlide() {
-                $scrollBar.css({
-                    "top": `${($(this).scrollTop() / $(document).height()) * 100}%`
-                })
             }
 
             //End
