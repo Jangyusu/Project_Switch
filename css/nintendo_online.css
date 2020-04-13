@@ -22,15 +22,68 @@ main {
 .service {
     width: 100%;
     margin: 0 auto;
-    padding: 100px 10%;
+    padding: 200px 10%;
     background: #fff;
     display: flex;
 }
-.service article {
+.service__list {
     width: 25%;
-}
-.service__title {
+    height: 450px;
     position: relative;
+}
+.service__list::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+.service__list:hover::before {
+    visibility: visible;
+    opacity: 1;
+}
+.service__hover_box {
+    width: 100%;
+    height: 100%;
+    padding: 80px 0 0 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(2%);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+.service__list:hover .service__hover_box {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+}
+.service__hover_box h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #fff;
+}
+.service__hover_box h2::before {
+    content: "";
+    width: 50px;
+    height: 32px;
+    display: block;
+    background: url("../img/online/sub_title.png") no-repeat center / cover;
+}
+.service__hover_box img {
+    width: 200px;
+    filter: grayscale(1);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(20%, 20%);
 }
 .service__title::before {
     content: "";
@@ -42,6 +95,8 @@ main {
     left: -40px;
     top: -20px;
     transform: rotate(-45deg);
+    visibility: visible;
+    opacity: 1;
 }
 .service__title h1 {
     font-size: 3.125rem;
@@ -51,4 +106,164 @@ main {
 .service__title small {
     font-size: 1.25rem;
     line-height: 2rem;
+    color: #555;
+}
+.service__play {
+    overflow: hidden;
+}
+.service__play::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url("../img/online/service_00.jpg") no-repeat right / cover;
+    display: block;
+    z-index: -1;
+    transition: .3s ease-in-out;
+}
+.service__save {
+    background: url("../img/online/service_01.jpg") no-repeat center / cover;
+    overflow: hidden;
+    padding: 80px 0 0 50px;
+}
+.service__app {
+    background: url("../img/online/service_02.jpg") no-repeat center / cover;
+    overflow: hidden;
+    padding: 80px 0 0 50px;
+}
+.service__bottom_box {
+    width: 90%;
+    height: 100px;
+    background: #fff;
+    border-top-left-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transition: .3s ease-in-out;
+}
+.service__list:hover .service__bottom_box {
+    transform: translateY(100%);
+}
+.service__bottom_box img {
+    width: 30px;
+    margin-right: 10px;
+}
+.service__bottom_box p {
+    font-size: 1.875rem;
+    font-weight: 800;
+}
+
+.price {
+    width: 100%;
+    margin-top: 300px;
+    padding: 150px 15%;
+    background: #fff;
+}
+.price__title {
+    font-size: 1.875rem;
+    font-weight: 800;
+}
+.price__title::before {
+    content: "";
+    width: 38px;
+    height: 5px;
+    background: #f00;
+    display: block;
+    margin-bottom: 10px;
+}
+.price__contents {
+    width: 80%;
+    margin: 100px auto;
+    position: relative;
+}
+.price__slide {
+    width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.price__list {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    z-index: 2;
+    transition: .5s ease-in-out;
+}
+.price__content {
+    display: flex;
+    flex: 0 0 50%;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease-in-out;
+}
+.price__content.active {
+    opacity: .5;
+}
+.price__content:last-of-type {
+    margin-right: 0;
+}
+.price__text_box {
+    margin-right: 10%;
+}
+.price__summary {
+    margin-bottom: 35px;
+}
+.price__summary span {
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+.price__personnel {
+    color: #f00;
+    border: 1px solid #f00;
+}
+.price__date {
+    color: #aaa;
+    border: 1px solid #aaa;
+}
+.price__sub_title {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+.price__sub_title small {
+    color: #333;
+    font-weight: 700;
+}
+.price__text {
+    margin-bottom: 20px;
+    color: #787878;
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+.price_end {
+    color: #f00;
+    font-size: 3.125rem;
+    font-weight: 800;
+}
+.pice__month {
+    width: 30%;
+    transition: .3s ease-in-out;
+}
+.price__content:hover .pice__month {
+    transform: scale(1.2);
+}
+.pice__month img {
+    width: 100%;
+}
+.price__arrow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.price__arrow button img {
+    width: 12px;
 }
