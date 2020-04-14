@@ -89,7 +89,7 @@ header {
     align-items: center;
     position: fixed;
     z-index: 9999;
-    transition: .5s;
+    transition: .3s;
 }
 header.active {
     transform: translateY(-100%);
@@ -126,7 +126,7 @@ nav.active > ul {
 nav > ul::after {
     content: "";
     width: 100vw;
-    height: 170px;
+    height: 140px;
     background: rgba(255, 255, 255, 0.95);
     display: block;
     position: absolute;
@@ -134,14 +134,14 @@ nav > ul::after {
     top: 100%;
     visibility: hidden;
     opacity: 0;
-    transform: translateY(-20%);
-    z-index: -1;
+    z-index: -5;
+    transition: .3s;
 }
 nav.active > ul::after {
     display: none;
 }
 nav > ul:hover::after {
-    transform: translateY(0);
+    height: 170px;
     visibility: visible;
     opacity: 1;
 }
@@ -196,10 +196,10 @@ nav .nav_details {
     position: absolute;
     left: 0;
     top: 100%;
-    transform: translateY(-5%);
+    transform: translateY(-10%);
     visibility: hidden;
     opacity: 0;
-    /* transition: .5s; */
+    transition: .3s;
 }
 nav > ul:hover .nav_details {
     visibility: visible;
@@ -286,7 +286,7 @@ nav.active .nav_details li a {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    transition: .5s;
+    transition: .3s;
 }
 .burger__button span:nth-of-type(1) {
     top: 0;
@@ -384,7 +384,7 @@ footer {
     height: 2px;
     margin-right: 13px;
     background: #f00;
-    transition: .5s;
+    transition: .3s;
 }
 .more:hover span {
     width: 40px;
@@ -404,7 +404,7 @@ footer {
     height: 1px;
     margin-right: 13px;
     background: #f00;
-    transition: .5s;
+    transition: .3s;
 }
 .more_long:hover span {
     width: 50px;
@@ -429,7 +429,7 @@ footer {
     bottom: 0;
     visibility: hidden;
     opacity: 0;
-    transition: .5s;
+    transition: .3s;
 }
 
 .slide_up {

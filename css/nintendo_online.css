@@ -215,7 +215,6 @@ main {
     margin-bottom: 35px;
 }
 .price__summary span {
-    font-size: 1.25rem;
     font-weight: 700;
     padding: 3px 10px;
     border-radius: 5px;
@@ -231,7 +230,7 @@ main {
 .price__sub_title {
     margin-bottom: 30px;
     color: #333;
-    font-size: 1.875rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 .price__sub_title small {
@@ -350,6 +349,10 @@ main {
     width: 50px;
     margin-right: 50px;
 }
+.question__q_box:hover .question__qtext {
+    color: #f00;
+}
 .question__text p {
+    color: #333;
     line-height: 2.5rem;
 }
