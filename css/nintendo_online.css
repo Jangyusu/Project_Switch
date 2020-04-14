@@ -2,12 +2,16 @@
 
 
 
-
+/* body */
+body {
+    background: none;
+}
 
 /* main */
 main {
-    background: url("../img/online/elsetge.cat_nintendo-switch-wallpaper_356306..jpg") no-repeat center / cover;
+    background: url("../img/online/bg.svg") repeat-x;
     background-attachment: fixed;
+    transition: .5s linear;
 }
 .visual {
     width: 100%;
@@ -79,7 +83,7 @@ main {
 }
 .service__hover_box img {
     width: 200px;
-    filter: grayscale(1);
+    filter: grayscale(1) brightness(2);
     position: absolute;
     right: 0;
     bottom: 0;
@@ -160,16 +164,18 @@ main {
     margin-top: 300px;
     padding: 150px 15%;
     background: #fff;
+    text-align: center;
 }
 .price__title {
     font-size: 1.875rem;
     font-weight: 800;
+    text-align: start;
 }
 .price__title::before {
     content: "";
     width: 38px;
     height: 5px;
-    background: #f00;
+    background: #e60012;
     display: block;
     margin-bottom: 10px;
 }
@@ -188,13 +194,13 @@ main {
     flex-wrap: nowrap;
     position: relative;
     z-index: 2;
-    transition: .5s ease-in-out;
 }
 .price__content {
     display: flex;
     flex: 0 0 50%;
     justify-content: center;
     align-items: center;
+    text-align: start;
     transition: .3s ease-in-out;
 }
 .price__content.active {
@@ -216,8 +222,8 @@ main {
     border-radius: 5px;
 }
 .price__personnel {
-    color: #f00;
-    border: 1px solid #f00;
+    color: #e60012;
+    border: 1px solid #e60012;
 }
 .price__date {
     color: #aaa;
@@ -241,7 +247,7 @@ main {
     line-height: 2rem;
 }
 .price_end {
-    color: #f00;
+    color: #e60012;
     font-size: 3.125rem;
     font-weight: 800;
 }
@@ -264,6 +270,34 @@ main {
     top: 50%;
     transform: translate(-50%,-50%);
 }
+.price__arrow button {
+    width: 27px;
+    height: 30px;
+}
 .price__arrow button img {
     width: 12px;
+    transition: .3s ease-in-out;
+}
+.price__arrow button:hover img {
+    transform: scale(1.3);
+}
+.price__buy {
+    width: 300px;
+    margin: 0 auto;
+    border: 2px solid #e60012;
+    border-radius: 5px;
+    background: #e60012;
+    color: #fff;
+    font-weight: 700;
+    line-height: 63px;
+    transition: .2s ease-in-out;
+}
+.price__buy:hover {
+    background: #fff;
+    color: #e60012;
+}
+
+.question {
+    background: #fff;
+    padding: 200px 15%;
 }

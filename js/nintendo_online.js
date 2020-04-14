@@ -8,23 +8,50 @@ $(function () {
             type: 'get',
             success: function (data) {
                 //start
-                var priceIndex = 0,
-                    priceBln = true;
+                var position = 0,
+                    priceBln = true,
+                    priceCount = $(".price__content").length,
+                    priceAfterCount = priceCount + $(".price__content").length / 2;
 
 
 
 
+
+                $(window).focus(backStart); //back슬라이드 시작
+                $(window).blur(backStop); //back슬라이드 정지
 
                 $("header").mouseenter(headerRemove);
                 $("header").mouseleave(headerAdd);
                 $(window).scroll(scrollHeader);
-                $(".price__content").mouseenter(priceEnter);
-                $(".price__content").mouseleave(priceLeave);
-                $(".price__arrow").click(priceSlide);
+
+                $('.price__content').clone().appendTo('.price__list'); //슬라이드 리스트 추가
+                $(".price__content").mouseenter(priceEnter); //슬라이드 컨텐츠 엔터
+                $(".price__content").mouseleave(priceLeave); //슬라이드 컨텐츠 리브                
+                $(".price__arrow").click(priceSlide); //슬라이드 클릭
 
 
 
 
+
+                function backStart() {
+                    backSlide();
+                }
+
+                function backStop() {
+                    clearInterval(backSlideInter);
+                }
+
+                var backSlideInter;
+                var backSlide = function () {
+                    backSlideInter = setInterval(function () {
+                        position += 10;
+
+                        $("main").css({
+                            "background-position": `-${position}px top`
+                        })
+                    }, 500)
+                };
+                backSlide();
 
                 function scrollHeader() {
                     headerRemove();
@@ -50,34 +77,69 @@ $(function () {
                 function priceEnter() {
                     $(".price__content").addClass("active");
                     $(this).removeClass("active");
+
+                    clearInterval(autoSlideInter);
                 }
 
                 function priceLeave() {
                     $(".price__content").removeClass("active");
+
+                    autoSlide();
                 }
 
                 function priceSlide(e) {
                     if (priceBln) {
                         priceBln = false;
 
-                        if ($(e.target).parent().hasClass("price__left_arrow")) { //왼쪽 버튼
-                            priceIndex--;
+                        var hasClass = $(e.target).hasClass("price__left_arrow"),
+                            parentHasClass = $(e.target).parent().hasClass("price__left_arrow");
+
+                        if (hasClass || parentHasClass) { //왼쪽 버튼
+                            priceCount--;
                         } else { //오른쪽 버튼
-                            priceIndex++;
+                            priceCount++;
                         }
 
                         slide();
 
                         function slide() {
-                            $(".price__list").css({
-                                transform: `translate(${-priceIndex * 50}%)`
-                            });
+                            slideEffect("0.5s");
+
+                            if (priceCount == 0) {
+                                slideReset(2);
+                            } else if (priceCount == priceAfterCount) {
+                                slideReset(4);
+                            }
+
+                            function slideReset(num) {
+                                priceCount = $(".price__content").length / num;
+
+                                setTimeout(function () {
+                                    slideEffect("0s");
+                                }, 500)
+                            }
                         }
+
                         setTimeout(function () {
                             priceBln = true;
                         }, 500)
                     }
                 }
+                var autoSlideInter;
+                var autoSlide = function () {
+                    autoSlideInter = setInterval(function () {
+                        $(".price__arrow").trigger("click");
+                    }, 3000)
+                }
+                autoSlide();
+
+                function slideEffect(time) {
+                    $(".price__list").css({
+                        transition: time,
+                        transform: `translate(${-priceCount * 50}%)`
+                    });
+                }
+                slideEffect();
 
                 //End
             }
