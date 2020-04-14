@@ -11,7 +11,8 @@ $(function () {
                 var position = 0,
                     priceBln = true,
                     priceCount = $(".price__content").length,
-                    priceAfterCount = priceCount + $(".price__content").length / 2;
+                    priceAfterCount = priceCount + $(".price__content").length / 2,
+                    tabBln = true;
 
 
 
@@ -29,9 +30,28 @@ $(function () {
                 $(".price__content").mouseleave(priceLeave); //슬라이드 컨텐츠 리브                
                 $(".price__arrow").click(priceSlide); //슬라이드 클릭
 
+                $(".question__q_box").click(tabBox); //질문 탭
 
 
 
+
+
+                function tabBox() {
+                    if (tabBln) {
+                        tabBln = false;
+                        var $answer = $(this).next();
+
+                        if ($answer.hasClass("active")) {
+                            $answer.removeClass("active");
+                        } else {
+                            $(".question__a_box").removeClass("active");
+                            $answer.addClass("active");
+                        }
+                        setTimeout(function () {
+                            tabBln = true;
+                        }, 300)
+                    }
+                }
 
                 function backStart() {
                     backSlide();

@@ -324,11 +324,32 @@ main {
 .question__box {
     width: 100%;
     padding: 35px;
-    background: #f9feff;
+    background: #f0fdff;
     display: flex;
     align-items: center;
+}
+.question__a_box {
+    height: 0;
+    padding: 0 35px;
+    background: #f9feff;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.question__a_box.active{
+    height: 300px;
+    padding: 35px;
+    visibility: visible;
+    opacity: 1;
+}
+.question__q_box {
+    cursor: pointer;
 }
 .question__img {
     width: 50px;
     margin-right: 50px;
+}
+.question__text p {
+    line-height: 2.5rem;
 }
