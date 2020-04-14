@@ -15,7 +15,6 @@ main {
 }
 .visual {
     width: 100%;
-    height: 100vh;
 }
 .visual video {
     width: 100%;
@@ -298,6 +297,38 @@ main {
 }
 
 .question {
-    background: #fff;
+    width: 100%;
     padding: 200px 15%;
+    background: #fff;
+}
+.question__title {
+    font-size: 1.875rem;
+    font-weight: 800;
+    text-align: start;
+}
+.question__title::before {
+    content: "";
+    width: 38px;
+    height: 5px;
+    background: #e60012;
+    display: block;
+    margin-bottom: 10px;
+}
+.question__contents {
+    width: 100%;
+    padding-top: 50px;
+}
+.question__content {
+    width: 100%;
+}
+.question__box {
+    width: 100%;
+    padding: 35px;
+    background: #f9feff;
+    display: flex;
+    align-items: center;
+}
+.question__img {
+    width: 50px;
+    margin-right: 50px;
 }
