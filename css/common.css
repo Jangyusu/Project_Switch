@@ -19,7 +19,7 @@ span, em, strong, a {
     display: inline-block;
 }
 
-p, span {
+p, span, figcaption {
     word-break: keep-all;
 }
 
