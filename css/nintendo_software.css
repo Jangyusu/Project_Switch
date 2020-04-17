@@ -1,0 +1,95 @@
+@import url(common.css);
+
+
+
+/* body */
+body {
+    background: none;
+}
+
+/* main */
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.visual {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: .5s cubic-bezier(0.87, 0, 0.13, 1);
+    position: relative;
+}
+.visual:hover {
+    flex: 2;
+}
+.visual.active {
+    flex: 0;
+}
+.visual:nth-of-type(1) {
+    background-image: url("../img/software/visual00.jpg");
+}
+.visual:nth-of-type(2) {
+    background-image: url("../img/software/visual01.jpg");
+}
+.visual:nth-of-type(3) {
+    background-image: url("../img/software/visual02.jpg");
+}
+.visual:nth-of-type(4) {
+    background-image: url("../img/software/visual03.jpg");
+}
+.visual__contents {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: 1s cubic-bezier(0.76, 0, 0.24, 1);
+    opacity: 0;
+}
+.visual__contents_btn {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #fff;
+    margin-right: 80px;
+    color: #fff;
+    position: relative;
+    transition: 1s cubic-bezier(0.76, 0, 0.24, 1);
+    z-index: 2;
+}
+.visual__contents_btn:hover {
+    color: #000;
+}
+.visual__contents_btn::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    background: rgba(255, 255, 255, .9);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .5s cubic-bezier(0.76, 0, 0.24, 1);
+    z-index: -1;
+}
+.visual__contents_btn:hover::before {
+    height: 100%;
+    top: 0;
+}
+.visual__contents_btn:last-of-type {
+    margin-right: 0;
+}
+.visual__life {
+    width: 100%;
+    height: 0;
+    background: #666;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 1s cubic-bezier(0.76, 0, 0.24, 1);
+}

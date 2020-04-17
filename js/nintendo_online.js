@@ -61,17 +61,17 @@ $(function () {
                     clearInterval(backSlideInter);
                 }
 
-                var backSlideInter;
-                var backSlide = function () {
-                    backSlideInter = setInterval(function () {
-                        position += 10;
+                // var backSlideInter;
+                // var backSlide = function () {
+                //     backSlideInter = setInterval(function () {
+                //         position += 100;
 
-                        $("main").css({
-                            "background-position": `-${position}px top`
-                        })
-                    }, 500)
-                };
-                backSlide();
+                //         $("main").css({
+                //             "background-position": `-${position}px center`
+                //         })
+                //     }, 5000)
+                // };
+                // backSlide();
 
                 function scrollHeader() {
                     headerRemove();

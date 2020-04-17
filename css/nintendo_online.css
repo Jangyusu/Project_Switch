@@ -9,9 +9,9 @@ body {
 
 /* main */
 main {
-    background: url("../img/online/bg.svg") repeat-x;
+    background: url("../img/online/bg.svg") center;
     background-attachment: fixed;
-    transition: .5s linear;
+    /* transition: 5s linear; */
 }
 .visual {
     width: 100%;
@@ -160,7 +160,6 @@ main {
 
 .price {
     width: 100%;
-    margin-top: 300px;
     padding: 150px 15%;
     background: #fff;
     text-align: center;
@@ -295,9 +294,45 @@ main {
     color: #e60012;
 }
 
+.subscriber {
+    width: 100%;
+    padding: 50px 15%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.subscriber__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.subscriber__text small {
+    font-size: 0.9375rem;
+    color: #666;
+    display: block;
+    margin-top: 10px;
+}
+.subscriber__detail {
+    width: 15%;
+    height: max-content;
+    border: 2px solid #e60012;
+    border-radius: 5px;
+    background: #e60012;
+    color: #fff;
+    font-weight: 700;
+    line-height: 63px;
+    text-align: center;
+    transition: .2s ease-in-out;
+}
+.subscriber__detail:hover {
+    background: #fff;
+    color: #e60012;
+}
+
 .question {
     width: 100%;
-    padding: 200px 15%;
+    padding: 150px 15%;
     background: #fff;
 }
 .question__title {
