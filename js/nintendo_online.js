@@ -25,7 +25,7 @@ $(function () {
                 $("header").mouseleave(headerAdd);
                 $(window).scroll(scrollHeader);
 
-                $('.price__content').clone().appendTo('.price__list'); //슬라이드 리스트 추가
+                $(".price__content").clone().appendTo(".price__list"); //슬라이드 리스트 추가
                 $(".price__content").mouseenter(priceEnter); //슬라이드 컨텐츠 엔터
                 $(".price__content").mouseleave(priceLeave); //슬라이드 컨텐츠 리브                
                 $(".price__arrow").click(priceSlide); //슬라이드 클릭
@@ -60,18 +60,6 @@ $(function () {
                 function backStop() {
                     clearInterval(backSlideInter);
                 }
-
-                // var backSlideInter;
-                // var backSlide = function () {
-                //     backSlideInter = setInterval(function () {
-                //         position += 100;
-
-                //         $("main").css({
-                //             "background-position": `-${position}px center`
-                //         })
-                //     }, 5000)
-                // };
-                // backSlide();
 
                 function scrollHeader() {
                     headerRemove();
