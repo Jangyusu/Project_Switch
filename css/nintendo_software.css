@@ -81,13 +81,15 @@ main {
     border-radius: 20px;
     position: relative;
     transform: translateY(100%);
-    transition: .7s transform cubic-bezier(0.76, 0, 0.24, 1), .7s opacity;
+    transition: .7s transform cubic-bezier(0.76, 0, 0.24, 1), .7s opacity, .7s visibility;
     overflow: hidden;
+    visibility: hidden;
     z-index: 2;
     opacity: 0;
 }
 .visual__contents.active .visual__contents_btn {
     transform: translateY(0);
+    visibility: visible;
     opacity: 1;
 }
 .visual__contents.hide .visual__contents_btn {
@@ -602,6 +604,7 @@ main {
     font-size: 3.125rem;
     font-weight: 800;
     color: #fff;
+    display: inline-block;
 }
 .visual__super_menus {
     width: 100%;

@@ -19,7 +19,7 @@ span, em, strong, a {
     display: inline-block;
 }
 
-p, span, figcaption {
+p, span, figcaption, h1, h2, h3, h4, h5, h6 {
     word-break: keep-all;
 }
 
@@ -38,6 +38,7 @@ em {
 a {
     color: #000;
     text-decoration: none;
+    display: block;
 }
 
 img {
@@ -51,6 +52,12 @@ button {
     border: 0;
     outline: 0;
     cursor: pointer;
+}
+
+input {
+    border: 0;
+    background: transparent;
+    outline: 0;
 }
 
 * {

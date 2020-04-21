@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Nintendo | 뉴스</title>
+    <link href="css/nintendo_news.css" type="text/css" rel="stylesheet" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <script src="https://kit.fontawesome.com/60a06f6dc3.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/nintendo_news.js"></script>
+</head>
+
+<body>
+    <header></header>
+
+    <main>
+        <section class="visual">
+            <h1 class="visual__title">닌텐도가 전하는 새로운 소식입니다</h1>
+            <div class="visual__indicator">
+                <a href="nintendo_news.html" class="visual__indicator_news">닌텐도 뉴스</a>
+            </div>
+        </section>
+        <section class="contents">
+            <h2 class="contents__title">닌텐도 뉴스</h2>
+        </section>
+        <div class="search">
+            <span class="search__amount">총 <span class="search__amount_number"></span>건</span>
+            <div class="search__box">
+                <button type="button" class="search__select">
+                    <span class="search__select_selected">전체</span>
+                    <img src="img/news/down_arrow.png" alt="arrow" class="search__select_img">
+                    <ul class="search__select_list">
+                        <li class="search__select_list_first">제목</li>
+                        <li class="search__select_list_second">내용</li>
+                    </ul>
+                </button>
+                <div class="search__text">
+                    <input type="text" placeholder="검색어를 입력하세요." class="search__text_typing">
+                    <input type="button" value="검색" class="search__text_result">
+                </div>
+                <input type="reset" value="초기화" class="search__reset">
+            </div>
+        </div>
+        <div class="list"></div>
+        <button type="button" class="view">더보기 (<span class="view__amount">1</span>/<span
+                class="view__max"></span>)</button>
+    </main>
+
+    <aside></aside>
+
+    <footer></footer>
+</body>
+
+</html>

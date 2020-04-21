@@ -11,12 +11,7 @@ $(function () {
             $("header").mouseenter(headerRemove);
             $("header").mouseleave(headerAdd);
             $(window).scroll(scrollHeader);
-
             $(".visual").click(visual); //클릭 이벤트
-
-
-
-
 
 
 
