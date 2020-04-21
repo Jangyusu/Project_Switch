@@ -323,7 +323,7 @@ main {
     overflow: hidden;
     transition: .5s;
 }
-.visual__ring_menu:hover {
+.visual__ring_menu:hover{
     transform: rotateY(180deg);
 }
 .visual__ring_menu::before {

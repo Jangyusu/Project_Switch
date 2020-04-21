@@ -22,6 +22,7 @@ $(function () {
         $burgerButton.click(burgerMenu); //버거메뉴 on/off
         $language.click(languageChange); //언어 변경
         $(window).scroll(scrollSlide); //스크롤 바 변경
+        $scrollBar.dragable
 
 
 

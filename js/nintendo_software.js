@@ -10,20 +10,14 @@ $(function () {
 
             $("header").mouseenter(headerRemove);
             $("header").mouseleave(headerAdd);
-            $(window).scroll(scrollHeader);
+
             $(".visual").click(visual); //클릭 이벤트
 
 
 
 
 
-            function scrollHeader() {
-                headerRemove();
 
-                if ($(this).scrollTop() == 0) {
-                    headerAdd();
-                }
-            }
 
             function headerAdd() {
                 $("header").addClass("online");
