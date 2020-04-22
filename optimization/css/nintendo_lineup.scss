@@ -1,0 +1,61 @@
+@import "common.css";
+
+
+
+
+
+main {
+    width: 100%;
+    background: #fff;
+    text-align: center;
+}
+
+.title {
+    &__main {}
+    &__sub {}
+}
+
+.visual {
+    &__text {
+        &_top {}
+        &_line {}
+        &_bottom {}
+    }
+}
+
+.contents {
+    &__header {
+        &_product {
+            &_num {}
+        }
+        &_typing {}
+    }
+    &__button {
+        &_main {
+            &_text {}
+            &_img {}
+        }
+        &_list {
+            &_first {}
+            &_second {}
+        }
+    }
+    &__year {
+        &_box {}
+        &_title {}
+    }
+    &_list {
+        &_box {}
+        &_img {}
+        &_text {
+            &_sub {}
+            &_title {}
+        }
+        &_inf {
+            &_title {}
+            &_date {}
+            &_price {}
+        }
+    }
+    &__more {}
+}

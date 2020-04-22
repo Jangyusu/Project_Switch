@@ -1,0 +1,214 @@
+{
+    "software": [
+        {
+            "ko": {
+                "title": "모여봐요 동물의 숲",
+                "device": "Nintendo Switch",
+                "genre": "커뮤니케이션 게임",
+                "img": "img/visual00.jpg",
+                "link": "sub/software.html"
+            },
+            "en": {
+                "title": "Animal Crossing: New Horizons",
+                "device": "Nintendo Switch",
+                "genre": "Communication game",
+                "img": "img/visual00.jpg",
+                "link": "sub/software.html"
+            }
+        },
+        {
+            "ko": {
+                "title": "링피트 어드벤처",
+                "device": "Nintendo Switch",
+                "genre": "피트니스 어드벤처",
+                "img": "img/visual01.jpg",
+                "link": "sub/software.html"
+            },
+            "en": {
+                "title": "Ring Fit Adventure",
+                "device": "Nintendo Switch",
+                "genre": "Fitness Adventure",
+                "img": "img/visual01.jpg",
+                "link": "sub/software.html"
+            }
+        },
+        {
+            "ko": {
+                "title": "마리오카트8 디럭스",
+                "device": "Nintendo Switch",
+                "genre": "레이싱",
+                "img": "img/visual02.jpg",
+                "link": "sub/software.html"
+            },
+            "en": {
+                "title": "Mario Kart 8 Deluxe",
+                "device": "Nintendo Switch",
+                "genre": "Racing",
+                "img": "img/visual02.jpg",
+                "link": "sub/software.html"
+            }
+        },
+        {
+            "ko": {
+                "title": "슈퍼 스매시 브라더스 얼티밋",
+                "device": "Nintendo Switch",
+                "genre": "난투형 액션",
+                "img": "img/visual03.jpg",
+                "link": "sub/software.html"
+            },
+            "en": {
+                "title": "Super Smash Bros. Ultimate",
+                "device": "Nintendo Switch",
+                "genre": "Fighting",
+                "img": "img/visual03.jpg",
+                "link": "sub/software.html"
+            }
+        }
+    ],
+    "howToPlay": [
+        {
+            "ko": {
+                "mode": "TV 모드",
+                "manual": "TV로 다함께 즐기는 모드<br>모임이나 홈 파티에 적합",
+                "img": "img/HOW_TO_PLAY00_TV.jpg",
+                "alt": "switch TV mode"
+            },
+            "en": {
+                "mode": "TV mode",
+                "manual": "Ideal for TV mode<br>meetings or home parties",
+                "img": "img/HOW_TO_PLAY00_TV.jpg",
+                "alt": "switch TV mode"
+            }
+        },
+        {
+            "ko": {
+                "mode": "테이블 모드",
+                "manual": "본체 스탠드를 세워 즐기는 모드<br>「Joy-Con」을 하나씩 나눠 들고 화면을 공유해서 플레이",
+                "img": "img/HOW_TO_PLAY01_Tabletop.jpg",
+                "alt": "switch Tabletop mode"
+            },
+            "en": {
+                "mode": "TV mode",
+                "manual": "a mode of entertainment by erecting a body stand<br>Play「Joy-Con」in groups and share the screen",
+                "img": "img/HOW_TO_PLAY01_Tabletop.jpg",
+                "alt": "switch Tabletop mode"
+            }
+        },
+        {
+            "ko": {
+                "mode": "휴대 모드",
+                "manual": "손 안에서 게임을 즐기는 모드<br>짜릿한 게임을 언제 어디서나 즐기기",
+                "img": "img/HOW_TO_PLAY02_Handheld.jpg",
+                "alt": "switch Handheld mode"
+            },
+            "en": {
+                "mode": "TV mode",
+                "manual": "A mode of playing games in your hands<br>Enjoy thrilling games anytime, anywhere",
+                "img": "img/HOW_TO_PLAY02_Handheld.jpg",
+                "alt": "switch Handheld mode"
+            }
+        }
+    ],
+    "aboutSwitch": [
+        {
+            "ko": {
+                "number": "01",
+                "name": "닌텐도 스위치 본체 라인업",
+                "subName": "Lineup",
+                "img": "img/ABOUT_SWITCH00.jpg"
+            },
+            "en": {
+                "number": "01",
+                "name": "Nintendo Switch Console Lineup",
+                "subName": "Lineup",
+                "img": "img/ABOUT_SWITCH00.jpg"
+            }
+        },
+        {
+            "ko": {
+                "number": "02",
+                "name": "닌텐도 스위치 기능 및 사양",
+                "subName": "Tech Specs",
+                "img": "img/ABOUT_SWITCH01.jpg"
+            },
+            "en": {
+                "number": "02",
+                "name": "Nintendo Switch Function And Specification",
+                "subName": "Tech Specs",
+                "img": "img/ABOUT_SWITCH01.jpg"
+            }
+        },
+        {
+            "ko": {
+                "number": "03",
+                "name": "닌텐도 스위치 주변기기",
+                "subName": "Accessories",
+                "img": "img/ABOUT_SWITCH02.jpg"
+            },
+            "en": {
+                "number": "03",
+                "name": "Nintendo Switch Peripherals",
+                "subName": "Accessories",
+                "img": "img/ABOUT_SWITCH02.jpg"
+            }
+        },
+        {
+            "ko": {
+                "number": "04",
+                "name": "닌텐도 스위치 온라인",
+                "subName": "Online",
+                "img": "img/ABOUT_SWITCH03.jpg"
+            },
+            "en": {
+                "number": "04",
+                "name": "Nintendo Switch Online",
+                "subName": "Online",
+                "img": "img/ABOUT_SWITCH03.jpg"
+            }
+        }
+    ],
+    "news": [
+        {
+            "ko": {
+                "kind": "NEWS",
+                "title": "무료 업데이트로 더욱 폭넓어지는 섬 생활.『모여봐요 동물의 숲』에서 계절 이벤트 「이스터」 개최!",
+                "date": "2020-03-30",
+                "img": "img/NEWS00.png"
+            },
+            "en": {
+                "kind": "NEWS",
+                "title": "Island life becomes more widespread with free updates. Hold season event「yster」in『Animal Crossing: New Horizons』",
+                "date": "2020-03-30",
+                "img": "img/NEWS00.png"
+            }
+        },
+        {
+            "ko": {
+                "kind": "NEWS",
+                "title": "Nintendo Switch 소프트웨어 「Good Job!」의 상세 소개 페이지가 공개되었습니다.",
+                "date": "2020-03-27",
+                "img": "img/NEWS01.jpg"
+            },
+            "en": {
+                "kind": "NEWS",
+                "title": "The Nintendo Switch software「Good Job!」detailed landing page has been released",
+                "date": "2020-03-27",
+                "img": "img/NEWS01.jpg"
+            }
+        },
+        {
+            "ko": {
+                "kind": "NEWS",
+                "title": "『ARMS』를 무료로 마음껏 즐기자! Nintendo Switch Online 가입자 한정 이벤트 「게임 트라이얼」개최!",
+                "date": "2020-03-27",
+                "img": "img/NEWS02.jpg"
+            },
+            "en": {
+                "kind": "NEWS",
+                "title": "Enjoy『ARMS』for free! Nintendo Switch Online Subscriber Only Event「Game Trials」Open!",
+                "date": "2020-03-27",
+                "img": "img/NEWS02.jpg"
+            }
+        }
+    ]
+}

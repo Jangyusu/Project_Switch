@@ -15,21 +15,21 @@ $(function () {
                     newsData = data.news,
                     title, device, genre, link, img, alt, mode, manual, number, name, subName, kind, date,
 
-                    $visual = $(".visual figure"),
+                    $visual = $(".visual__img"),
                     visualAppend = "",
 
-                    $howToPlay = $(".how_to_play ul"),
+                    $howToPlay = $(".how-to-play__list"),
                     howToPlayAppend = "",
 
-                    $aboutSwitch = $(".about_switch__box"),
+                    $aboutSwitch = $(".about-switch__list"),
                     aboutSwitchAppend = "",
 
-                    $software = $(".software__box"),
+                    $software = $(".software__list"),
                     $softwareList, $softwareImg, softwareImg,
                     softwareAppend = "",
                     softwareIndex = 0,
 
-                    $news = $(".news__box"),
+                    $news = $(".news__list"),
                     $newsList, $newsImg, newsImg, newsTitle,
                     newsAppend = "",
                     newsIndex = 0;
@@ -45,16 +45,16 @@ $(function () {
 
                     visualAppend +=
                         `<figcaption class="visual__text">
-                            <small class="visual__device">${device}</small>
-                            <strong class="visual__title">${title}</strong>
-                            <a href="${link}" class="more">
-                                <span></span>
-                                <p>더보기</p>
+                            <small class="visual__text_sub">${device}</small>
+                            <strong class="visual__text_title">${title}</strong>
+                            <a href="nintendo_software.html" target="_blank" class="more">
+                                <span class="more__line"></span>
+                                <p class="more__text">더보기</p>
                             </a>
                         </figcaption>`
                 });
                 $visual.append(visualAppend);
-                $visual.find("figcaption").eq(0).addClass("active");
+                $visual.find(".visual__text").eq(0).addClass("active");
 
                 $.each(howToPlayData, function () {  //how to play Html 추가
                     img = this.ko.img,
@@ -63,10 +63,10 @@ $(function () {
                         manual = this.ko.manual;
 
                     howToPlayAppend +=
-                        `<li>
-                            <img src="${img}" alt="${alt}" class="how_to_play__mode__img">
-                            <p class=" how_to_play__mode">${mode}</p>
-                            <p class="how_to_play__manual">${manual}</p>
+                        `<li class="how-to-play__list_box">
+                            <img src="${img}" alt="${alt}" class="how-to-play__list_img">
+                            <p class="how-to-play__list_title">${mode}</p>
+                            <p class="how-to-play__list_sub">${manual}</p>
                         </li>`
                 });
                 $howToPlay.append(howToPlayAppend);
@@ -74,41 +74,41 @@ $(function () {
                 $.each(aboutSwitchData, function () {  //about switch Html 추가
                     number = this.ko.number,
                         name = this.ko.name,
-                        subName = this.ko.subName;
+                        subName = this.ko.subName,
+                        link = this.ko.link;
 
                     aboutSwitchAppend +=
-                        `<li class="about_switch__content">
-                            <small>${number}</small>
-                            <strong>${subName}</strong>
-                            <p>${name}</p>
-                            <a href="#" class="more_long">
-                                <span></span>
-                                <p>더보기</p>
+                        `<li class="about-switch__list_box">
+                            <small class="about-switch__list_num">${number}</small>
+                            <strong class="about-switch__list_title">${subName}</strong>
+                            <p class="about-switch__list_sub">${name}</p>
+                            <a href="${link}" target="_blank" class="more-long">
+                                <span class="more-long__line"></span>
+                                <p class="more-long__text">더보기</p>
                             </a>
                         </li>`
                 });
                 $aboutSwitch.append(aboutSwitchAppend);
-                $aboutSwitch.find(".about_switch__content").eq(0).addClass("active");
+                $aboutSwitch.find(".about-switch__list_box").eq(0).addClass("active");
 
                 $.each(softwareData, function () { //software html 추가
                     title = this.ko.title,
                         device = this.ko.device,
-                        genre = this.ko.genre,
-                        link = this.ko.link;
+                        genre = this.ko.genre;
 
                     softwareAppend +=
-                        `<figure class="software__list slide_up">
-                            <a href="${link}">
+                        `<figure class="software__list_box slide-up">
+                            <a href="nintendo_software.html" target="_blank" class="software__list_img">
                                 <img src="img/plus.png" alt="plus" class="plus">
                             </a>
-                            <figcaption>
-                                <small class="software__device">${device} : ${genre}</small>
-                                <p class="software__title">${title}</p>
+                            <figcaption class="software__list_text">
+                                <small class="software__list_sub">${device} : ${genre}</small>
+                                <p class="software__list_title">${title}</p>
                             </figcaption>
                         </figure>`;
                 });
                 $software.append(softwareAppend);
-                $softwareList = $(".software__list");
+                $softwareList = $(".software__list_box");
 
                 $.each($softwareList, function () { //software img 추가
                     $softwareImg = $(this).find("a");
@@ -124,18 +124,18 @@ $(function () {
                         date = this.ko.date;
 
                     newsAppend +=
-                        `<li class="news__list">
-                            <a href="#">
+                        `<li class="news__list_box">
+                            <a href="nintendo_news.html" target="_blank" class="news__list_img">
                                 <img src="img/plus.png" alt="plus" class="plus">
                             </a>
-                            <small class="news__kind">${kind}</small>
-                            <p class="news__title">${newsTitle}</p>
-                            <time class="news__date">${date}</time>
+                            <small class="news__list_sub">${kind}</small>
+                            <p class="news__list_title">${newsTitle}</p>
+                            <time class="news__list_date">${date}</time>
                         </li>`;
                 });
 
                 $news.append(newsAppend);
-                $newsList = $(".news__list");
+                $newsList = $(".news__list_box");
 
                 $.each($newsList, function () { //news img 추가
                     $newsImg = $(this).find("a");
@@ -149,26 +149,21 @@ $(function () {
 
 
 
-
-
-
-
-
-                var $visualCurrent = $(".visual__current"),
+                var $visualCurrent = $(".visual__controls_num_current"),
                     $visualList = $(".visual__text"),
-                    $visualTotal = $(".visual__total"),
-                    $visualControl = $(".visual__controls"),
-                    $visualLeft = $(".visual__controls input")[0],
-                    $visualPlayPause = $(".visual__controls input")[1],
-                    $visualRight = $(".visual__controls input")[2],
+                    $visualTotal = $(".visual__controls_num_total"),
+                    $visualControl = $(".visual__controls_button"),
+                    $visualLeft = $(".visual__controls_button_prev")[0],
+                    $visualPlayPause = $(".visual__controls_button_play")[0],
+                    $visualRight = $(".visual__controls_button_next")[0],
                     visualIndex = 0,
                     visualSlide,
                     visualBln = true,
 
-                    $aboutSwitchList = $(".about_switch__content"),
+                    $aboutSwitchList = $(".about-switch__list_box"),
                     aboutSwitchIndex = 0,
 
-                    $slideContents = $(".slide_up"),
+                    $slideContents = $(".slide-up"),
                     $windowTop = $(window).height(),
                     $scrollTop = 0,
                     $scrollBottom = 0,
@@ -225,7 +220,7 @@ $(function () {
                             }
 
                             change();
-                        } else if (target == $visualPlayPause) { //재생, 멈춤 버튼
+                        } else if (target == $visualPlayPause) { //재생, 정지버튼
                             if (target.src.includes("play")) { //재생
                                 target.src = "img/pause.png";
                                 visualSlide();
@@ -237,7 +232,9 @@ $(function () {
 
                         function change() {
                             $visualList.removeClass("active");
-                            $visual.css({ "background": "url(img/visual0" + visualIndex + ".jpg)", "background-repeat": "no-repeat", "background-position": "top right", "background-size": "cover" });
+                            $visual.css({
+                                "background": "url(img/visual0" + visualIndex + ".jpg)", "background-repeat": "no-repeat", "background-position": "top right", "background-size": "cover"
+                            });
                             setTimeout(function () {
                                 $visualList.eq(visualIndex).addClass("active");
                             }, 500);
@@ -247,7 +244,7 @@ $(function () {
 
                         setTimeout(function () {
                             visualBln = true;
-                        }, 1500);
+                        }, 1000);
                     }
                 }
 
@@ -259,22 +256,27 @@ $(function () {
                 visualSlide();
 
                 function aboutSwitchenter() {
-                    aboutSwitchIndex = $(this).index();
-                    $aboutSwitch.css({ "background": "url(img/ABOUT_SWITCH0" + aboutSwitchIndex + ".jpg)", "background-repeat": "no-repeat", "background-position": "center", "background-size": "cover" });
+                    aboutSwitchCss($(this).index());
 
                     $aboutSwitchList.removeClass("active");
                     $(this).addClass("active");
                 }
 
                 function aboutSwitchleave() {
-                    $aboutSwitch.css({ "background": "url(img/ABOUT_SWITCH00.jpg)", "background-repeat": "no-repeat", "background-position": "center", "background-size": "cover" });
+                    aboutSwitchCss(0);
 
                     $aboutSwitchList.removeClass("active");
                     $aboutSwitchList.eq(0).addClass("active");
                 }
 
+                function aboutSwitchCss(Index) {
+                    $aboutSwitch.css({
+                        "background": "url(img/ABOUT_SWITCH0" + Index + ".jpg)", "background-repeat": "no-repeat", "background-position": "center", "background-size": "cover"
+                    });
+                }
+
                 //End
             }
-        }, 100)
+        }, 500)
     });
 });

@@ -12,8 +12,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/index.js"></script>
 </head>
@@ -24,62 +22,65 @@
 
     <main>
         <div class="visual">
-            <figure>
-                <div class="visual__control_box">
-                    <p><span class="visual__current">01</span><span class="visual__total"></span></p>
-                    <div class="visual__controls">
-                        <input type="image" src="img/left_arrow.png">
-                        <input type="image" src="img/pause.png">
-                        <input type="image" src="img/right_arrow.png">
+            <figure class="visual__img">
+                <div class="visual__controls">
+                    <p class="visual__controls_num"><span class="visual__controls_num_current">01</span><span
+                            class="visual__controls_num_total"></span></p>
+                    <div class="visual__controls_button">
+                        <input type="image" src="img/left_arrow.png" class="visual__controls_button_prev">
+                        <input type="image" src="img/pause.png" class="visual__controls_button_play">
+                        <input type="image" src="img/right_arrow.png" class="visual__controls_button_next">
                     </div>
                 </div>
             </figure>
         </div>
 
-        <section class="how_to_play">
-            <h2>HOW TO PLAY</h2>
-            <ul></ul>
+        <section class="how-to-play">
+            <h2 class="how-to-play__title">HOW TO PLAY</h2>
+            <ul class="how-to-play__list"></ul>
         </section>
 
-        <section class="about_switch">
-            <h2>ABOUT SWITCH</h2>
-            <p>「Nintendo Switch™」은 플레이 장면에 맞추어 형태를 바꾸는 게임기로<br>언제, 어디에서나, 마음 가는대로, 자유로운 스타일로 게임을 즐길 수 있습니다.</p>
-            <ul class="about_switch__box"></ul>
+        <section class="about-switch">
+            <h2 class="about-switch__title">ABOUT SWITCH</h2>
+            <p class="about-switch__sub">「Nintendo Switch™」은 플레이 장면에 맞추어 형태를 바꾸는 게임기로<br>언제, 어디에서나, 마음 가는대로, 자유로운 스타일로
+                게임을 즐길 수 있습니다.</p>
+            <ul class="about-switch__list"></ul>
         </section>
 
-        <section class="joy_con">
-            <h2>JOY CON</h2>
-            <div class="joy_con__box">
-                <p class="slide_up">「Joy-Con」이 초대하는 새로운 오락의 세계</p>
-                <small class="slide_up">「Joy-Con」은 세로 잡기, 가로 잡기 외에도<br>양손에 하나씩 잡는 플레이 스타일이나 2개 잡기로도 조작할 수 있습니다.</small>
-                <a href="#" class="more slide_up">
-                    <span></span>
-                    <p>더보기</p>
+        <section class="joy-con">
+            <h2 class="joy-con__title">JOY CON</h2>
+            <div class="joy-con__box">
+                <p class="joy-con__box_title slide-up">「Joy-Con」이 초대하는 새로운 오락의 세계</p>
+                <small class="joy-con__box_sub slide-up">「Joy-Con」은 세로 잡기, 가로 잡기 외에도<br>양손에 하나씩 잡는 플레이 스타일이나 2개 잡기로도 조작할
+                    수 있습니다.</small>
+                <a href="nintendo_peripherals.html" target="_blank" class="more slide-up">
+                    <span class="more__line"></span>
+                    <p class="more__text">더보기</p>
                 </a>
-                <img src="img/joy_con.png" alt="nintendo switch" class="slide_up">
+                <img src="img/joy_con.png" alt="nintendo switch" class="joy-con__box_img slide-up">
             </div>
         </section>
 
         <section class="software">
-            <h2 class="slide_up">SOFTWARE</h2>
-            <div class="software__box">
+            <h2 class="software__title slide-up">SOFTWARE</h2>
+            <div class="software__list">
                 <div class="software__text">
-                    <p class="slide_up">Nintendo <span>Switch</span><span>Game</span> Software</p>
-                    <small class="slide_up">※한국에서 발매 및 발매일이 미정인 소프트웨어의 이미지가 일부 포함되어 있습니다.</small>
-                    <a href="#" class="more slide_up">
-                        <span></span>
-                        <p>더보기</p>
+                    <p class="software__text_title slide-up">Nintendo <span>Switch</span><span>Game</span> Software</p>
+                    <small class="software__text_sub slide-up">※한국에서 발매 및 발매일이 미정인 소프트웨어의 이미지가 일부 포함되어 있습니다.</small>
+                    <a href="nintendo_software.html" target="_blank" class="more slide-up">
+                        <span class="more__line"></span>
+                        <p class="more_text">더보기</p>
                     </a>
                 </div>
             </div>
         </section>
 
         <section class="news">
-            <h2>NEWS</h2>
-            <ul class="news__box"></ul>
-            <a href="#" class="more">
-                <span></span>
-                <p>더보기</p>
+            <h2 class="news__title">NEWS</h2>
+            <ul class="news__list"></ul>
+            <a href="nintendo_news.html" target="_blank" class="more">
+                <span class="more__line"></span>
+                <p class="more__text">더보기</p>
             </a>
         </section>
     </main>

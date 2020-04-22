@@ -1,0 +1,244 @@
+{
+    "peripherals": [
+        {
+            "ko": {
+                "title": "Nintendo Switch Pro 컨트롤러",
+                "firstImg": "img/peripherals/img_switch_device_acc01_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc01_02.jpg",
+                "price": "77,800원",
+                "enclosed": "USB 충전 케이블",
+                "date": "2017년 12월 1일(금)",
+                "explanation": "잡기 편한 그립형이기 때문에, TV 모드나 테이블 모드에서 게임을 장시간 쾌적하게 플레이할 수 있는 무선 컨트롤러"
+            },
+            "en": {
+                "title": "Nintendo Switch Pro Controller",
+                "firstImg": "img/peripherals/img_switch_device_acc01_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc01_02.jpg",
+                "price": "$299.99",
+                "enclosed": "USB charging cable",
+                "date": "Friday, December 1, 2017",
+                "explanation": "Because it is a grip type that is easy to hold, it is a wireless controller that can comfortably play games for a long time in TV mode or table mode"
+            }
+        },
+        {
+            "ko": {
+                "title": "Joy-Con 충전 그립",
+                "firstImg": "img/peripherals/img_switch_device_acc02_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc02_02.jpg",
+                "price": "27,800원",
+                "enclosed": "USB 충전 케이블",
+                "date": "2017년 12월 1일(금)",
+                "explanation": "Joy-Con(L)과 Joy-Con(R)을 장착해서 그립형의 컨트롤러로써 사용할 수 있습니다. 본체 세트에 동봉된 Joy-Con 그립과 달리 동봉된 USB 충전 케이블을 사용해서 플레이하며Joy-Con을 충전할 수 있기 때문에 배터리 방전에 대한 염려가 없습니다."
+            },
+            "en": {
+                "title": "Joy-Con charging grip",
+                "firstImg": "img/peripherals/img_switch_device_acc02_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc02_02.jpg",
+                "price": "$29.99",
+                "enclosed": "USB charging cable",
+                "date": "Friday, December 1, 2017",
+                "explanation": "Combine the left and right Joy‑Con into one larger controller with this handy grip. It also lets you keep playing while you’re charging your Joy‑Con, so you don’t have to miss a minute."
+            }
+        },
+        {
+            "ko": {
+                "title": "Nintendo Switch 휴대용 케이스",
+                "firstImg": "img/peripherals/img_switch_device_acc03_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc03_02.jpg",
+                "price": "22,800원",
+                "enclosed": "없음",
+                "date": "2017년 12월 1일(금)",
+                "explanation": "Nintendo Switch 본체 휴대용 케이스와, 액정 화면을 흠집과 오염으로부터 보호하는 보호 필름 세트입니다.게임 카드 5개, Joy-Con 스트랩 2개를 수납할 수 있는 칸막이 패드 포함. 본체를 기대 세우는 스탠드로도 사용 가능합니다."
+            },
+            "en": {
+                "title": "Nintendo Switch carrying case",
+                "firstImg": "img/peripherals/img_switch_device_acc03_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc03_02.jpg",
+                "price": "$19.99",
+                "enclosed": "none",
+                "date": "Friday, December 1, 2017",
+                "explanation": "Nintendo Switch This is a body carrying case and a protective film set that protects the LCD screen from scratches and contamination. Includes a partition pad that can hold 5game cardsand 2Joy-Con straps. It can also be used as a stand to lean the body."
+            }
+        },
+        {
+            "ko": {
+                "title": "Nintendo Switch Lite 휴대용 케이스",
+                "firstImg": "img/peripherals/img_switch_device_acc11_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc11_02.jpg",
+                "price": "22,800원",
+                "enclosed": "없음",
+                "date": "2019년 9월 20일(금)",
+                "explanation": "Nintendo Switch Lite 본체 휴대용 케이스와, 액정 화면을 흠집과 오염으로부터 보호하는 보호 필름 세트입니다. 게임 카드 8개를 수납할 수 있는 포켓이 포함되어 있습니다."
+            },
+            "en": {
+                "title": "Nintendo Switch Lite carrying case",
+                "firstImg": "img/peripherals/img_switch_device_acc11_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc11_02.jpg",
+                "price": "$19.99",
+                "enclosed": "none",
+                "date": "Friday, September 20, 2019",
+                "explanation": "Nintendo Switch Lite Body Carrying Case and protective film set that protects the LCD screen from scratches and contamination. Includes a pocket for 8 game cards."
+            }
+        },
+        {
+            "ko": {
+                "title": "Nintendo Switch Lite 플립 커버",
+                "firstImg": "img/peripherals/img_switch_device_acc12_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc12_02.jpg",
+                "price": "37,800원",
+                "enclosed": "없음",
+                "date": "2019년 11월 15일(금)",
+                "explanation": "Nintendo Switch Lite 본체 플립 커버와, 액정 화면을 흠집과 오염으로부터 보호하는 보호 필름 세트입니다."
+            },
+            "en": {
+                "title": "Nintendo Switch Lite flip cover",
+                "firstImg": "img/peripherals/img_switch_device_acc12_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc12_02.jpg",
+                "price": "$39.99",
+                "enclosed": "none",
+                "date": "Friday, November 15, 2019",
+                "explanation": "Nintendo Switch Lite body flip cover and protective film set that protects the LCD screen from scratches and contamination."
+            }
+        },
+        {
+            "ko": {
+                "title": "Joy-Con 핸들",
+                "firstImg": "img/peripherals/img_switch_device_acc04_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc04_02.jpg",
+                "price": "16,800원",
+                "enclosed": "2개 세트",
+                "date": "2017년 12월 15일(금)",
+                "explanation": "Joy-Con을 장착하면 드라이브하는 감각으로 조작할 수 있어, 마리오 카트 8 디럭스 등의 레이스 게임을 즐기기에 적합합니다. 좌우 어느 쪽의 Joy-Con에도 장착할 수 있습니다."
+            },
+            "en": {
+                "title": "Joy-Con handle",
+                "firstImg": "img/peripherals/img_switch_device_acc04_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc04_02.jpg",
+                "price": "$14.99",
+                "enclosed": "Two sets",
+                "date": "Friday, December 15, 2017",
+                "explanation": "When equipped with Joy-Con, it can be operated with a sense of driving, making it suitable for racing games such as Mario Kart 8 Deluxe. It can be installed on either left or right Joy-Con."
+            }
+        },
+        {
+            "ko": {
+                "title": "Joy-Con (L)/(R)",
+                "firstImg": "img/peripherals/img_switch_device_acc05_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc05_02.jpg",
+                "price": "79,800원",
+                "enclosed": "Joy-Con 스트랩(블랙) × 2개",
+                "date": "2017년 12월 1일(금)",
+                "explanation": "Joy-Con(L)과 Joy-Con(R)에 Joy-Con 스트랩(블랙) 2개가 포함된 세트입니다. 본체가 1대라도, 소프트웨어에 따라서는 Joy-Con을 만들고 함께 모여 여러 명이 함께 플레이할 수 있습니다."
+            },
+            "en": {
+                "title": "Joy-Con (L)/(R)",
+                "firstImg": "img/peripherals/img_switch_device_acc05_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc05_02.jpg",
+                "price": "$79.99",
+                "enclosed": "Joy-Con Strap (Black) × 2",
+                "date": "Friday, December 1, 2017",
+                "explanation": "This set includes two Joy-Con straps (black) in Joy-Con (L) and Joy-Con (R). Even if there is one main unit, depending on the software, you can create a Joy-Con and gather together to play with multiple people."
+            }
+        },
+        {
+            "ko": {
+                "title": "Joy-Con 스트랩 (온라인 전용)",
+                "firstImg": "img/peripherals/img_switch_device_acc07_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc07_02.jpg",
+                "price": "각 6,800원",
+                "enclosed": "없음",
+                "date": "2017년 12월 1일(금)",
+                "explanation": "스트랩을 손목에 걸어서 플레이를 즐길 수 있을 뿐만 아니라 Joy-Con을 쉽게 잡을 수 있어, 보다 쾌적한 조작을 할 수 있게 됩니다. Joy-Con(L)과 Joy-Con(R) 어느 쪽에도 사용 가능합니다."
+            },
+            "en": {
+                "title": "Joy-Con Strap (Online only)",
+                "firstImg": "img/peripherals/img_switch_device_acc07_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc07_02.jpg",
+                "price": "$5.99 won each",
+                "enclosed": "none",
+                "date": "Friday, December 1, 2017",
+                "explanation": "Not only can you enjoy playing by hanging the strap on your wrist, but you can easily hold the Joy-Con, so you can operate more comfortably. It can be used for both Joy-Con (L) and Joy-Con (R)."
+            }
+        },
+        {
+            "ko": {
+                "title": "Nintendo Switch AC 어댑터",
+                "firstImg": "img/peripherals/img_switch_device_acc08_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc08_02.jpg",
+                "price": "33,800원",
+                "enclosed": "none",
+                "date": "2017년 12월 1일(금)",
+                "explanation": "Nintendo Switch 본체 또는 Nintendo Switch 독에 연결해서 사용하는 AC 어댑터입니다. 평소 AC 어댑터를 설치하지 않는 침실이나 외출한 곳 등에서, 충전이 필요할 경우에 편리하게 사용할 수 있습니다."
+            },
+            "en": {
+                "title": "Nintendo Switch AC adapter",
+                "firstImg": "img/peripherals/img_switch_device_acc08_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc08_02.jpg",
+                "price": "$29.99",
+                "enclosed": "none",
+                "date": "Friday, December 1, 2017",
+                "explanation": "AC adapter used to connect to the Nintendo Switch body or Nintendo Switch dock. It can be conveniently used when charging is required, such as in a bedroom where you do not normally have an AC adapter installed, or where you go out."
+            }
+        },
+        {
+            "ko": {
+                "title": "Nintendo Switch 독 (단품, 온라인전용)",
+                "firstImg": "img/peripherals/img_switch_device_acc09_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc09_02.jpg",
+                "price": "69,800원",
+                "enclosed": "없음",
+                "date": "2017년 12월 1일(금)",
+                "explanation": "평소와 다른 장소에서도 Nintendo Switch를 TV 모드로 즐길 수 있습니다."
+            },
+            "en": {
+                "title": "Nintendo Switch Dock (single item, online only)",
+                "firstImg": "img/peripherals/img_switch_device_acc09_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc09_02.jpg",
+                "price": "$59.99",
+                "enclosed": "none",
+                "date": "Friday, December 1, 2017",
+                "explanation": "You can also enjoy the Nintendo Switch in TV mode in other places than usual."
+            }
+        },
+        {
+            "ko": {
+                "title": "HDMI 케이블 (단품, 온라인전용)",
+                "firstImg": "img/peripherals/img_switch_device_acc10_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc10_02.jpg",
+                "price": "17,800원",
+                "enclosed": "없음",
+                "date": "2017년 12월 1일(금)",
+                "explanation": "Nintendo Switch를 텔레비전의 HDMI 입력 슬롯에 연결하는 데 사용됩니다. HDMI 케이블의 길이는 1.5m입니다."
+            },
+            "en": {
+                "title": "HDMI cable (single, online only)",
+                "firstImg": "img/peripherals/img_switch_device_acc10_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc10_02.jpg",
+                "price": "$7.99",
+                "enclosed": "none",
+                "date": "Friday, December 1, 2017",
+                "explanation": "It is used to connect the console to your television's HDMI input slot. The HDMI Cable is 4.92 feet long."
+            }
+        },
+        {
+            "ko": {
+                "title": "Nintendo Switch 충전 스탠드(프리 스톱 방식)",
+                "firstImg": "img/peripherals/img_switch_device_acc13_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc13_02.jpg",
+                "price": "18,800원",
+                "enclosed": "없음",
+                "date": "2018년 7월 20일(금)",
+                "explanation": "Nintendo Switch 본체 화면의 각도를 자유롭게 조절할 수 있는 테이블 모드용 스탠드입니다. 자유롭게 조절 가능한 프리 스톱 방식으로 원하는 각도로 게임을 즐길 수 있습니다. 또한 충전하면서 게임을 플레이할 수 있으므로 플레이 도중에 배터리 방전의 우려가 없습니다."
+            },
+            "en": {
+                "title": "Nintendo Switch charging stand (free stop method)",
+                "firstImg": "img/peripherals/img_switch_device_acc13_01.jpg",
+                "secondImg": "img/peripherals/img_switch_device_acc13_02.jpg",
+                "price": "$19.99",
+                "enclosed": "none",
+                "date": "Friday, July 20, 2018",
+                "explanation": "This is a table mode stand that allows you to freely adjust the angle of the Nintendo Switch body screen. The freely adjustable free-stop method allows you to enjoy the game at any angle. In addition, you can play the game while charging, so there is no risk of battery discharge during play."
+            }
+        }
+    ]
+}
