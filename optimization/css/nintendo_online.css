@@ -25,7 +25,7 @@ main {
 .service {
     width: 100%;
     margin: 0 auto;
-    padding: 200px 10%;
+    padding: 200px 10% 100px;
     background: #fff;
     display: flex;
 }
@@ -288,6 +288,7 @@ main {
     font-weight: 700;
     line-height: 63px;
     transition: .2s ease-in-out;
+    display: inline-block;
 }
 .price__buy:hover {
     background: #fff;
