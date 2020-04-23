@@ -22,63 +22,68 @@
     <!-- 메인 시작 -->
     <main>
         <!-- 타이틀 시작 -->
-        <div class="sub_header">
-            <h1>
-                <span>닌텐도 스위치</span>기능 및 사양
-            </h1>
-        </div>
+        <section class="title">
+            <h1 class="title__main"><span class="title__sub">닌텐도 스위치</span>기능 및 사양</h1>
+        </section>
         <!-- 타이틀 끝 -->
         <!-- 카인즈 시작 -->
-        <div class="kinds">
+        <section class="kinds">
+            <h2 class="kinds__title">kinds</h2>
             <div class="kinds__header">
-                <ul class="kinds__list">
-                    <li data-selector="1">Nintendo Switch 본체</li>
-                    <li data-selector="2">Nintendo Switch 독</li>
-                    <li data-selector="3">Joy-Con</li>
-                    <li data-selector="4">Joy-Con 스트랩</li>
-                    <li data-selector="5">Joy-Con 그립</li>
+                <ul class="kinds__header_list">
+                    <li data-selector="1" class="kinds__header_list_text">Nintendo Switch 본체</li>
+                    <li data-selector="2" class="kinds__header_list_text">Nintendo Switch 독</li>
+                    <li data-selector="3" class="kinds__header_list_text">Joy-Con</li>
+                    <li data-selector="4" class="kinds__header_list_text">Joy-Con 스트랩</li>
+                    <li data-selector="5" class="kinds__header_list_text">Joy-Con 그립</li>
                 </ul>
-                <span class="kinds__bar"></span>
+                <span class="kinds__header_bar"></span>
             </div>
             <img src="" alt="Nintendo Switch spec" class="kinds__img">
             <div class="kinds__controls">
-                <button type="button" class="kinds__controls_front" data-num="1">
-                    <img src="img/features-and-specifications/bg_switch_device_tab_ov.gif" alt="tab">
+                <button type="button" data-num="1" class="kinds__controls_front">
+                    <img src="img/features-and-specifications/bg_switch_device_tab_ov.gif" alt="tab"
+                        class="kinds__controls_front_img">
                     정면
                 </button>
-                <button type="button" class="kinds__controls_back" data-num="2">
-                    <img src="img/features-and-specifications/bg_switch_device_tab.gif" alt="tab">
+                <button type="button" data-num="2" class="kinds__controls_back">
+                    <img src="img/features-and-specifications/bg_switch_device_tab.gif" alt="tab"
+                        class="kinds__controls_back_img">
                     뒷면
                 </button>
             </div>
-        </div>
+        </section>
         <!-- 카인즈 끝 -->
         <!-- 홈 시작 -->
-        <div class="home">
+        <section class="home">
             <h2 class="home__title">HOME 메뉴</h2>
-            <p class="home__sub_title">게임이나 각종 기능을 기동하는 Nintendo Switch의 중심이 되는 화면입니다. 친구나 어카운트의 관리를 비롯해 각종 설정도 변경할 수
+            <p class="home__sub">게임이나 각종 기능을 기동하는 Nintendo Switch의 중심이 되는 화면입니다. 친구나 어카운트의 관리를 비롯해 각종 설정도 변경할 수
                 있습니다.</p>
             <div class="home__contents">
-                <div class="home__img">
-                    <img src="img/features-and-specifications/img_switch_device_spec00.jpg" alt="Nintendo Switch">
-                    <p>게임에 관한 최신 정보 등을 Nintendo Switch 본체에 수신합니다.</p>
+                <div class="home__contents_box">
+                    <img src="img/features-and-specifications/img_switch_device_spec00.jpg" alt="Nintendo Switch"
+                        class="home__contents_img">
+                    <p class="home__contents_text">게임에 관한 최신 정보 등을 Nintendo Switch 본체에 수신합니다.</p>
                 </div>
-                <ul class="home__list">
-                    <li>
-                        <img src="img/features-and-specifications/ico_switch_device_func01.jpg" alt="news">
+                <ul class="home__contents_list">
+                    <li class="home__contents_list_box">
+                        <img src="img/features-and-specifications/ico_switch_device_func01.jpg" alt="news"
+                            class="home__contents_list_img">
                         뉴스
                     </li>
-                    <li>
-                        <img src="img/features-and-specifications/ico_switch_device_func02.jpg" alt="Nintendo eshop">
+                    <li class="home__contents_list_box">
+                        <img src="img/features-and-specifications/ico_switch_device_func02.jpg" alt="Nintendo eshop"
+                            class="home__contents_list_img">
                         닌텐도 e숍
                     </li>
-                    <li>
-                        <img src="img/features-and-specifications/ico_switch_device_func03.jpg" alt="album">
+                    <li class="home__contents_list_box">
+                        <img src="img/features-and-specifications/ico_switch_device_func03.jpg" alt="album"
+                            class="home__contents_list_img">
                         앨범
                     </li>
                 </ul>
             </div>
-        </div>
+        </section>
         <!-- 홈 끝 -->
     </main>
     <!-- 메인 끝 -->
