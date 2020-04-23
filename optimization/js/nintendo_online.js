@@ -2,8 +2,9 @@ $(function () {
     //start
 
     var priceBln = true,
-        priceCount = $(".price__content").length,
-        priceAfterCount = priceCount + $(".price__content").length / 2,
+        $priceList = $(".price__list_box"),
+        priceCount = $(".price__list_box").length,
+        priceAfterCount = priceCount + (priceCount / 2),
         tabBln = true;
 
 
@@ -14,12 +15,12 @@ $(function () {
     $("header").mouseleave(headerAdd);
     $(window).scroll(scrollHeader);
 
-    $(".price__content").clone().appendTo(".price__list"); //슬라이드 리스트 추가
-    $(".price__content").mouseenter(priceEnter); //슬라이드 컨텐츠 엔터
-    $(".price__content").mouseleave(priceLeave); //슬라이드 컨텐츠 리브                
-    $(".price__arrow").click(priceSlide); //슬라이드 클릭
+    $priceList.clone().appendTo(".price__list"); //슬라이드 리스트 추가
+    $priceList.mouseenter(priceEnter); //슬라이드 컨텐츠 엔터
+    $priceList.mouseleave(priceLeave); //슬라이드 컨텐츠 리브                
+    $(".price__ind").click(priceSlide); //슬라이드 클릭
 
-    $(".question__q_box").click(tabBox); //질문 탭
+    $(".question__list_q").click(tabBox); //질문 탭
 
 
 
@@ -54,7 +55,7 @@ $(function () {
             if ($answer.hasClass("active")) {
                 $answer.removeClass("active");
             } else {
-                $(".question__a_box").removeClass("active");
+                $(".question__list_a").removeClass("active");
                 $answer.addClass("active");
             }
             setTimeout(function () {
@@ -64,14 +65,14 @@ $(function () {
     }
 
     function priceEnter() {
-        $(".price__content").addClass("active");
+        $priceList.addClass("active");
         $(this).removeClass("active");
 
         clearInterval(autoSlideInter);
     }
 
     function priceLeave() {
-        $(".price__content").removeClass("active");
+        $priceList.removeClass("active");
 
         autoSlide();
     }
@@ -80,8 +81,8 @@ $(function () {
         if (priceBln) {
             priceBln = false;
 
-            var hasClass = $(e.target).hasClass("price__left_arrow"),
-                parentHasClass = $(e.target).parent().hasClass("price__left_arrow");
+            var hasClass = $(e.target).hasClass("price__ind_prev"),
+                parentHasClass = $(e.target).parent().hasClass("price__ind_prev");
 
             if (hasClass || parentHasClass) { //왼쪽 버튼
                 priceCount--;
@@ -101,7 +102,7 @@ $(function () {
                 }
 
                 function slideReset(num) {
-                    priceCount = $(".price__content").length / num;
+                    priceCount = $(".price__list_box").length / num;
 
                     setTimeout(function () {
                         slideEffect("0s");
@@ -117,7 +118,7 @@ $(function () {
     var autoSlideInter;
     var autoSlide = function () {
         autoSlideInter = setInterval(function () {
-            $(".price__arrow").trigger("click");
+            $(".price__ind").trigger("click");
         }, 3000)
     }
     autoSlide();
