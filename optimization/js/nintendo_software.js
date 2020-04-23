@@ -33,71 +33,30 @@ $(function () {
             }
 
             function visual(e) {
-                $(".visual").addClass("active");
-                $(this).removeClass("active");
+                addActive($(".visual"));
+                removeActive($(this));
 
-                $(this).find(".visual__contents").addClass("active");
+                addActive($(this).find(".visual__contents"));
 
-                if ($(e.target).hasClass("visual__contents_home_btn")) { //홈으로 버튼
-                    $(".visual").removeClass("active");
-                    $(this).find(".visual__contents").removeClass("active");
+                if ($(e.target).hasClass("visual__contents_home")) { //홈으로 버튼
+                    removeActive($(".visual"));
+                    removeActive($(this).find(".visual__contents"));
                 }
 
-                if ($(e.target).hasClass("animal_first_btn")) {//동물의 숲 첫번째 상세 메뉴 버튼
-                    $(".visual__life").addClass("active");
-                    $(".visual__contents").addClass("hide");
-                    $(".visual__life_movie").removeClass("active");
-                    $(".visual__life_content").addClass("active");
-                }
 
-                if ($(e.target).hasClass("animal_second_btn")) {//동물의 숲 두번째 상세 메뉴 버튼
-                    $(".visual__life").addClass("active");
-                    $(".visual__contents").addClass("hide");
-                    $(".visual__life_content").removeClass("active");
-                    $(".visual__life_movie").addClass("active");
-                }
+                firstMenu("life");
+                secondMenu("life");
 
-                if ($(e.target).hasClass("ring_first_btn")) {//링피트 첫번째 상세 메뉴 버튼
-                    $(".visual__ring").addClass("active");
-                    $(".visual__contents").addClass("hide");
-                    $(".visual__ring_movie").removeClass("active");
-                    $(".visual__ring_content").addClass("active");
-                }
+                firstMenu("ring");
+                secondMenu("ring");
 
-                if ($(e.target).hasClass("ring_second_btn")) {//링피트 두번째 상세 메뉴 버튼
-                    $(".visual__ring").addClass("active");
-                    $(".visual__contents").addClass("hide");
-                    $(".visual__ring_content").removeClass("active");
-                    $(".visual__ring_movie").addClass("active");
-                }
+                firstMenu("cart");
+                secondMenu("cart");
 
-                if ($(e.target).hasClass("cart_first_btn")) {//마리오카트 첫번째 상세 메뉴 버튼
-                    $(".visual__cart").addClass("active");
-                    $(".visual__contents").addClass("hide");
-                    $(".visual__cart_movie").removeClass("active");
-                    $(".visual__cart_content").addClass("active");
-                }
+                firstMenu("super");
+                secondMenu("super");
 
-                if ($(e.target).hasClass("cart_second_btn")) {//마리오카트 두번째 상세 메뉴 버튼
-                    $(".visual__cart").addClass("active");
-                    $(".visual__contents").addClass("hide");
-                    $(".visual__cart_content").removeClass("active");
-                    $(".visual__cart_movie").addClass("active");
-                }
 
-                if ($(e.target).hasClass("super_first_btn")) {//슈퍼스매시 첫번째 상세 메뉴 버튼
-                    $(".visual__super").addClass("active");
-                    $(".visual__contents").addClass("hide");
-                    $(".visual__super_movie").removeClass("active");
-                    $(".visual__super_content").addClass("active");
-                }
-
-                if ($(e.target).hasClass("super_second_btn")) {//슈퍼스매시 두번째 상세 메뉴 버튼
-                    $(".visual__super").addClass("active");
-                    $(".visual__contents").addClass("hide");
-                    $(".visual__super_content").removeClass("active");
-                    $(".visual__super_movie").addClass("active");
-                }
 
                 if ($(e.target).hasClass("visual__life_top_img")) {//동물의 숲 상단 이미지
                     $(".visual__life_top_main").attr("src", $(e.target).attr("src"));
@@ -138,6 +97,24 @@ $(function () {
                     $(".visual__cart_detail_text").html(`${cartData[cartIndex].sub}`);
                     $(".visual__cart_detail_img").attr("src", cartData[cartIndex].img);
                     $(".visual__cart_detail").addClass("active");
+                }
+
+                function firstMenu(targets) {
+                    if ($(e.target).hasClass(`${targets}_first`)) {
+                        addActive($(`.${targets}`));
+                        $(".visual__contents").addClass("hide");
+                        removeActive($(`.${targets}__introduce`));
+                        addActive($(`.${targets}__contents`));
+                    }
+                }
+
+                function secondMenu(targets) {
+                    if ($(e.target).hasClass(`${targets}_first`)) {
+                        addActive($(`.${targets}`));
+                        $(".visual__contents").addClass("hide");
+                        addActive($(`.${targets}__introduce`));
+                        removeActive($(`.${targets}__contents`));
+                    }
                 }
             }
 
