@@ -5,3 +5,7 @@ function addActive(target) {
 function removeActive(target) {
     target.removeClass("active");
 }
+
+function toggleActive(target) {
+    target.toggleClass("active");
+}

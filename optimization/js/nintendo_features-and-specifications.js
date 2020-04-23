@@ -37,8 +37,8 @@ $(function () {
         $kindsBar.width($(this).width() + 80);
         $kindsBar.offset({ left: $(this).offset().left })
 
-        $kindsFront.find("img").attr({ src: "img/features_and_specifications/bg_switch_device_tab_ov.gif" });
-        $kindsBack.find("img").attr({ src: "img/features_and_specifications/bg_switch_device_tab.gif" });
+        $kindsFront.find("img").attr({ src: "img/features-and-specifications/bg_switch_device_tab_ov.gif" });
+        $kindsBack.find("img").attr({ src: "img/features-and-specifications/bg_switch_device_tab.gif" });
 
         $select = $(this).data("selector");
         $selectNum = 01;
@@ -49,15 +49,15 @@ $(function () {
     function kindsControl(e) {
         $target = $(e.target);
 
-        $(this).find("img").attr({ src: "img/features_and_specifications/bg_switch_device_tab_ov.gif" });
-        $(this).siblings().find("img").attr({ src: "img/features_and_specifications/bg_switch_device_tab.gif" });
+        $(this).find("img").attr({ src: "img/features-and-specifications/bg_switch_device_tab_ov.gif" });
+        $(this).siblings().find("img").attr({ src: "img/features-and-specifications/bg_switch_device_tab.gif" });
 
         $selectNum = $(this).data("num");
         changeImg();
     }
 
     function changeImg() {
-        $kindsImg.attr({ src: `img/features_and_specifications/img_switch_device_spec_detail${$select}_${$selectNum}.jpg` });
+        $kindsImg.attr({ src: `img/features-and-specifications/img_switch_device_spec_detail${$select}_${$selectNum}.jpg` });
     }
     changeImg();
 
