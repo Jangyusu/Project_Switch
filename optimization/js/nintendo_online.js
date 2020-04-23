@@ -53,10 +53,10 @@ $(function () {
             var $answer = $(this).next();
 
             if ($answer.hasClass("active")) {
-                $answer.removeClass("active");
+                removeActive($answer);
             } else {
-                $(".question__list_a").removeClass("active");
-                $answer.addClass("active");
+                removeActive($(".question__list_a"));
+                addActive($answer);
             }
             setTimeout(function () {
                 tabBln = true;
@@ -65,14 +65,14 @@ $(function () {
     }
 
     function priceEnter() {
-        $priceList.addClass("active");
-        $(this).removeClass("active");
+        addActive($priceList);
+        removeActive($(this));
 
         clearInterval(autoSlideInter);
     }
 
     function priceLeave() {
-        $priceList.removeClass("active");
+        removeActive($priceList);
 
         autoSlide();
     }

@@ -35,9 +35,9 @@ $(function () {
                 }
 
                 if ($(this).scrollTop() >= indicatorTop) {
-                    $(".visual__indicator").addClass("active");
+                    addActive($(".visual__indicator"));
                 } else {
-                    $(".visual__indicator").removeClass("active");
+                    removeActive($(".visual__indicator"));
                 }
             }
 
@@ -56,9 +56,9 @@ $(function () {
 
             function searchSelect() {
                 if ($(this).hasClass("active")) {
-                    $(this).removeClass("active");
+                    removeActive($(this));
                 } else {
-                    $(this).addClass("active");
+                    addActive($(this));
                 }
             }
 

@@ -10,24 +10,33 @@
     <link rel="icon" href="img/favicon.png" type="image/png" />
     <script src="https://kit.fontawesome.com/60a06f6dc3.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/util.js"></script>
     <script src="js/common.js"></script>
     <script src="js/nintendo_news.js"></script>
 </head>
 
 <body>
+    <!-- 헤더 시작 -->
     <header class="header"></header>
-
+    <!-- 헤더 끝 -->
+    <!-- 메인 시작 -->
     <main>
+        <!-- 비주얼 시작 -->
         <section class="visual">
             <h1 class="visual__title">닌텐도가 전하는 새로운 소식입니다</h1>
             <div class="visual__indicator">
                 <a href="nintendo_news.html" class="visual__indicator_news">닌텐도 뉴스</a>
             </div>
         </section>
+        <!-- 비주얼 끝 -->
+        <!-- 컨텐츠 시작 -->
         <section class="contents">
             <h2 class="contents__title">닌텐도 뉴스</h2>
         </section>
-        <div class="search">
+        <!-- 컨텐츠 끝 -->
+        <!-- 검색 시작 -->
+        <section class="search">
+            <h2 class="search__title">검색</h2>
             <span class="search__amount">총 <span class="search__amount_number"></span>건</span>
             <div class="search__box">
                 <button type="button" class="search__select">
@@ -44,15 +53,23 @@
                 </div>
                 <input type="reset" value="초기화" class="search__reset">
             </div>
-        </div>
-        <div class="list"></div>
+        </section>
+        <!-- 검색 끝 -->
+        <!-- 리스트 시작 -->
+        <section class="list">
+            <h2 class="list__title">검색</h2>
+        </section>
+        <!-- 리스트 끝 -->
         <button type="button" class="view">더보기 (<span class="view__amount">1</span>/<span
                 class="view__max"></span>)</button>
     </main>
-
+    <!-- 메인 끝 -->
+    <!-- 어사이드 시작 -->
     <aside></aside>
-
+    <!-- 어사이드 끝 -->
+    <!-- 푸터 시작 -->
     <footer></footer>
+    <!-- 푸터 끝 -->
 </body>
 
 </html>
