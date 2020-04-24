@@ -515,15 +515,55 @@ $mob-s-width : 375px;
             transform: translateY(50%);
         }
         &__img::before {
-            padding-top: 800px;
+            padding-top: 600px;
         }
         &__text {
             display: none;
         }
     }
+
+    .how-to-play {
+        &__list {
+            padding: 50px 0% 50px;
+        }
+    }
+
+    .about-switch {
+        padding: 100px 0 0 0;
+
+        &__list {
+            width: 100%;
+        }
+    }
+
+    .joy-con {
+        &__box {
+            &_title {
+                font-size: 3.5rem;
+            }
+            &_sub {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .software {
+        &__text {
+            &_sub {
+                line-height: 2rem;
+            }
+        }
+    }
+
+    .news {
+        &__list {
+            &_title {
+                font-size: 1.125rem;
+            }
+        }
+    }
 }
 @include tab-small {
-
 }
 @include mob-large {
 

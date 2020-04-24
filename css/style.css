@@ -354,8 +354,27 @@ main {
       height: 80px;
       transform: translateY(50%); }
     .visual__img::before {
-      padding-top: 800px; }
+      padding-top: 600px; }
     .visual__text {
-      display: none; } }
+      display: none; }
+
+  .how-to-play__list {
+    padding: 50px 0% 50px; }
+
+  .about-switch {
+    padding: 100px 0 0 0; }
+    .about-switch__list {
+      width: 100%; }
+
+  .joy-con__box_title {
+    font-size: 3.5rem; }
+  .joy-con__box_sub {
+    font-size: 1rem; }
+
+  .software__text_sub {
+    line-height: 2rem; }
+
+  .news__list_title {
+    font-size: 1.125rem; } }
 
 /*# sourceMappingURL=style.css.map */
