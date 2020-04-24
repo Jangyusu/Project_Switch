@@ -342,12 +342,21 @@ footer {
     opacity: 1; }
 
 @media screen and (max-width: 1024px) {
-  .header__nav.active .header__nav_list_link {
-    padding-right: 4vw;
-    font-size: 1.5rem; }
+  .header__nav.active .header__nav_list_box {
+    height: max-content;
+    margin-right: 2vw;
+    padding: 0;
+    margin: 230px 0 0 0;
+    border-bottom: 2px solid #000; }
+    .header__nav.active .header__nav_list_box:first-of-type {
+      margin: 30px 0 0 0; }
+    .header__nav.active .header__nav_list_box:last-of-type {
+      padding: 0; }
   .header__nav_list {
     display: none; }
     .header__nav_list.flex {
-      display: flex; } }
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; } }
 
 /*# sourceMappingURL=common.css.map */
