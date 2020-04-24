@@ -1,7 +1,8 @@
 @import url(common.css);
 main {
   width: 100%;
-  padding-top: 96px; }
+  padding-top: 96px;
+  overflow: hidden; }
 
 .visual {
   width: 100%;
@@ -333,5 +334,17 @@ main {
   100% {
     left: 100%;
     transform: rotateY(180deg) translate(0); } }
+@media screen and (max-width: 1024px) {
+  .visual {
+    padding-left: 0;
+    height: 80px; }
+    .visual__controls {
+      width: 290px;
+      height: 80px;
+      transform: translateY(50%); }
+    .visual__img::before {
+      padding-top: 800px; }
+    .visual__text {
+      display: none; } }
 
 /*# sourceMappingURL=style.css.map */

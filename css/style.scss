@@ -7,6 +7,7 @@
 main {
     width: 100%;
     padding-top: 96px;
+    overflow: hidden;
 }
 
 .visual {
@@ -427,3 +428,89 @@ main {
         transform: rotateY(180deg) translate(0);
     }
 }
+
+// 반응형 mixin --------------------------------------
+
+$desktop-m-width : 1440px;
+$tablet-l-width : 1024px;
+$tablet-s-width : 768px;
+$mob-l-width : 640px;
+$mob-m-width : 425px;
+$mob-s-width : 375px;
+ 
+// -------------------------------------------------- 
+
+// PC large
+@mixin pc-mid {
+	@media screen and (max-width: #{$desktop-m-width}) {
+		@content;
+	}
+}
+// 태블릿 large
+@mixin tab-large {
+	@media screen and (max-width: #{$tablet-l-width}) {
+		@content;
+	}
+}
+// 태블릿 small
+@mixin tab-small {
+	@media screen and (max-width: #{$tablet-s-width}) {
+		@content;
+	}
+}
+// 모바일 large
+@mixin mob-large {
+	@media screen and (max-width: #{$mob-l-width}) {
+		@content;
+	}
+}
+// 모바일 mid
+@mixin mob-mid {
+	@media screen and (max-width: #{$mob-m-width}) {
+		@content;
+	}
+}
+// 모바일 small
+@mixin mob-small {
+	@media screen and (max-width: #{$mob-s-width}) {
+		@content;
+	}
+}
+
+// --------------------------------------------------
+
+@include pc-mid {
+     
+}
+@include tab-large {
+    .visual {
+        padding-left: 0;
+        height: 80px;
+
+        &__controls {
+            width: 290px;
+            height: 80px;
+            transform: translateY(50%);
+        }
+        &__img::before {
+            padding-top: 800px;
+        }
+        &__text {
+            display: none;
+        }
+    }
+}
+@include tab-small {
+
+}
+@include mob-large {
+
+}
+@include mob-mid {
+
+}
+@include mob-small {
+     
+}
+
+// -------------------------------------------------- 
