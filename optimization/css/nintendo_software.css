@@ -1,4 +1,14 @@
 @import url(common.css);
+.life, .ring, .cart, .super {
+  width: 100%;
+  height: 0;
+  padding: 0 50px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: 0.7s cubic-bezier(0.76, 0, 0.24, 1);
+  overflow: hidden; }
+
 body {
   background: none; }
 
@@ -95,14 +105,7 @@ main {
     background-image: url("../img/software/visual03.jpg"); }
 
 .life {
-  width: 100%;
-  height: 0;
-  padding: 0 50px;
-  background: url("../img/software/00/content_bg00_pc.jpg");
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transition: 0.7s cubic-bezier(0.76, 0, 0.24, 1); }
+  background: url("../img/software/00/content_bg00_pc.jpg"); }
   .life.active {
     height: 100%;
     padding: 100px 50px; }
@@ -198,15 +201,7 @@ main {
       height: 800px; }
 
 .ring {
-  width: 100%;
-  height: 0;
-  padding: 0 50px;
-  background: url("../img/software/01/visual.jpg") no-repeat center/cover;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transition: 0.7s cubic-bezier(0.76, 0, 0.24, 1);
-  overflow: hidden; }
+  background: url("../img/software/01/visual.jpg"); }
   .ring.active {
     height: 100%;
     padding: 100px 50px; }
@@ -304,7 +299,7 @@ main {
     transform: translate(-50%, -45%);
     visibility: hidden;
     opacity: 0;
-    transition: .2s; }
+    transition: .5s; }
     .ring__introduce.active {
       visibility: visible;
       opacity: 1; }
@@ -318,15 +313,7 @@ main {
       height: 800px; }
 
 .cart {
-  width: 100%;
-  height: 0;
-  padding: 0 50px;
-  background: url("../img/software/02/bg_page-illust.jpg") no-repeat center/cover;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transition: 0.7s cubic-bezier(0.76, 0, 0.24, 1);
-  overflow: hidden; }
+  background: url("../img/software/02/bg_page-illust.jpg"); }
   .cart.active {
     height: 100%;
     padding: 100px 50px; }
@@ -433,7 +420,7 @@ main {
     transform: translate(-50%, -45%);
     visibility: hidden;
     opacity: 0;
-    transition: .2s; }
+    transition: .5s; }
     .cart__introduce.active {
       visibility: visible;
       opacity: 1; }
@@ -447,16 +434,10 @@ main {
       height: 800px; }
 
 .super {
-  width: 100%;
-  height: 0;
-  background: url("../img/software/03/bg.jpg") no-repeat center/cover;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transition: 0.7s cubic-bezier(0.76, 0, 0.24, 1);
-  overflow: hidden; }
+  background: url("../img/software/03/bg.jpg"); }
   .super.active {
-    height: 100%; }
+    height: 100%;
+    padding: 100px 50px; }
   .super__prev {
     border-radius: 50px;
     padding: 10px;
@@ -556,7 +537,7 @@ main {
     transform: translate(-50%, -45%);
     visibility: hidden;
     opacity: 0;
-    transition: .2s; }
+    transition: .5s; }
     .super__introduce.active {
       visibility: visible;
       opacity: 1; }

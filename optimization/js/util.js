@@ -9,3 +9,11 @@ function removeActive(target) {
 function toggleActive(target) {
     target.toggleClass("active");
 }
+
+function addHide(target) {
+    target.addClass("hide");
+}
+
+function removeHide(target) {
+    target.removeClass("hide");
+}

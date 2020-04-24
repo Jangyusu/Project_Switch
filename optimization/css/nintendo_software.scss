@@ -1,7 +1,63 @@
 @import "common.css";
 
+%visual { //비주얼
+    width: 100%;
+    height: 0;
+    padding: 0 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: .7s cubic-bezier(0.76, 0, 0.24, 1);
+    overflow: hidden;
+}
 
+@mixin backBtn { //뒤로가기 버튼
+    &.active {
+        height: 100%;
+        padding: 100px 50px;
+    }
+    &__prev {
+        border-radius: 50px;
+        padding: 10px;
+        background: #fff;
+        position: absolute;
+        left: 50px;
+        top: 100px;
 
+        &_img {
+            width: 30px;
+        }
+    }    
+}
+
+@mixin introduce { // 소개 영상
+    &__introduce {
+        width: 70%;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-45%);
+        visibility: hidden;
+        opacity: 0;
+        transition: .5s;
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        &_title {
+            margin-bottom: 20px;
+            font-size: 3.125rem;
+            font-weight: 800;
+            color: #fff;
+        }
+        &_video {
+            width: 100%;
+            height: 800px;
+        }
+    }
+}
 
 
 body {
@@ -120,31 +176,11 @@ main {
 }
 
 .life {
-    width: 100%;
-    height: 0;
-    padding: 0 50px;
     background: url("../img/software/00/content_bg00_pc.jpg");
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    transition: .7s cubic-bezier(0.76, 0, 0.24, 1);
+    @extend %visual;
 
-    &.active {
-        height: 100%;    
-        padding: 100px 50px;
-    }
-    &__prev {
-        border-radius: 50px;
-        padding: 10px;
-        background: #fff;
-        position: absolute;
-        left: 50px;
-        top: 100px;
+    @include backBtn;
 
-        &_img {
-            width: 30px;
-        }
-    }
     &__contents {
         width: 70%;
         margin: 0 auto;
@@ -236,61 +272,16 @@ main {
             }
         }
     }
-    &__introduce {
-        width: 70%;
-        text-align: center;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-45%);
-        visibility: hidden;
-        opacity: 0;
-        transition: .5s;
 
-        &.active {
-            visibility: visible;
-            opacity: 1;
-        }
-        &_title {
-            margin-bottom: 20px;
-            font-size: 3.125rem;
-            font-weight: 800;
-            color: #fff;
-        }
-        &_video {
-            width: 100%;
-            height: 800px;
-        }
-    }
+    @include introduce;
 }
 
 .ring {
-    width: 100%;
-    height: 0;
-    padding: 0 50px;
-    background: url("../img/software/01/visual.jpg") no-repeat center / cover;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    transition: .7s cubic-bezier(0.76, 0, 0.24, 1);
-    overflow: hidden;
+    background: url("../img/software/01/visual.jpg");
+    @extend %visual;
 
-    &.active {
-        height: 100%;    
-        padding: 100px 50px;
-    }
-    &__prev {
-        border-radius: 50px;
-        padding: 10px;
-        background: #fff;
-        position: absolute;
-        left: 50px;
-        top: 100px;
+    @include backBtn;
 
-        &_img {
-            width: 30px;
-        }
-    }
     &__contents {
         width: 70%;
         margin: 0 auto;
@@ -381,61 +372,16 @@ main {
             }
         }
     }
-    &__introduce {
-        width: 70%;
-        text-align: center;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-45%);
-        visibility: hidden;
-        opacity: 0;
-        transition: .2s;
 
-        &.active {
-            visibility: visible;
-            opacity: 1;
-        }
-        &_title {
-            margin-bottom: 20px;
-            font-size: 3.125rem;
-            font-weight: 800;
-            color: #fff;
-        }
-        &_video {
-            width: 100%;
-            height: 800px;
-        }
-    }
+    @include introduce;
 }
 
 .cart {
-    width: 100%;
-    height: 0;
-    padding: 0 50px;
-    background: url("../img/software/02/bg_page-illust.jpg") no-repeat center / cover;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    transition: .7s cubic-bezier(0.76, 0, 0.24, 1);
-    overflow: hidden;
+    background: url("../img/software/02/bg_page-illust.jpg");
+    @extend %visual;
 
-    &.active {
-        height: 100%;    
-        padding: 100px 50px;
-    }
-    &__prev {
-        border-radius: 50px;
-        padding: 10px;
-        background: #fff;
-        position: absolute;
-        left: 50px;
-        top: 100px;
+    @include backBtn;
 
-        &_img {
-            width: 30px;
-        }
-    }
     &__contents {
         width: 70%;
         margin: 0 auto;
@@ -544,59 +490,16 @@ main {
             &_img {}
         }
     }
-    &__introduce {
-        width: 70%;
-        text-align: center;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-45%);
-        visibility: hidden;
-        opacity: 0;
-        transition: .2s;
 
-        &.active {
-            visibility: visible;
-            opacity: 1;
-        }
-        &_title {
-            margin-bottom: 20px;
-            font-size: 3.125rem;
-            font-weight: 800;
-            color: #fff;
-        }
-        &_video {
-            width: 100%;
-            height: 800px;
-        }
-    }
+    @include introduce;
 }
 
 .super {
-    width: 100%;
-    height: 0;
-    background: url("../img/software/03/bg.jpg") no-repeat center / cover;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    transition: .7s cubic-bezier(0.76, 0, 0.24, 1);
-    overflow: hidden;
+    background: url("../img/software/03/bg.jpg");
+    @extend %visual;
+    
+    @include backBtn;
 
-    &.active {
-        height: 100%;
-    }
-    &__prev {
-        border-radius: 50px;
-        padding: 10px;
-        background: #fff;
-        position: absolute;
-        left: 50px;
-        top: 100px;
-
-        &_img {
-            width: 30px;
-        }
-    }
     &__contents {
         width: 100%;
         margin: 0 auto;
@@ -701,30 +604,6 @@ main {
             }            
         }
     }
-    &__introduce {
-        width: 70%;
-        text-align: center;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-45%);
-        visibility: hidden;
-        opacity: 0;
-        transition: .2s;
 
-        &.active {
-            visibility: visible;
-            opacity: 1;
-        }
-        &_title {
-            margin-bottom: 20px;
-            font-size: 3.125rem;
-            font-weight: 800;
-            color: #fff;
-        }
-        &_video {
-            width: 100%;
-            height: 800px;
-        }
-    }
+    @include introduce;
 }

@@ -10,10 +10,7 @@ $(function () {
 
             $("header").mouseenter(headerRemove);
             $("header").mouseleave(headerAdd);
-
-            $(".visual").click(visual); //클릭 이벤트
-
-
+            $(".visual").click(visual); //화면 클릭 이벤트
 
 
 
@@ -43,54 +40,35 @@ $(function () {
                     removeActive($(this).find(".visual__contents"));
                 }
 
+                firstMenu("life"); //동물의숲 첫번째 메뉴
+                secondMenu("life"); //동물의숲 두번째 메뉴                
+                backBtn("life"); //동물의숲 뒤로가기 버튼
 
-                firstMenu("life");
-                secondMenu("life");
+                firstMenu("ring"); //링피트 첫번째 메뉴
+                secondMenu("ring"); //링피트 두번째 메뉴
+                backBtn("ring"); //링피트 뒤로가기 버튼
 
-                firstMenu("ring");
-                secondMenu("ring");
+                firstMenu("cart"); //마리오카트 첫번째 메뉴
+                secondMenu("cart"); //마리오카트 두번째 메뉴
+                backBtn("cart"); //마리오카트 뒤로가기 버튼
 
-                firstMenu("cart");
-                secondMenu("cart");
+                firstMenu("super"); //수퍼스매시 첫번째 메뉴
+                secondMenu("super"); //수퍼스매시 두번째 메뉴
+                backBtn("super"); //수퍼스매시 뒤로가기 버튼
 
-                firstMenu("super");
-                secondMenu("super");
+                imgChange("top"); //동물의숲 상단 이미지 변경
+                imgChange("bottom"); //동물의숲 하단 이미지 변경
 
 
 
-                if ($(e.target).hasClass("visual__life_top_img")) {//동물의 숲 상단 이미지
-                    $(".visual__life_top_main").attr("src", $(e.target).attr("src"));
-                }
 
-                if ($(e.target).hasClass("visual__life_bottom_img")) {//동물의 숲 하단 이미지
-                    $(".visual__life_bottom_main").attr("src", $(e.target).attr("src"));
-                }
 
-                if ($(e.target).hasClass("visual__life_back_btn") || $(e.target).hasClass("visual__life_back_btn_img")) {// 동물의 숲 뒤로가기 버튼
-                    $(".visual__content").removeClass("active");
-                    $(".visual__contents").removeClass("hide");
-                }
 
-                if ($(e.target).hasClass("visual__ring_back_btn") || $(e.target).hasClass("visual__ring_back_btn_img")) {//링피트 뒤로가기 버튼
-                    $(".visual__content").removeClass("active");
-                    $(".visual__contents").removeClass("hide");
-                }
-
-                if ($(e.target).hasClass("visual__cart_back_btn") || $(e.target).hasClass("visual__cart_back_btn_img")) {//마리오카트 뒤로가기 버튼
-                    $(".visual__content").removeClass("active");
-                    $(".visual__contents").removeClass("hide");
-                }
-
-                if ($(e.target).hasClass("visual__super_back_btn") || $(e.target).hasClass("visual__super_back_btn_img")) {//마리오카트 뒤로가기 버튼
-                    $(".visual__content").removeClass("active");
-                    $(".visual__contents").removeClass("hide");
-                }
-
-                if ($(e.target).hasClass("visual__cart_detail_close") || $(e.target).hasClass("visual__cart_detail_close_img")) {
+                if ($(e.target).hasClass("visual__cart_detail_close") || $(e.target).hasClass("visual__cart_detail_close_img")) { //마리오카트 상세보기 on/off
                     $(".visual__cart_detail").removeClass("active");
                 }
 
-                if ($(e.target).hasClass("visual__cart_menu_box")) {
+                if ($(e.target).hasClass("visual__cart_menu_box")) { //마리오카트 상세보기 변경
                     var cartIndex = $(e.target).index();
 
                     $(".visual__cart_detail_title").html(`${cartData[cartIndex].name}`);
@@ -99,7 +77,7 @@ $(function () {
                     $(".visual__cart_detail").addClass("active");
                 }
 
-                function firstMenu(targets) {
+                function firstMenu(targets) { //컨텐츠 첫번째 메뉴
                     if ($(e.target).hasClass(`${targets}_first`)) {
                         addActive($(`.${targets}`));
                         $(".visual__contents").addClass("hide");
@@ -108,20 +86,32 @@ $(function () {
                     }
                 }
 
-                function secondMenu(targets) {
-                    if ($(e.target).hasClass(`${targets}_first`)) {
+                function secondMenu(targets) { //컨텐츠 두번째 메뉴
+                    if ($(e.target).hasClass(`${targets}_second`)) {
                         addActive($(`.${targets}`));
                         $(".visual__contents").addClass("hide");
                         addActive($(`.${targets}__introduce`));
                         removeActive($(`.${targets}__contents`));
                     }
                 }
+
+                function imgChange(position) { //동물의 숲 이미지 변경
+                    if ($(e.target).hasClass(`life__contents_${position}_sub_img`)) {
+                        $(`.life__contents_${position}_main_img`).attr("src", $(e.target).attr("src"));
+                    }
+                }
+
+                function backBtn(targets) { //컨텐츠 뒤로가기 버튼
+                    if ($(e.target).hasClass(`${targets}__prev`) || $(e.target).hasClass(`${targets}__prev_img`)) {// 동물의숲 뒤로가기 버튼
+                        removeActive($(".visual__content"));
+                        removeHide($(".visual__contents"));
+                    }
+                }
             }
 
-            $('.visual__super_menu').eq(0).clone().appendTo('.visual__super_menus'); //슬라이드 리스트 추가
-
+            $('.super__contents_list_box').eq(0).clone().appendTo('.super__contents_list'); //수퍼스매시 첫번째 슬라이드 리스트 추가
             var superIndex = 1, t = 1;
-            function superSlide() {
+            function superSlide() { //수퍼스매시 자동 슬라이드
                 setTimeout(function () {
                     superSlideCss(".5s");
                     t = 1;
@@ -134,15 +124,15 @@ $(function () {
                     superIndex++;
                     superSlide();
                 }, t * 5000);
+
+                function superSlideCss(time) {
+                    $(".super__contents_list_box").css({
+                        transform: `translate(-${superIndex * 100}%)`,
+                        transition: time
+                    })
+                }
             }
             superSlide();
-
-            function superSlideCss(time) {
-                $(".visual__super_menu").css({
-                    transform: `translate(-${superIndex * 100}%)`,
-                    transition: time
-                })
-            }
 
             //End
         }
