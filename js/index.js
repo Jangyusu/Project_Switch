@@ -303,7 +303,7 @@ $(function () {
                         `<img src="img/visual0${i}.jpg" alt="#">
                             <img src="img/ABOUT_SWITCH0${i}.jpg" alt="#">`
                 };
-                $("body").append(loadingImg);
+                $(".loading").append(loadingImg);
             }
             loading();
 
