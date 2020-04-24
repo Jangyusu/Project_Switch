@@ -169,7 +169,7 @@ main {
     }
     @for $i from 0 to 4 {
         &:nth-of-type(#{$i + 1}) &__contents {
-            background-image: url("../img/software/visual0#{$i}.jpg");
+            background-image: url("../img/visual0#{$i}.jpg");
         }
     }
     &__content {}

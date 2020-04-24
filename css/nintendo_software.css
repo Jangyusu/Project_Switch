@@ -96,13 +96,13 @@ main {
     .visual__contents.hide .visual__contents_btn {
       transform: translateY(100%); }
   .visual:nth-of-type(1) .visual__contents {
-    background-image: url("../img/software/visual00.jpg"); }
+    background-image: url("../img/visual00.jpg"); }
   .visual:nth-of-type(2) .visual__contents {
-    background-image: url("../img/software/visual01.jpg"); }
+    background-image: url("../img/visual01.jpg"); }
   .visual:nth-of-type(3) .visual__contents {
-    background-image: url("../img/software/visual02.jpg"); }
+    background-image: url("../img/visual02.jpg"); }
   .visual:nth-of-type(4) .visual__contents {
-    background-image: url("../img/software/visual03.jpg"); }
+    background-image: url("../img/visual03.jpg"); }
 
 .life {
   background: url("../img/software/00/content_bg00_pc.jpg"); }
