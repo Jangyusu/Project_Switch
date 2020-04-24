@@ -116,7 +116,10 @@ main {
         .home__contents_list_box:nth-of-type(3) {
           color: #1271ff;
           margin-bottom: 0; }
+        .home__contents_list_box:hover .home__contents_list_img {
+          transform: rotateY(180deg); }
       .home__contents_list_img {
-        margin-right: 20px; }
+        margin-right: 20px;
+        transition: .5s; }
 
 /*# sourceMappingURL=nintendo_features-and-specifications.css.map */
