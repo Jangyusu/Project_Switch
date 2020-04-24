@@ -480,12 +480,34 @@ $mob-s-width : 375px;
 // --------------------------------------------------
 
 @include pc-mid {
-     
+    .visual {
+        &__img::before {
+        padding-top: 760px;
+        }
+    }
+
+    .about-switch {
+        &__list {
+            &_box {
+            padding: 150px 0 0 30px;
+            }
+        }
+    }
+
+    .joy-con {
+        &__box {
+            padding: 100px 0 100px 10%;
+
+            &_img {
+                width: 450px;
+                bottom: -260px;
+            }
+        }
+    }
 }
 @include tab-large {
     .visual {
         padding-left: 0;
-        height: 80px;
 
         &__controls {
             width: 290px;

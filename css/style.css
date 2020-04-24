@@ -334,10 +334,21 @@ main {
   100% {
     left: 100%;
     transform: rotateY(180deg) translate(0); } }
+@media screen and (max-width: 1440px) {
+  .visual__img::before {
+    padding-top: 760px; }
+
+  .about-switch__list_box {
+    padding: 150px 0 0 30px; }
+
+  .joy-con__box {
+    padding: 100px 0 100px 10%; }
+    .joy-con__box_img {
+      width: 450px;
+      bottom: -260px; } }
 @media screen and (max-width: 1024px) {
   .visual {
-    padding-left: 0;
-    height: 80px; }
+    padding-left: 0; }
     .visual__controls {
       width: 290px;
       height: 80px;

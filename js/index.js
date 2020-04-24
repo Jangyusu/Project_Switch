@@ -171,8 +171,8 @@ $(function () {
             $(window).scroll(scrollEvent); //scroll 이벤트
             $visualTotal.text("0" + softwareData.length); //visual 총 갯수
             $visualControl.click(visualControl); //visual 컨트롤
-            $(".visual").mousedown(visualStart); //visual 마우스시작
-            $(".visual").mouseup(visualEnd); //visual 마우스끝
+            $(".visual").on("mousedown touchstart", visualStart); //visual 마우스, 터치시작
+            $(".visual").on("mouseup touchend", visualEnd); //visual 마우스, 터치끝
 
             $aboutSwitchList.hover(aboutSwitchenter, aboutSwitchleave) //aboutSwitch 마우스 엔터/리브
 
@@ -198,12 +198,13 @@ $(function () {
             }
 
             var visualStartX, visualEndX, visualSlideX;
-            function visualStart(e) {
-                visualStartX = e.originalEvent.screenX;
+            function visualStart(e) { //visual 마우스, 터치시작
+                visualStartX = e.originalEvent.screenX || e.originalEvent.changedTouches[0].screenX;
             }
 
-            function visualEnd(e) {
-                visualEndX = e.originalEvent.screenX;
+            function visualEnd(e) { //visual 마우스, 터치끝
+                visualEndX = e.originalEvent.screenX || e.originalEvent.changedTouches[0].screenX;
+
                 visualSlideX = visualStartX - visualEndX;
 
                 if (visualSlideX > 50) {
