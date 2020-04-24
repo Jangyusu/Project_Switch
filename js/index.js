@@ -176,13 +176,6 @@ $(function () {
             $(".visual").mouseup(visualEnd); //visual 마우스끝
 
             $aboutSwitchList.hover(aboutSwitchenter, aboutSwitchleave) //aboutSwitch 마우스 엔터/리브
-            $(".fun__img").mousedown(funStart); //fun 마우스시작
-            // $(".fun__img").mousemove(funmove); //fun 마우스시작
-            // $(".fun__img").mouseup(funEnd); //fun 마우스끝
-
-            function funStart() {
-                console.log($(this).offset().left);
-            }
 
 
 
