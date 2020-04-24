@@ -34,7 +34,6 @@ $(function () {
 
 
 
-            loading(); //로딩 이미지 추가
 
             $.each(softwareData, function () { //visual html 추가
                 title = this.ko.title,
@@ -43,13 +42,13 @@ $(function () {
 
                 visualAppend +=
                     `<figcaption class="visual__text">
-                            <small class="visual__text_sub">${device}</small>
-                            <strong class="visual__text_title">${title}</strong>
-                            <a href="nintendo_software.html" target="_blank" class="more">
-                                <span class="more__line"></span>
-                                <p class="more__text">더보기</p>
-                            </a>
-                        </figcaption>`
+                        <small class="visual__text_sub">${device}</small>
+                        <strong class="visual__text_title">${title}</strong>
+                        <a href="nintendo_software.html" target="_blank" class="more">
+                            <span class="more__line"></span>
+                            <p class="more__text">더보기</p>
+                        </a>
+                    </figcaption>`
             });
             $visual.append(visualAppend);
             addActive($visual.find(".visual__text").eq(0));
@@ -62,10 +61,10 @@ $(function () {
 
                 howToPlayAppend +=
                     `<li class="how-to-play__list_box">
-                            <img src="${img}" alt="${alt}" class="how-to-play__list_img">
-                            <p class="how-to-play__list_title">${mode}</p>
-                            <p class="how-to-play__list_sub">${manual}</p>
-                        </li>`
+                        <img src="${img}" alt="${alt}" class="how-to-play__list_img">
+                        <p class="how-to-play__list_title">${mode}</p>
+                        <p class="how-to-play__list_sub">${manual}</p>
+                    </li>`
             });
             $howToPlay.append(howToPlayAppend);
 
@@ -77,14 +76,14 @@ $(function () {
 
                 aboutSwitchAppend +=
                     `<li class="about-switch__list_box">
-                            <small class="about-switch__list_num">${number}</small>
-                            <strong class="about-switch__list_title">${subName}</strong>
-                            <p class="about-switch__list_sub">${name}</p>
-                            <a href="${link}" target="_blank" class="more-long">
-                                <span class="more-long__line"></span>
-                                <p class="more-long__text">더보기</p>
-                            </a>
-                        </li>`
+                        <small class="about-switch__list_num">${number}</small>
+                        <strong class="about-switch__list_title">${subName}</strong>
+                        <p class="about-switch__list_sub">${name}</p>
+                        <a href="${link}" target="_blank" class="more-long">
+                            <span class="more-long__line"></span>
+                            <p class="more-long__text">더보기</p>
+                        </a>
+                    </li>`
             });
             $aboutSwitch.append(aboutSwitchAppend);
             addActive($aboutSwitch.find(".about-switch__list_box").eq(0))
@@ -96,14 +95,14 @@ $(function () {
 
                 softwareAppend +=
                     `<figure class="software__list_box slide-up">
-                            <a href="nintendo_software.html" target="_blank" class="software__list_img">
-                                <img src="img/plus.png" alt="plus" class="plus">
-                            </a>
-                            <figcaption class="software__list_text">
-                                <small class="software__list_sub">${device} : ${genre}</small>
-                                <p class="software__list_title">${title}</p>
-                            </figcaption>
-                        </figure>`;
+                        <a href="nintendo_software.html" target="_blank" class="software__list_img">
+                            <img src="img/plus.png" alt="plus" class="plus">
+                        </a>
+                        <figcaption class="software__list_text">
+                            <small class="software__list_sub">${device} : ${genre}</small>
+                            <p class="software__list_title">${title}</p>
+                        </figcaption>
+                    </figure>`;
             });
             $software.append(softwareAppend);
             $softwareList = $(".software__list_box");
@@ -123,13 +122,13 @@ $(function () {
 
                 newsAppend +=
                     `<li class="news__list_box">
-                            <a href="nintendo_news.html" target="_blank" class="news__list_img">
-                                <img src="img/plus.png" alt="plus" class="plus">
-                            </a>
-                            <small class="news__list_sub">${kind}</small>
-                            <p class="news__list_title">${newsTitle}</p>
-                            <time class="news__list_date">${date}</time>
-                        </li>`;
+                        <a href="nintendo_news.html" target="_blank" class="news__list_img">
+                            <img src="img/plus.png" alt="plus" class="plus">
+                        </a>
+                        <small class="news__list_sub">${kind}</small>
+                        <p class="news__list_title">${newsTitle}</p>
+                        <time class="news__list_date">${date}</time>
+                    </li>`;
             });
             $news.append(newsAppend);
             $newsList = $(".news__list_box");
@@ -306,6 +305,7 @@ $(function () {
                 };
                 $("body").append(loadingImg);
             }
+            loading();
 
             //End
         }
