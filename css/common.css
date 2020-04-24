@@ -342,6 +342,8 @@ footer {
     opacity: 1; }
 
 @media screen and (max-width: 1024px) {
+  .header.active {
+    transform: translateY(0); }
   .header__nav.active .header__nav_list_box {
     margin-right: 2vw;
     padding: 0;

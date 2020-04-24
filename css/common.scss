@@ -515,6 +515,9 @@ $mob-s-width : 375px;
 }
 @include tab-large {
     .header {
+        &.active {
+            transform: translateY(0);
+        }
         &__nav {
             &.active &_list {
                 &_box {
