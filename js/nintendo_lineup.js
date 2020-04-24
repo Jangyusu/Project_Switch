@@ -8,12 +8,12 @@ $(function () {
                 //start
 
                 var lineupData = data.lineup,
-                    $lineupList = $(".contents__list"),
-                    $lineupSerch = $(".contents__header input"),
-                    $button = $(".more_button"),
-                    $contentsNumber = $(".contents__number"),
+                    $lineupList = $(".contents__year"),
+                    $lineupSerch = $(".contents__header_typing"),
+                    $button = $(".contents__more"),
+                    $contentsNumber = $(".contents__header_product_num"),
                     $sortButton = $(".contents__button"),
-                    $sortSeleced = $(".contents__selected"),
+                    $sortSeleced = $(".contents__button_main_text"),
                     lineupAppend = "",
                     lineupListAppend = "",
                     lineupNum = 2019,
@@ -37,24 +37,24 @@ $(function () {
                 function sortToggle(e) {
                     var $target = $(e.target);
 
-                    $(".contents__button").toggleClass("active");
+                    toggleActive($(".contents__button"));
 
-                    if ($target.hasClass("contents__button_list")) {
+                    if ($target.hasClass("contents__button_list_text")) {
                         $sortSeleced.text($target.text())
 
                         if ($target.text() == "최신순") {
-                            $lineupList.removeClass("active");
+                            removeActive($lineupList);
                         } else {
-                            $lineupList.addClass("active");
+                            addActive($lineupList);
                         }
                     };
                 }
 
                 function lineupSerch() {
                     var text = $(this).val();
-                    $(".content__list figure").hide();
+                    $(".contents__list_box").hide();
 
-                    var $result = $(".content__title:contains(" + text + ")");
+                    var $result = $(".contents__list_text_title:contains(" + text + ")");
                     $result.parent().parent().show();
                 }
 
@@ -66,10 +66,10 @@ $(function () {
                 function moreContents() { //년도별 더보기
                     if (lineupNum >= 2017) {
                         lineupListAppend =
-                            `<div class="content_${lineupNum} content">
-                            <h2>${lineupNum}</h2>
-                            <div class="content_${lineupNum}__list content__list"></div>
-                        </div>`
+                            `<div class="content_${lineupNum} contents__year_box">
+                                <h2 class="contents__year_title">${lineupNum}</h2>
+                                <div class="content_${lineupNum}__list contents__list"></div>
+                            </div>`
 
                         $lineupList.append(lineupListAppend);
 
@@ -92,16 +92,16 @@ $(function () {
                             img = this.ko.img;
 
                         lineupAppend +=
-                            `<figure>
-                                <img src="${img}" alt="Nintendo Switch">
-                                <figcaption>
-                                    <small class="content__sub_title">${sub}</small>
-                                    <p class="content__title">${title}</p>
-                                    <dl>
-                                        <dt>발매일</dt>
-                                        <dd class="content__date">${date}</dd>
-                                        <dt>희망소비자가격</dt>
-                                        <dd class="content__price">${price}</dd>
+                            `<figure class="contents__list_box">
+                                <img src="${img}" alt="Nintendo Switch" class="contents__list_img">
+                                <figcaption class="contents__list_text">
+                                    <small class="contents__list_text_sub">${sub}</small>
+                                    <p class="contents__list_text_title">${title}</p>
+                                    <dl class="contents__list_inf">
+                                        <dt class="contents__list_inf_title">발매일</dt>
+                                        <dd class="contents__list_inf_sub">${date}</dd>
+                                        <dt class="contents__list_inf_title">희망소비자가격</dt>
+                                        <dd class="contents__list_inf_sub">${price}</dd>
                                     </dl>
                                 </figcaption>
                             </figure>`

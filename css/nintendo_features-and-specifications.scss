@@ -1,0 +1,172 @@
+@import "common.css";
+
+
+
+
+
+main {
+    width: 100%;
+    padding: 96px 12% 80px;
+    background: #fff;
+}
+
+.title {
+    margin: 100px 0 30px 0;
+
+    &__main {
+        font-size: 4rem;
+        font-weight: 800;
+        line-height: 1.4;
+    }
+    &__sub {
+        margin: 0 0 10px 0;
+        font-size: 1.25rem;
+        font-weight: 700;
+        display: block;
+    }
+}
+
+.kinds {
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+
+    &__title {
+        display: none;
+    }
+    &__header {
+        width: 100%;
+        margin-bottom: 50px;
+        position: relative;
+
+        &_list {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+
+            &_text {
+                padding: 50px 40px;
+                cursor: pointer;
+
+                &.active {
+                    color: #f00;
+                }
+            }
+        }
+        &_bar {
+            height: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: #f00;
+            transition: .5s;
+        }
+    }
+    &__img {}
+    &__controls {
+        width: max-content;
+        margin: 50px auto 0;
+        display: flex;
+
+        & button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & img {
+                margin-bottom: 5px;
+            }
+        }
+        &_front {
+            margin-right: 5px;
+        }
+    }
+}
+
+.home {
+    width: 100%;
+    padding-top: 200px;
+    text-align: center;
+
+    &__title {
+        margin-bottom: 50px;
+        font-size: 2rem;
+        font-weight: 800;
+    }
+    &__sub {
+        width: 520px;
+        margin: 0 auto 80px;
+        line-height: 2rem;
+    }
+    &__contents {
+        display: flex;
+        align-items: center;
+
+        &_box {
+            width: 75%;
+            margin-right: 80px;
+            position: relative;
+        }
+        &_img {
+            width: 100%;
+        }
+        &_text {
+            width: 65%;
+            height: 80%;
+            background: rgba(0, 0, 0, .8);
+            color: #fff;
+            line-height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 50%;
+            top: 52%;
+            transform: translate(-50%,-50%);
+            visibility: hidden;
+            opacity: 0;
+            transition: .5s;
+
+            &.active {
+                top: 50%;
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        &_list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            &_box {
+                width: 100%;
+                margin-bottom: 30px;
+                font-weight: 800;
+                display: flex;
+                align-items: center;
+
+                &:nth-of-type(1) {
+                    color: #fe3c32;
+                }
+                &:nth-of-type(2) {
+                    color: #ff9f00;
+                }
+                &:nth-of-type(3) {
+                    color: #1271ff;
+                    margin-bottom: 0;
+                }
+
+                &:hover .home__contents_list_img {
+                    transform: rotateY(180deg);
+                }
+            }
+            &_img {
+                margin-right: 20px;
+                transition: .5s;
+            }            
+        }
+    }
+}

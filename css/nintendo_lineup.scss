@@ -1,0 +1,202 @@
+@import "common.css";
+
+
+
+
+
+main {
+    width: 100%;
+    padding: 96px 12% 80px;
+    background: #fff;
+}
+
+.title {
+    margin: 100px 0 30px 0;
+
+    &__main {
+        font-size: 4rem;
+        font-weight: 800;
+        line-height: 1.4;
+    }
+    &__sub {
+        margin: 0 0 10px 0;
+        font-size: 1.25rem;
+        font-weight: 700;
+        display: block;
+    }
+}
+
+.visual {
+    width: 100%;
+    height: 400px;
+    margin-top: 100px;
+    background: url("../img/lineup/visual00.jpg") no-repeat center bottom / cover;
+
+    &__text {
+        width: 100%;
+        height: 100%;
+        padding: 80px 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        p {
+            color: #fff;
+            font-size: 1.75rem;
+            font-weight: 800;
+            line-height: 3rem;
+        }
+        &_line {
+            width: 36px;
+            height: 1px;
+            background: #fff;
+        }
+    }
+}
+
+.contents {
+    width: 100%;
+
+    &__header {
+        width: 100%;
+        padding: 80px 0 0 0;
+        border-bottom: 4px solid #000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &_product {
+            font-size: 1.25rem;
+
+            &_num {
+                font-size: 1.25rem;
+            }
+        }
+        &_typing {
+            width: 300px;
+            padding: 0 20px;
+            border: 1px solid #eee;
+            line-height: 50px;
+        }
+    }
+    &__button {
+        position: relative;
+
+        &.active &_main_img {
+            transform: rotate(180deg);
+        }
+        &.active &_list_text {
+            display: block;
+        }
+        &_main {
+            width: 220px;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &_text {
+                font-size: 1.25rem;
+                line-height: 3rem;
+            }
+            &_img {
+                width: 16px;
+            }
+        }
+        &_list {
+            width: 100%;
+            border: 1px solid #eee;
+            position: absolute;
+            left: 0;
+            top: calc(100% + 6px);
+
+            &_text {
+                width: 100%;
+                padding-left: 20px;
+                font-size: 1.25rem;
+                line-height: 3rem;
+                cursor: pointer;
+                display: none;
+
+                &:hover {
+                    color: #f00;
+                }
+            }
+        }
+    }
+    &__year {
+        display: flex;
+        flex-direction: column;
+
+        &.active {
+            flex-direction: column-reverse;
+        }
+        &_box {
+            width: 100%;
+            padding: 50px 0 0 0;
+        }
+        &_title {
+            margin-bottom: 50px;
+            font-size: 3rem;
+            font-weight: 800;
+        }
+    }
+    &__list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        &_box {
+            width: 33%;
+            margin-bottom: 100px;
+        }
+        &_img {
+            width: 80%;
+        }
+        &_text {
+            width: 100%;
+            padding-left: 60px;
+
+            &_sub {
+                color: #787878;
+            }
+            &_title {
+                font-size: 1.75rem;
+                font-weight: 800;
+                margin: 20px 0 10px;
+            }
+        }
+        &_inf {
+            width: 100%;
+
+            &_title {
+                width: 150px;
+                margin-top: 20px;
+            }
+            &_sub {
+                color: #787878;
+            }
+        }
+    }
+    &__more {
+        margin: 0 auto;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #787878;
+        display: block;
+
+        &:hover::after {
+            opacity: 1;
+        }
+        &::after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            background: #787878;
+            display: block;
+            opacity: 0;
+            transition: .5s;
+        }
+    }
+}

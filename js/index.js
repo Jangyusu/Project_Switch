@@ -54,7 +54,7 @@ $(function () {
                         </figcaption>`
                 });
                 $visual.append(visualAppend);
-                $visual.find(".visual__text").eq(0).addClass("active");
+                addActive($visual.find(".visual__text").eq(0));
 
                 $.each(howToPlayData, function () {  //how to play Html 추가
                     img = this.ko.img,
@@ -89,7 +89,7 @@ $(function () {
                         </li>`
                 });
                 $aboutSwitch.append(aboutSwitchAppend);
-                $aboutSwitch.find(".about-switch__list_box").eq(0).addClass("active");
+                addActive($aboutSwitch.find(".about-switch__list_box").eq(0))
 
                 $.each(softwareData, function () { //software html 추가
                     title = this.ko.title,
@@ -115,7 +115,7 @@ $(function () {
                     softwareIndex = $(this).index() - 1;
 
                     softwareImg = softwareData[softwareIndex].ko.img;
-                    $softwareImg.css({ "background": "url(" + softwareImg + ")", "background-repeat": "no-repeat", "background-position": "center", "background-size": "cover" });
+                    backgroundUrl($softwareImg, softwareImg);
                 });
 
                 $.each(newsData, function () { //news html 추가
@@ -133,7 +133,6 @@ $(function () {
                             <time class="news__list_date">${date}</time>
                         </li>`;
                 });
-
                 $news.append(newsAppend);
                 $newsList = $(".news__list_box");
 
@@ -142,7 +141,7 @@ $(function () {
                     newsIndex = $(this).index();
                     newsImg = newsData[newsIndex].ko.img;
 
-                    $newsImg.css({ "background": "url(" + newsImg + ")", "background-repeat": "no-repeat", "background-position": "center", "background-size": "cover" });
+                    backgroundUrl($newsImg, newsImg);
                 });
 
 
@@ -161,7 +160,6 @@ $(function () {
                     visualBln = true,
 
                     $aboutSwitchList = $(".about-switch__list_box"),
-                    aboutSwitchIndex = 0,
 
                     $slideContents = $(".slide-up"),
                     $windowTop = $(window).height(),
@@ -173,10 +171,21 @@ $(function () {
 
 
 
+
                 $(window).scroll(scrollEvent); //scroll 이벤트
                 $visualTotal.text("0" + softwareData.length); //visual 총 갯수
                 $visualControl.click(visualControl); //visual 컨트롤
+                $(".visual").mousedown(visualStart); //visual 마우스시작
+                $(".visual").mouseup(visualEnd); //visual 마우스끝
+
                 $aboutSwitchList.hover(aboutSwitchenter, aboutSwitchleave) //aboutSwitch 마우스 엔터/리브
+                $(".fun__img").mousedown(funStart); //fun 마우스시작
+                // $(".fun__img").mousemove(funmove); //fun 마우스시작
+                // $(".fun__img").mouseup(funEnd); //fun 마우스끝
+
+                function funStart() {
+                    console.log($(this).offset().left);
+                }
 
 
 
@@ -193,15 +202,32 @@ $(function () {
                     $slideTop = $(this).offset().top;
 
                     if ($scrollBottom - 200 > $slideTop) {
-                        $(this).addClass("active");
+                        addActive($(this));
                     } else {
-                        $(this).removeClass("active");
+                        removeActive($(this))
+                    }
+                }
+
+                var visualStartX, visualEndX, visualSlideX;
+                function visualStart(e) {
+                    visualStartX = e.originalEvent.screenX;
+                }
+
+                function visualEnd(e) {
+                    visualEndX = e.originalEvent.screenX;
+                    visualSlideX = visualStartX - visualEndX;
+
+                    if (visualSlideX > 50) {
+                        $(".visual__controls_button_next").click();
+                    } else if (visualSlideX < -50) {
+                        $(".visual__controls_button_prev").click();
                     }
                 }
 
                 function visualControl(e) {
                     if (visualBln == true) {
                         visualBln = false;
+
                         var target = e.target;
 
                         if (target == $visualLeft) { //왼쪽 버튼
@@ -231,12 +257,11 @@ $(function () {
                         };
 
                         function change() {
-                            $visualList.removeClass("active");
-                            $visual.css({
-                                "background": "url(img/visual0" + visualIndex + ".jpg)", "background-repeat": "no-repeat", "background-position": "top right", "background-size": "cover"
-                            });
+                            removeActive($visualList);
+                            background($visual, "visual0", visualIndex);
+
                             setTimeout(function () {
-                                $visualList.eq(visualIndex).addClass("active");
+                                addActive($visualList.eq(visualIndex));
                             }, 500);
 
                             $visualCurrent.text("0" + (visualIndex + 1)); //visual 현재 페이지
@@ -244,9 +269,10 @@ $(function () {
 
                         setTimeout(function () {
                             visualBln = true;
-                        }, 1000);
+                        }, 1200);
                     }
                 }
+                background($visual, "visual0", 0);
 
                 function visualSlide() { //visual slide
                     visualSlideInter = setInterval(function () { //visual 슬라이드
@@ -256,22 +282,28 @@ $(function () {
                 visualSlide();
 
                 function aboutSwitchenter() {
-                    aboutSwitchCss($(this).index());
+                    background($aboutSwitch, "ABOUT_SWITCH0", $(this).index());
 
-                    $aboutSwitchList.removeClass("active");
-                    $(this).addClass("active");
+                    removeActive($aboutSwitchList);
+                    addActive($(this));
                 }
 
                 function aboutSwitchleave() {
-                    aboutSwitchCss(0);
+                    background($aboutSwitch, "ABOUT_SWITCH0", 0);
 
-                    $aboutSwitchList.removeClass("active");
-                    $aboutSwitchList.eq(0).addClass("active");
+                    removeActive($aboutSwitchList);
+                    addActive($aboutSwitchList.eq(0));
                 }
 
-                function aboutSwitchCss(Index) {
-                    $aboutSwitch.css({
-                        "background": "url(img/ABOUT_SWITCH0" + Index + ".jpg)", "background-repeat": "no-repeat", "background-position": "center", "background-size": "cover"
+                function background(target, link, Index) {
+                    target.css({
+                        "background": "url(img/" + link + Index + ".jpg)", "background-repeat": "no-repeat", "background-position": "center", "background-size": "cover"
+                    });
+                }
+
+                function backgroundUrl(target, url) {
+                    target.css({
+                        "background": "url(" + url + ")", "background-repeat": "no-repeat", "background-position": "center", "background-size": "cover"
                     });
                 }
 

@@ -113,6 +113,8 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: flex-end; }
+  .search__title {
+    display: none; }
   .search__amount {
     color: #666; }
     .search__amount_number {
@@ -189,6 +191,8 @@ main {
 .list {
   width: 100%;
   padding: 30px 15% 80px; }
+  .list__title {
+    display: none; }
   .list__box {
     padding: 30px 0;
     border-top: 1px solid #ddd;

@@ -10,217 +10,237 @@
     <link rel="icon" href="img/favicon.png" type="image/png" />
     <script src="https://kit.fontawesome.com/60a06f6dc3.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/util.js"></script>
     <script src="js/common.js"></script>
     <script src="js/nintendo_online.js"></script>
 </head>
 
 <body>
-    <header></header>
-
+    <!-- 헤더시작 -->
+    <header class="header"></header>
+    <!-- 헤더 끝 -->
+    <!-- 메인 시작 -->
     <main>
-        <div class="visual">
-            <video src="video/nintendo_switch_online.mp4" autoplay loop></video>
-        </div>
-        <div class="contents">
-            <div class="service">
-                <div class="service__title service__list">
-                    <h1>서비스 내용</h1>
-                    <small>더 즐겁게, 더 편리하게<br>Nintendo Online</small>
+        <!-- 비주얼 시작 -->
+        <section class="visual">
+            <h1 class="visual__title">비주얼</h1>
+            <video src="video/nintendo_switch_online.mp4" autoplay loop class="visual__viedo"></video>
+        </section>
+        <!-- 비주얼 끝 -->
+        <!-- 서비스 시작 -->
+        <section class="service">
+            <h1 class="service__title">서비스</h1>
+            <div class="service__main service__box">
+                <h2 class="service__main_title">서비스 내용</h2>
+                <small class="service__main_sub">더 즐겁게, 더 편리하게<br>Nintendo Online</small>
+            </div>
+            <div class="service__online service__box">
+                <div class="service__box_hover">
+                    <h2 class="service__box_hover_text">온라인 플레이</h2>
+                    <img src="img/online/service_icon_00.png" alt="online" class="service__box_hover_img">
                 </div>
-                <div class="service__play service__list">
-                    <div class="service__hover_box">
-                        <h2>온라인 플레이</h2>
-                        <img src="img/online/service_icon_00.png" alt="">
-                    </div>
-                    <div class="service__bottom_box">
-                        <img src="img/online/service_icon_00.png" alt="">
-                        <p>온라인 플레이</p>
-                    </div>
-                </div>
-                <div class="service__save service__list">
-                    <div class="service__hover_box">
-                        <h2>데이터 저장</h2>
-                        <img src="img/online/service_icon_01.png" alt="">
-                    </div>
-                    <div class="service__bottom_box">
-                        <img src="img/online/service_icon_01.png" alt="">
-                        <p>데이터 저장</p>
-                    </div>
-                </div>
-                <div class="service__app service__list">
-                    <div class="service__hover_box">
-                        <h2>어플리케이션</h2>
-                        <img src="img/online/service_icon_02.png" alt="">
-                    </div>
-                    <div class="service__bottom_box">
-                        <img src="img/online/service_icon_02.png" alt="">
-                        <p>어플리케이션</p>
-                    </div>
+                <div class="service__box_main">
+                    <img src="img/online/service_icon_00.png" alt="online" class="service__box_main_img">
+                    <p class="service__box_main_text">온라인 플레이</p>
                 </div>
             </div>
-            <div class="price">
-                <p class="price__title">요금 플랜</p>
-                <div class="price__contents">
-                    <div class="price__slide">
-                        <ul class="price__list">
-                            <li class="price__content">
-                                <div class="price__text_box">
-                                    <div class="price__summary">
-                                        <span class="price__personnel">1인</span>
-                                        <span class="price__date">30day</span>
-                                    </div>
-                                    <p class="price__sub_title">1개월<small>(30일간)</small></p>
-                                    <p class="price__text">한달 간 온라인을<br>실속있게 즐겨보자!</p>
-                                    <p class="price_end">&#8361;4,900</p>
-                                </div>
-                                <img src="img/online/price_00.png" alt="month" class="pice__month">
-                            </li>
-                            <li class="price__content">
-                                <div class="price__text_box">
-                                    <div class="price__summary">
-                                        <span class="price__personnel">1인</span>
-                                        <span class="price__date">60day</span>
-                                    </div>
-                                    <p class="price__sub_title">3개월<small>(90일간)</small></p>
-                                    <p class="price__text">1개월로 가입하는 것보다<br>4,800 이득!</p>
-                                    <p class="price_end">&#8361;9,900</p>
-                                </div>
-                                <img src="img/online/price_01.png" alt="month" class="pice__month">
-                            </li>
-                            <li class="price__content">
-                                <div class="price__text_box">
-                                    <div class="price__summary">
-                                        <span class="price__personnel">12인</span>
-                                        <span class="price__date">365day</span>
-                                    </div>
-                                    <p class="price__sub_title">12개월<small>(365일간)</small></p>
-                                    <p class="price__text">1개월로 가입하는 것보다<br>&#8361;38,900 이득!</p>
-                                    <p class="price_end">&#8361;19,900</p>
-                                </div>
-                                <img src="img/online/price_02.png" alt="month" class="pice__month">
-                            </li>
-                            <li class="price__content">
-                                <div class="price__text_box">
-                                    <div class="price__summary">
-                                        <span class="price__personnel">12인</span>
-                                        <span class="price__date">365day</span>
-                                    </div>
-                                    <p class="price__sub_title">12개월<small>(365일간)</small></p>
-                                    <p class="price__text">최대 8어카운트까지 이용<br>패밀리 플랜!</p>
-                                    <p class="price_end">&#8361;37,900</p>
-                                </div>
-                                <img src="img/online/price_03.png" alt="month" class="pice__month">
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="price__arrow">
-                        <button type="button" class="price__left_arrow"><img src="img/online/left_arrow.png"
-                                alt="arrow"></button>
-                        <button type="button" class="price__right_arrow"><img src="img/online/right_arrow.png"
-                                alt="arrow"></button>
-                    </div>
+            <div class="service__data service__box">
+                <div class="service__box_hover">
+                    <h2 class="service__box_hover_text">데이터 저장</h2>
+                    <img src="img/online/service_icon_01.png" alt="data" class="service__box_hover_img">
                 </div>
-                <a href="https://store.nintendo.co.kr/catalog/category/view/s/nintendo-switch-online/id/15/"
-                    target="_blank" class="price__buy">이용권 구매하기</a>
-                <a href="https://support.nintendo.co.kr/accessories.do#code=Switch" target="_blank"
-                    class="price__buy">온라인 구입안내</a>
-            </div>
-            <div class="subscriber">
-                <img src="img/online/subscriber.jpg" alt="subscriber" class="subscriber__img">
-                <div class="subscriber__text">
-                    <p class="subscriber__title">가입하신 분들에게만 드리는 특별한 서비스</p>
-                    <p>가입자 한정 상품과 이벤트의 안내, 특별한 데이터 배포 등 여러 가지 서비스가 예정되어 있습니다.</p>
-                    <small>※ 특전의 제공은 비정기적입니다. 제공 시기가 정해지는 대로 알려 드리겠습니다.</small>
-                    <small>※ 가입한 플랜에 따라 이용할 수 없는 서비스가 있습니다.</small>
+                <div class="service__box_main">
+                    <img src="img/online/service_icon_01.png" alt="data" class="service__box_main_img">
+                    <p class="service__box_main_text">데이터 저장</p>
                 </div>
-                <a href="https://www.nintendo.co.kr/switch/onlineservice/specialoffer/" target="_blank"
-                    class="subscriber__detail">자세히 보기</a>
             </div>
-            <div class="question">
-                <p class="question__title">자주하는질문</p>
-                <ul class="question__contents">
-                    <li class="question__content">
-                        <div class="question__box question__q_box">
-                            <img src="img/online/question.png" alt="question" class="question__img">
-                            <p class="question__qtext">「개인 플랜」 과 「패밀리 플랜」 의 차이는 무엇인가요?</p>
-                        </div>
-                        <div class="question__box question__a_box">
-                            <img src="img/online/answer.png" alt="answer" class="question__img">
-                            <div class="question__text">
-                                <p>「개인 플랜」은 혼자(1어카운트)만 「Nintendo Switch Online」을 이용할 수 있게 되는 플랜입니다.</p>
-                                <p>「패밀리 플랜」은 가족(최대 8어카운트까지)이 함께 「Nintendo Switch Online」을 이용할 수 있게 되는 플랜입니다.</p>
-                                <p>Nintendo Switch를 즐기고 계신 분이 자신뿐이라면, 「개인 플랜」을 추천합니다.<br>(가입할 때는 「Nintendo Switch
-                                    Online」
-                                    서비스를 이용하는 본인의 어카운트로 가입해 주십시오.)</p>
-                                <p>가족 등 2명 이상의 분이 Nintendo Switch를 즐기면서, 「Nintendo Switch Online」 서비스를 이용하실 때에는, 요금이 더
-                                    저렴한
-                                    「패밀리 플랜」을 추천합니다.</p>
-                                <p>「패밀리 플랜」의 가입(구입)은 18세 이상의 닌텐도 어카운트로 한정됩니다.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="question__content">
-                        <div class="question__box question__q_box">
-                            <img src="img/online/question.png" alt="question" class="question__img">
-                            <p class="question__qtext">플랜을 변경하고 싶을 때에는 어떻게 하면 좋을까요?</p>
-                        </div>
-                        <div class="question__box question__a_box">
-                            <img src="img/online/answer.png" alt="answer" class="question__img">
-                            <div class="question__text">
-                                <p>구입하신 이용권은 변경할 수 없습니다.</p>
-
-                                <p>현재의 서비스 기간이 끝난 뒤, 다음 기간의 서비스를 이용할 때에 변경하고자 하는 플랜의 이용권을 구입하거나, 서비스 이용 중에 추가하고 싶은 이용권을
-                                    구입해 주시기 바랍니다.</p>
-
-                                <p>예1 : 「개인 플랜 3개월 (90일간) 이용권」을 이용 중에, 「개인 플랜 12개월 (365일간) 이용권」을 구입했을 경우, 「12개월(365일간)」의
-                                    이용 기간이 추가됩니다.</p>
-
-                                <p>예2 : 「7일간 무료 체험」을 이용하는 중, 「개인 플랜 12개월(365일간) 이용권」을 구입했을 경우, 「12개월(365일간)」의 이용 기간이
-                                    추가됩니다.</p>
-
-                                <p>「개인 플랜」 가입 중에 「패밀리 플랜」에도 가입할 수 있습니다만, 2개의 플랜 간의 이용 기간은 합산되지 않는 점, 미리 양해 바랍니다.</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="question__content">
-                        <div class="question__box question__q_box">
-                            <img src="img/online/question.png" alt="question" class="question__img">
-                            <p class="question__qtext">「7일간 무료 체험」 이 종료된 후에는 어떻게 되나요?</p>
-                        </div>
-                        <div class="question__box question__a_box">
-                            <img src="img/online/answer.png" alt="answer" class="question__img">
-                            <div class="question__text">
-                                <p>「Nintendo Switch Online」의 서비스를 이용하실 수 없게 됩니다. 계속 서비스를 이용하길 원하실 때에는 닌텐도 온라인 스토어에서 원하시는
-                                    플랜의 이용권을 구입해 주시기 바랍니다.</p>
-                                <p>「개인 플랜」이 아닌, 「패밀리 플랜」의 가입으로 변경하고 싶은 경우, 「패밀리 플랜」의 이용권을 구입하시면, 가입할 수 있습니다.</p>
-                                <p> 다만, 「패밀리 플랜」 으로 넘어오기 전에 남아 있던 「개인 플랜」의 이용 기간은 합산되지 않습니다.
+            <div class="service__app service__box">
+                <div class="service__box_hover">
+                    <h2 class="service__box_hover_text">어플리케이션</h2>
+                    <img src="img/online/service_icon_02.png" alt="app" class="service__box_hover_img">
+                </div>
+                <div class="service__box_main">
+                    <img src="img/online/service_icon_02.png" alt="app" class="service__box_main_img">
+                    <p class="service__box_main_text">어플리케이션</p>
+                </div>
+            </div>
+        </section>
+        <!-- 서비스 끝 -->
+        <!-- 프라이스 시작 -->
+        <section class="price">
+            <h1 class="price__title">요금 플랜</h1>
+            <div class="price__contents">
+                <div class="price__slide">
+                    <ul class="price__list">
+                        <li class="price__list_box">
+                            <div class="price__list_text">
+                                <div class="price__list_text_sub">
+                                    <span class="price__list_text_sub_num">1인</span>
+                                    <span class="price__list_text_sub_day">30day</span>
+                                </div>
+                                <p class="price__list_text_month">1개월<small class="price__list_text_day">(30일간)</small>
                                 </p>
+                                <p class="price__list_text_title">한달 간 온라인을<br>실속있게 즐겨보자!</p>
+                                <p class="price__list_text_price">&#8361;4,900</p>
                             </div>
-                        </div>
-                    </li>
-                    <li class="question__content">
-                        <div class="question__box question__q_box">
-                            <img src="img/online/question.png" alt="question" class="question__img">
-                            <p class="question__qtext">「Nintendo Switch Online」 가입 중에 이용권을 추가 구입했을 때에, 나머지 이용 기간은 어떻게
-                                되나요?</p>
-                        </div>
-                        <div class="question__box question__a_box">
-                            <img src="img/online/answer.png" alt="answer" class="question__img">
-                            <div class="question__text">
-                                <p>「개인 플랜」 이용 중에 「개인 플랜」 이용권을 구입했을 경우, 이용 기간이 가산됩니다.</p>
-                                <p>예: 개인 플랜 이용 기간이 35일 남은 상태에서「개인 플랜 12개월(365일간) 이용권」을 구입하시면 나머지 이용 기간이 400일로 연장됩니다.</p>
-                                <p>어카운트별 이용 기간의 상한은 합계 36개월간(1,095일)입니다. 다만, 「패밀리 플랜」과 「개인 플랜」의 이용 기간을 합산할 수는 없습니다.</p>
+                            <img src="img/online/price_00.png" alt="month" class="price__list_img">
+                        </li>
+                        <li class="price__list_box">
+                            <div class="price__list_text">
+                                <div class="price__list_text_sub">
+                                    <span class="price__list_text_sub_num">1인</span>
+                                    <span class="price__list_text_sub_day">60day</span>
+                                </div>
+                                <p class="price__list_text_month">3개월<small class="price__list_text_day">(90일간)</small>
+                                </p>
+                                <p class="price__list_text_title">1개월로 가입하는 것보다<br>4,800 이득!</p>
+                                <p class="price__list_text_price">&#8361;9,900</p>
                             </div>
-                        </div>
-                    </li>
-                </ul>
+                            <img src="img/online/price_01.png" alt="month" class="price__list_img">
+                        </li>
+                        <li class="price__list_box">
+                            <div class="price__list_text">
+                                <div class="price__list_text_sub">
+                                    <span class="price__list_text_sub_num">12인</span>
+                                    <span class="price__list_text_sub_day">365day</span>
+                                </div>
+                                <p class="price__list_text_month">12개월<small
+                                        class="price__list_text_day">(365일간)</small></p>
+                                <p class="price__list_text_title">1개월로 가입하는 것보다<br>&#8361;38,900 이득!</p>
+                                <p class="price__list_text_price">&#8361;19,900</p>
+                            </div>
+                            <img src="img/online/price_02.png" alt="month" class="price__list_img">
+                        </li>
+                        <li class="price__list_box">
+                            <div class="price__list_text">
+                                <div class="price__list_text_sub">
+                                    <span class="price__list_text_sub_num">12인</span>
+                                    <span class="price__list_text_sub_day">365day</span>
+                                </div>
+                                <p class="price__list_text_month">12개월<small
+                                        class="price__list_text_day">(365일간)</small></p>
+                                <p class="price__list_text_title">최대 8어카운트까지 이용<br>패밀리 플랜!</p>
+                                <p class="price__list_text_price">&#8361;37,900</p>
+                            </div>
+                            <img src="img/online/price_03.png" alt="month" class="price__list_img">
+                        </li>
+                    </ul>
+                </div>
+                <div class="price__ind">
+                    <button type="button" class="price__ind_prev"><img src="img/online/left_arrow.png" alt="arrow"
+                            class="price__ind_prev_img"></button>
+                    <button type="button" class="price__ind_next"><img src="img/online/right_arrow.png" alt="arrow"
+                            class="price__ind_next_img"></button>
+                </div>
             </div>
-        </div>
+            <div class="price__use">
+                <a href="#" class="price__use_buy">이용권 구매하기</a>
+                <a href="#" class="price__use_guid">온라인 구입안내</a>
+            </div>
+        </section>
+        <!-- 프라이스 끝 -->
+        <!-- 특전 시작 -->
+        <section class="privilege">
+            <h1 class="privilege__title">특전</h1>
+            <img src="img/online/subscriber.jpg" alt="subscriber" class="privilege__img">
+            <div class="privilege__text">
+                <p class="privilege__text_title">가입하신 분들에게만 드리는 특별한 서비스</p>
+                <p class="privilege__text_sub">가입자 한정 상품과 이벤트의 안내, 특별한 데이터 배포 등 여러 가지 서비스가 예정되어 있습니다.</p>
+                <small class="privilege__text_small">※ 특전의 제공은 비정기적입니다. 제공 시기가 정해지는 대로 알려 드리겠습니다.</small>
+                <small class="privilege__text_small">※ 가입한 플랜에 따라 이용할 수 없는 서비스가 있습니다.</small>
+            </div>
+            <a href="#" class="privilege__detail">자세히 보기</a>
+        </section>
+        <!-- 특전 끝 -->
+        <!-- 질문 시작 -->
+        <section class="question">
+            <h1 class="question__title">자주하는질문</h1>
+            <ul class="question__list">
+                <li class="question__list_box">
+                    <div class="question__list_qna question__list_q">
+                        <img src="img/online/question.png" alt="question" class="question__list_q_img">
+                        <p class="question__list_q_text">「개인 플랜」 과 「패밀리 플랜」 의 차이는 무엇인가요?</p>
+                    </div>
+                    <div class="question__list_qna question__list_a">
+                        <img src="img/online/answer.png" alt="answer" class="question__list_a_img">
+                        <div class="question__list_a_text">
+                            <p>「개인 플랜」은 혼자(1어카운트)만 「Nintendo Switch Online」을 이용할 수 있게 되는 플랜입니다.</p>
+                            <p>「패밀리 플랜」은 가족(최대 8어카운트까지)이 함께 「Nintendo Switch Online」을 이용할 수 있게 되는 플랜입니다.</p>
+                            <p>Nintendo Switch를 즐기고 계신 분이 자신뿐이라면, 「개인 플랜」을 추천합니다.<br>(가입할 때는 「Nintendo Switch
+                                Online」
+                                서비스를 이용하는 본인의 어카운트로 가입해 주십시오.)</p>
+                            <p>가족 등 2명 이상의 분이 Nintendo Switch를 즐기면서, 「Nintendo Switch Online」 서비스를 이용하실 때에는, 요금이 더
+                                저렴한
+                                「패밀리 플랜」을 추천합니다.</p>
+                            <p>「패밀리 플랜」의 가입(구입)은 18세 이상의 닌텐도 어카운트로 한정됩니다.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="question__list_box">
+                    <div class="question__list_qna question__list_q">
+                        <img src="img/online/question.png" alt="question" class="question__list_q_img">
+                        <p class="question__list_q_text">플랜을 변경하고 싶을 때에는 어떻게 하면 좋을까요?</p>
+                    </div>
+                    <div class="question__list_qna question__list_a">
+                        <img src="img/online/answer.png" alt="answer" class="question__list_a_img">
+                        <div class="question__list_a_text">
+                            <p>구입하신 이용권은 변경할 수 없습니다.</p>
+
+                            <p>현재의 서비스 기간이 끝난 뒤, 다음 기간의 서비스를 이용할 때에 변경하고자 하는 플랜의 이용권을 구입하거나, 서비스 이용 중에 추가하고 싶은 이용권을
+                                구입해 주시기 바랍니다.</p>
+
+                            <p>예1 : 「개인 플랜 3개월 (90일간) 이용권」을 이용 중에, 「개인 플랜 12개월 (365일간) 이용권」을 구입했을 경우, 「12개월(365일간)」의
+                                이용 기간이 추가됩니다.</p>
+
+                            <p>예2 : 「7일간 무료 체험」을 이용하는 중, 「개인 플랜 12개월(365일간) 이용권」을 구입했을 경우, 「12개월(365일간)」의 이용 기간이
+                                추가됩니다.</p>
+
+                            <p>「개인 플랜」 가입 중에 「패밀리 플랜」에도 가입할 수 있습니다만, 2개의 플랜 간의 이용 기간은 합산되지 않는 점, 미리 양해 바랍니다.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="question__list_box">
+                    <div class="question__list_qna question__list_q">
+                        <img src="img/online/question.png" alt="question" class="question__list_q_img">
+                        <p class="question__list_q_text">「7일간 무료 체험」 이 종료된 후에는 어떻게 되나요?</p>
+                    </div>
+                    <div class="question__list_qna question__list_a">
+                        <img src="img/online/answer.png" alt="answer" class="question__list_a_img">
+                        <div class="question__list_a_text">
+                            <p>「Nintendo Switch Online」의 서비스를 이용하실 수 없게 됩니다. 계속 서비스를 이용하길 원하실 때에는 닌텐도 온라인 스토어에서 원하시는
+                                플랜의 이용권을 구입해 주시기 바랍니다.</p>
+                            <p>「개인 플랜」이 아닌, 「패밀리 플랜」의 가입으로 변경하고 싶은 경우, 「패밀리 플랜」의 이용권을 구입하시면, 가입할 수 있습니다.</p>
+                            <p> 다만, 「패밀리 플랜」 으로 넘어오기 전에 남아 있던 「개인 플랜」의 이용 기간은 합산되지 않습니다.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="question__list_box">
+                    <div class="question__list_qna question__list_q">
+                        <img src="img/online/question.png" alt="question" class="question__list_q_img">
+                        <p class="question__list_q_text">「Nintendo Switch Online」 가입 중에 이용권을 추가 구입했을 때에, 나머지 이용 기간은 어떻게
+                            되나요?</p>
+                    </div>
+                    <div class="question__list_qna question__list_a">
+                        <img src="img/online/answer.png" alt="answer" class="question__list_a_img">
+                        <div class="question__list_a_text">
+                            <p>「개인 플랜」 이용 중에 「개인 플랜」 이용권을 구입했을 경우, 이용 기간이 가산됩니다.</p>
+                            <p>예: 개인 플랜 이용 기간이 35일 남은 상태에서「개인 플랜 12개월(365일간) 이용권」을 구입하시면 나머지 이용 기간이 400일로 연장됩니다.</p>
+                            <p>어카운트별 이용 기간의 상한은 합계 36개월간(1,095일)입니다. 다만, 「패밀리 플랜」과 「개인 플랜」의 이용 기간을 합산할 수는 없습니다.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!-- 질문 끝 -->
     </main>
-
+    <!-- 메인 끝 -->
+    <!-- 어사이드 시작 -->
     <aside></aside>
-
+    <!-- 어사이드 끝 -->
+    <!-- 푸터 시작 -->
     <footer></footer>
+    <!-- 푸터 끝 -->
 </body>
 
 </html>

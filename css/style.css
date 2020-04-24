@@ -8,7 +8,7 @@ main {
   padding-left: 25%; }
   .visual__img {
     width: 100%;
-    background: url("../img/visual00.jpg") no-repeat right top/cover;
+    background: no-repeat center / cover;
     display: flex;
     flex-direction: row-reverse;
     position: relative;
@@ -272,7 +272,6 @@ main {
       width: 100%;
       height: 270px;
       margin-bottom: 10px;
-      background: url("../img/NEWS00.png") no-repeat center/cover;
       position: relative; }
       .news__list_img::before {
         content: "";
@@ -299,5 +298,40 @@ main {
       color: #999; }
   .news .more {
     width: 120px; }
+
+.fun {
+  width: 100%;
+  height: 120px;
+  position: relative; }
+  .fun__img {
+    position: absolute;
+    left: -20%;
+    top: 0;
+    transform: rotateY(180deg) translate(100%); }
+  .fun__img:nth-of-type(1) {
+    animation: go 6s infinite linear; }
+  .fun__img:nth-of-type(2) {
+    animation: go 7s infinite linear; }
+  .fun__img:nth-of-type(3) {
+    animation: go 8s infinite linear; }
+  .fun__img:nth-of-type(4) {
+    animation: go 9s infinite linear; }
+  .fun__img:nth-of-type(5) {
+    animation: go 10s infinite linear; }
+  .fun__img:nth-of-type(6) {
+    animation: go 11s infinite linear; }
+  .fun__img:nth-of-type(7) {
+    animation: go 12s infinite linear; }
+  .fun__img:nth-of-type(8) {
+    animation: go 13s infinite linear; }
+  .fun__img:nth-of-type(9) {
+    animation: go 14s infinite linear; }
+  .fun__img:nth-of-type(10) {
+    animation: go 15s infinite linear; }
+
+@keyframes go {
+  100% {
+    left: 100%;
+    transform: rotateY(180deg) translate(0); } }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,16 +1,16 @@
 $(function () {
     //start
 
-    var $kindsList = $(".kinds__list li"),
-        $kindsBar = $(".kinds__bar"),
+    var $kindsList = $(".kinds__header_list_text"),
+        $kindsBar = $(".kinds__header_bar"),
         $kindsControls = $(".kinds__controls button"),
         $kindsFront = $(".kinds__controls_front"),
         $kindsBack = $(".kinds__controls_back"),
         $kindsImg = $(".kinds__img"),
         $select = 1,
         $selectNum = 1,
-        $homeList = $(".home__list li"),
-        $homeText = $(".home__img p"),
+        $homeList = $(".home__contents_list_box"),
+        $homeText = $(".home__contents_text"),
         homeTextList = [
             "게임에 관한 최신 정보 등을 Nintendo Switch 본체에 수신합니다.",
             "소프트웨어나 추가 콘텐츠 등을 다운로드 구입할 수 있습니다. 또한, TVCM이나 소개 영상 등, 소프트웨어의 정보를 확인할 수 있습니다.",
@@ -31,14 +31,14 @@ $(function () {
 
 
     function kindsSelected() {
-        $kindsList.removeClass("active");
-        $(this).addClass("active");
+        removeActive($kindsList);
+        addActive($(this));
 
         $kindsBar.width($(this).width() + 80);
         $kindsBar.offset({ left: $(this).offset().left })
 
-        $kindsFront.find("img").attr({ src: "img/features_and_specifications/bg_switch_device_tab_ov.gif" });
-        $kindsBack.find("img").attr({ src: "img/features_and_specifications/bg_switch_device_tab.gif" });
+        findAttr($kindsFront, "img", "img/features-and-specifications/bg_switch_device_tab_ov.gif");
+        findAttr($kindsBack, "img", "img/features-and-specifications/bg_switch_device_tab.gif");
 
         $select = $(this).data("selector");
         $selectNum = 01;
@@ -49,25 +49,29 @@ $(function () {
     function kindsControl(e) {
         $target = $(e.target);
 
-        $(this).find("img").attr({ src: "img/features_and_specifications/bg_switch_device_tab_ov.gif" });
-        $(this).siblings().find("img").attr({ src: "img/features_and_specifications/bg_switch_device_tab.gif" });
+        findAttr($(this), "img", "img/features-and-specifications/bg_switch_device_tab_ov.gif");
+        findAttr($(this).siblings(), "img", "img/features-and-specifications/bg_switch_device_tab.gif");
 
         $selectNum = $(this).data("num");
         changeImg();
     }
 
     function changeImg() {
-        $kindsImg.attr({ src: `img/features_and_specifications/img_switch_device_spec_detail${$select}_${$selectNum}.jpg` });
+        $kindsImg.attr({ src: `img/features-and-specifications/img_switch_device_spec_detail${$select}_${$selectNum}.jpg` });
     }
     changeImg();
 
     function homeTextShow() {
         $homeText.text(`${homeTextList[$(this).index()]}`);
-        $homeText.addClass("active");
+        addActive($homeText);
     }
 
     function homeTextHide() {
-        $homeText.removeClass("active");
+        removeActive($homeText);
+    }
+
+    function findAttr(target, find, link) {
+        target.find(find).attr({ src: link });
     }
 
     //End

@@ -153,6 +153,9 @@ main {
     justify-content: space-between;
     align-items: flex-end;
 
+    &__title {
+        display: none;
+    }
     &__amount {
         color: #666;
 
@@ -260,6 +263,9 @@ main {
     width: 100%;
     padding: 30px 15% 80px;
 
+    &__title {
+        display: none;
+    }
     &__box {
         padding: 30px 0;
         border-top: 1px solid #ddd;
