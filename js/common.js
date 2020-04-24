@@ -47,6 +47,7 @@ $(function () {
         function burgerMenu() {
             $burgerButton.toggleClass("active");
             $nav.toggleClass("active");
+            $(".header__nav_list").toggleClass("flex");
 
             $nav.on('scroll touchmove mousewheel', function (e) {
                 e.preventDefault();

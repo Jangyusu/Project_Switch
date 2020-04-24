@@ -341,4 +341,13 @@ footer {
     transform: translateY(0);
     opacity: 1; }
 
+@media screen and (max-width: 1024px) {
+  .header__nav.active .header__nav_list_link {
+    padding-right: 4vw;
+    font-size: 1.5rem; }
+  .header__nav_list {
+    display: none; }
+    .header__nav_list.flex {
+      display: flex; } }
+
 /*# sourceMappingURL=common.css.map */
