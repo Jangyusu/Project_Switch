@@ -34,6 +34,7 @@ $(function () {
 
 
 
+            loading(); //로딩 이미지 추가
 
             $.each(softwareData, function () { //visual html 추가
                 title = this.ko.title,
@@ -168,7 +169,6 @@ $(function () {
 
 
 
-
             $(window).scroll(scrollEvent); //scroll 이벤트
             $visualTotal.text("0" + softwareData.length); //visual 총 갯수
             $visualControl.click(visualControl); //visual 컨트롤
@@ -295,6 +295,16 @@ $(function () {
                 target.css({
                     "background": "url(" + url + ")", "background-repeat": "no-repeat", "background-position": "center", "background-size": "cover"
                 });
+            }
+
+            function loading() { //로딩 이미지 추가
+                var loadingImg = "";
+                for (var i = 0; i < 3; i++) {
+                    loadingImg +=
+                        `<img src="img/visual0${i}.jpg" alt="#">
+                            <img src="img/ABOUT_SWITCH0${i}.jpg" alt="#">`
+                };
+                $("body").append(loadingImg);
             }
 
             //End
