@@ -301,8 +301,11 @@ $(function () {
                 var loadingImg = "";
                 for (var i = 0; i < 3; i++) {
                     loadingImg +=
-                        `<img src="img/visual0${i}.jpg" alt="#">
-                            <img src="img/ABOUT_SWITCH0${i}.jpg" alt="#">`
+                        `<img src="img/visual0${i}.jpg" alt="#">`
+                };
+                for (var i = 0; i < 4; i++) {
+                    loadingImg +=
+                        `<img src="img/ABOUT_SWITCH0${i}.jpg" alt="#">`
                 };
                 $(".loading").append(loadingImg);
             }

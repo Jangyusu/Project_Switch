@@ -564,15 +564,230 @@ $mob-s-width : 375px;
     }
 }
 @include tab-small {
+    .how-to-play {
+        &__list {
+            &_img{
+                width: 160px;
+            }
+        }
+    }
+
+    .joy-con {
+        &__box {
+            &_title {
+                line-height: 5rem;
+            }
+        }
+    }
+
+    .software {
+        &__text {
+            &_title {
+                width: 300px;
+                font-size: 2rem;
+                line-height: 3rem;
+
+                & span {
+                    font-size: 2rem;
+                }
+            }
+        }
+        &__list {
+            &_img {
+                height: 600px;
+            }
+            &_box:nth-of-type(even) {
+                margin-top: -450px;
+            }
+        }
+    }    
+    
+    .news {
+        &__list {
+            flex-direction: column;
+
+            &_box {
+                width: 100%;
+            }
+            &_date {
+                display: none;
+            }
+            &_title {
+                margin: 20px 0 40px;
+            }
+        }
+    }
 }
 @include mob-large {
+    .software {
+        &__list {
+            &_img {
+                height: 400px;
+            }
+            &_sub {
+                font-size: 0.9rem;
+            }
+            &_box {
+                margin-bottom: 50px;
 
+                &:nth-of-type(even) {
+                    margin-top: -200px;
+                }
+            }
+        }
+        &__text {
+            &_title {
+                width: 250px;
+            }
+        }
+    }
 }
 @include mob-mid {
+    .how-to-play {
+        &__list {
+            flex-direction: column;
 
+            &_img {
+                width: 200px;
+                margin-bottom: 20px;
+
+                &:last-of-type {
+                        margin-bottom: 0;
+                }
+            }
+            &_title {
+                margin-bottom: 10px;
+            }
+            &_box {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }        
+    }
+    .about-switch {
+        &__sub {
+            font-size: 1rem;
+            line-height: 2rem;
+            margin: 30px 0;
+        }
+        &__list {
+            flex-direction: column;
+
+            &_box {
+                width: 100%;
+                padding: 30px;
+            }
+            &_title {
+                margin-bottom: 12px;
+            }
+            &_sub {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .joy-con {
+        &__box {
+            padding: 100px 5%;
+
+            &_title {
+                width: 100%;
+                margin-bottom: 30px;
+                font-size: 2.5rem;
+                line-height: 4rem;
+            }
+            &_sub {
+                margin-bottom: 30px;
+            }
+            &_img {
+                display: none;
+            }
+        }
+    }
+
+    .software {
+        padding: 0;
+
+        &__text {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        &__list {
+            &_box {
+                &:nth-of-type(even) {
+                    margin-top: 0;
+                }
+            }
+            &_title {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    
+    .fun {
+        &__img {
+            &:nth-of-type(even) {
+                display: none;
+            }
+        }
+    }
+
+    footer {
+        height: 100px;
+        font-size: 0.8rem;
+    }
 }
 @include mob-small {
-     
+    .visual {
+        &__img {
+            &::before {
+                padding-top: 500px;
+            }
+        }
+        &__controls {
+            width: 270px;
+            padding: 0 30px;
+        }
+    }
+
+    .how-to-play {
+        &__list {
+            &_title {
+                margin: 10px;
+            }
+        }
+    }
+
+    .joy-con {
+        &__box {
+            &_title {
+                font-size: 2rem;
+                line-height: 3rem;
+            }
+        }
+    }
+
+    .software {
+        &__list {
+            padding: 50px 0 0 0;
+
+            &_img {
+                height: 300px;
+            }
+            &_title {
+                font-size: 1rem;
+            }
+            &_sub {
+                font-size: 0.8rem;
+            }
+        }
+        &__text {
+            &_sub {
+                line-height: 1.8rem;
+                font-size: .9rem;
+            }
+        }
+    }
 }
 
 // -------------------------------------------------- 

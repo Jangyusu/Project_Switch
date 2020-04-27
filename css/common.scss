@@ -555,10 +555,57 @@ $mob-s-width : 375px;
      
 }
 @include mob-mid {
-     
+    .header {
+        padding: 0 30px;
+
+        &__nav.active {
+            .header {
+                &__nav {
+                    &_list {
+                        &_box {
+                            margin: 200px 0 0 0;
+
+                            &:first-of-type {
+                                margin: 0;
+                            }
+                        }
+                        
+                    }
+                    &_detail-list {
+                        margin: 10px 0 0 0;
+                    }
+                }
+            }
+        }
+    }
+    
+    aside {
+        display: none;
+    }
 }
 @include mob-small {
-     
+    .header {
+        &__nav.active {
+            .header {
+                &__nav {
+                    &_list {
+                        &_link {
+                            font-size: 2rem;
+                        }
+                        &_box {
+                            margin: 180px 0 0 0;
+                        }
+                    }
+                    &_detail-list {
+                        &_link {
+                            font-size: 1rem;
+                            padding: 10px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 // -------------------------------------------------- 

@@ -376,5 +376,123 @@ main {
 
   .news__list_title {
     font-size: 1.125rem; } }
+@media screen and (max-width: 768px) {
+  .how-to-play__list_img {
+    width: 160px; }
+
+  .joy-con__box_title {
+    line-height: 5rem; }
+
+  .software__text_title {
+    width: 300px;
+    font-size: 2rem;
+    line-height: 3rem; }
+    .software__text_title span {
+      font-size: 2rem; }
+  .software__list_img {
+    height: 600px; }
+  .software__list_box:nth-of-type(even) {
+    margin-top: -450px; }
+
+  .news__list {
+    flex-direction: column; }
+    .news__list_box {
+      width: 100%; }
+    .news__list_date {
+      display: none; }
+    .news__list_title {
+      margin: 20px 0 40px; } }
+@media screen and (max-width: 640px) {
+  .software__list_img {
+    height: 400px; }
+  .software__list_sub {
+    font-size: 0.9rem; }
+  .software__list_box {
+    margin-bottom: 50px; }
+    .software__list_box:nth-of-type(even) {
+      margin-top: -200px; }
+  .software__text_title {
+    width: 250px; } }
+@media screen and (max-width: 425px) {
+  .how-to-play__list {
+    flex-direction: column; }
+    .how-to-play__list_img {
+      width: 200px;
+      margin-bottom: 20px; }
+      .how-to-play__list_img:last-of-type {
+        margin-bottom: 0; }
+    .how-to-play__list_title {
+      margin-bottom: 10px; }
+    .how-to-play__list_box {
+      width: 100%;
+      margin-bottom: 30px; }
+
+  .about-switch__sub {
+    font-size: 1rem;
+    line-height: 2rem;
+    margin: 30px 0; }
+  .about-switch__list {
+    flex-direction: column; }
+    .about-switch__list_box {
+      width: 100%;
+      padding: 30px; }
+    .about-switch__list_title {
+      margin-bottom: 12px; }
+    .about-switch__list_sub {
+      margin-bottom: 30px; }
+
+  .joy-con__box {
+    padding: 100px 5%; }
+    .joy-con__box_title {
+      width: 100%;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      line-height: 4rem; }
+    .joy-con__box_sub {
+      margin-bottom: 30px; }
+    .joy-con__box_img {
+      display: none; }
+
+  .software {
+    padding: 0; }
+    .software__text {
+      width: 100%;
+      margin-bottom: 50px; }
+    .software__list_box:nth-of-type(even) {
+      margin-top: 0; }
+    .software__list_title {
+      font-size: 1.2rem; }
+
+  .fun__img:nth-of-type(even) {
+    display: none; }
+
+  footer {
+    height: 100px;
+    font-size: 0.8rem; } }
+@media screen and (max-width: 375px) {
+  .visual__img::before {
+    padding-top: 500px; }
+  .visual__controls {
+    width: 270px;
+    padding: 0 30px; }
+
+  .how-to-play__list_title {
+    margin: 10px; }
+
+  .joy-con__box_title {
+    font-size: 2rem;
+    line-height: 3rem; }
+
+  .software__list {
+    padding: 50px 0 0 0; }
+    .software__list_img {
+      height: 300px; }
+    .software__list_title {
+      font-size: 1rem; }
+    .software__list_sub {
+      font-size: 0.8rem; }
+  .software__text_sub {
+    line-height: 1.8rem;
+    font-size: .9rem; } }
 
 /*# sourceMappingURL=style.css.map */

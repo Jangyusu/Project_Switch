@@ -361,5 +361,25 @@ footer {
 
   footer {
     height: 150px; } }
+@media screen and (max-width: 425px) {
+  .header {
+    padding: 0 30px; }
+    .header__nav.active .header__nav_list_box {
+      margin: 200px 0 0 0; }
+      .header__nav.active .header__nav_list_box:first-of-type {
+        margin: 0; }
+    .header__nav.active .header__nav_detail-list {
+      margin: 10px 0 0 0; }
+
+  aside {
+    display: none; } }
+@media screen and (max-width: 375px) {
+  .header__nav.active .header__nav_list_link {
+    font-size: 2rem; }
+  .header__nav.active .header__nav_list_box {
+    margin: 180px 0 0 0; }
+  .header__nav.active .header__nav_detail-list_link {
+    font-size: 1rem;
+    padding: 10px 0; } }
 
 /*# sourceMappingURL=common.css.map */
