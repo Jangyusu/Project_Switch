@@ -143,4 +143,87 @@ main {
       opacity: 0;
       transition: .5s; }
 
+@media screen and (max-width: 1440px) {
+  .contents__list_text_title {
+    font-size: 1.3rem; }
+  .contents__list_text_sub {
+    line-height: 1.5rem; } }
+@media screen and (max-width: 1024px) {
+  main {
+    padding: 96px 5% 80px; }
+
+  .title {
+    margin: 50px 0 30px 0; }
+
+  .contents__list_text {
+    width: 85%;
+    padding-left: 0px; }
+    .contents__list_text_title {
+      line-height: 2rem; }
+    .contents__list_text_sub {
+      font-size: .9rem; }
+  .contents__list_box {
+    margin-bottom: 60px; }
+  .contents__list_inf_title {
+    width: 120px; } }
+@media screen and (max-width: 768px) {
+  .visual {
+    margin-top: 50px; }
+    .visual__text {
+      padding: 60px 10%; }
+
+  .contents__list_box {
+    width: 50%; }
+  .contents__list_text {
+    padding-left: 30px; } }
+@media screen and (max-width: 640px) {
+  .contents__header_typing {
+    width: 200px; }
+  .contents__button_main {
+    width: 180px; } }
+@media screen and (max-width: 425px) {
+  .title {
+    margin: 30px 0; }
+    .title__main {
+      font-size: 3rem; }
+
+  .visual {
+    height: 300px; }
+    .visual__text {
+      padding: 30px 5%; }
+      .visual__text p {
+        font-size: 1.25rem; }
+
+  .contents__header_product {
+    font-size: 1rem; }
+  .contents__button_main {
+    width: 120px;
+    padding: 0 10px; }
+    .contents__button_main_text {
+      font-size: 1rem; }
+  .contents__button_list_text {
+    padding-left: 10px;
+    font-size: 1rem; }
+  .contents__header_typing {
+    width: 150px; }
+  .contents__header_product_num {
+    font-size: 1rem; }
+  .contents__year_title {
+    margin-bottom: 30px; }
+  .contents__list_box {
+    width: 100%; }
+  .contents__list_text {
+    padding-left: 50px; } }
+@media screen and (max-width: 375px) {
+  main {
+    padding: 96px 5% 20px; }
+
+  .contents__header_typing {
+    width: 120px;
+    padding: 0 10px; }
+  .contents__year_box {
+    padding: 30px 0 0 0; }
+  .contents__list_inf_title {
+    width: 115px; } }
+
 /*# sourceMappingURL=nintendo_lineup.css.map */

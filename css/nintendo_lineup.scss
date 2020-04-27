@@ -221,15 +221,178 @@ main {
 
 //반응형 시작 -------------------------------------------------------------------
 @include pc-mid { //1440px 이하 ------------------------------------------------
+    .contents {
+        &__list {
+            &_text {
+                &_title {
+                    font-size: 1.3rem;
+                }
+                &_sub {
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
 }
 @include tab-large { //1024px 이하 ------------------------------------------------
+    main {
+        padding: 96px 5% 80px;
+    }
+
+    .title {
+        margin: 50px 0 30px 0;
+    }
+
+    .contents {
+        &__list {
+            &_text {
+                width: 85%;
+                padding-left: 0px;
+
+                &_title {
+                    line-height: 2rem;
+                }
+                &_sub {
+                    font-size: .9rem;
+                }
+            }
+            &_box {
+                margin-bottom: 60px;
+            }
+            &_inf {
+                &_title {
+                    width: 120px;
+                }
+            }
+        }
+    }
 }
 @include tab-small { //768px 이하 ------------------------------------------------
+    .visual {
+        margin-top: 50px;
+
+        &__text {
+            padding: 60px 10%;
+        }
+    }
+
+    .contents {
+        &__list {
+            &_box {
+                width: 50%;
+            }
+            &_text {
+                padding-left: 30px;
+            }
+        }
+    }
 }
 @include mob-large { //640px 이하 ------------------------------------------------
+    .contents {
+        &__header {
+            &_typing {
+                width: 200px;
+            }
+        }
+        &__button {
+            &_main {
+                width: 180px;
+            }
+        }
+    }
 }
 @include mob-mid { //425px 이하 ------------------------------------------------
+    .title {
+        margin: 30px 0;
+
+        &__main {
+            font-size: 3rem;
+        }
+    }
+
+    .visual {
+        height: 300px;
+
+        &__text {
+            padding: 30px 5%;
+
+            & p {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    .contents {
+        &__header {
+            &_product {
+                font-size: 1rem;
+            }
+        }
+        &__button {
+            &_main {
+                width: 120px;
+                padding: 0 10px;
+
+                &_text {
+                    font-size: 1rem;
+                }
+            }
+            &_list {
+                &_text {
+                    padding-left: 10px;
+                    font-size: 1rem;
+                }
+            }
+        }
+        &__header {
+            &_typing {
+                width: 150px;
+            }
+            &_product {
+                &_num {
+                    font-size: 1rem;
+                }
+            }
+        }
+        &__year {
+            &_title {
+                margin-bottom: 30px;
+            }
+        }
+        &__list {
+            &_box {
+                width: 100%;
+            }
+            &_text {
+                padding-left: 50px;
+            }
+        }
+    }
 }
 @include mob-small { //375px 이하 ------------------------------------------------
+    main {
+        padding: 96px 5% 20px;
+    }
+    
+    .contents {
+        &__header {
+            &_typing {
+                width: 120px;
+                padding: 0 10px;
+            }
+        }
+        &__year {
+            &_box {
+                padding: 30px 0 0 0;
+            }
+        }
+        &__list {
+            &_inf {
+                &_title {
+                    width: 115px;
+                }
+            }
+        }
+    }
 }
 // 반응형 끝 -------------------------------------------------------------------
