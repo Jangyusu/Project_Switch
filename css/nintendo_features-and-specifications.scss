@@ -191,13 +191,149 @@ main {
 @include pc-mid { //1440px 이하 ------------------------------------------------
 }
 @include tab-large { //1024px 이하 ------------------------------------------------
+    main {
+        padding: 96px 5% 80px;
+    }
+    
+    .kinds {
+        &__img {
+            width:100%
+        }
+    }
+
+    .home {
+        padding-top: 100px;
+
+        &__contents {
+            &_box {
+                margin-right: 40px;
+            }
+            &_list {
+                &_img {
+                    width: 40%;
+                }
+            }
+        }
+    }
 }
 @include tab-small { //768px 이하 ------------------------------------------------
+    .title {
+        &__main {
+            font-size: 3rem;
+        }
+    }
+
+    .kinds {
+        &__header {
+            &_list {
+                &_text {
+                    padding: 30px 40px;
+                    font-size: .8rem
+                }
+            }
+        }
+    }
+
+    .home {
+        &__contents {
+            &_list {
+                &_img {
+                    width: 30%;
+                    margin-right: 10px;
+                }
+            }
+            &_box {
+                margin-right: 30px;
+            }
+        }
+    }
 }
 @include mob-large { //640px 이하 ------------------------------------------------
+    main {
+        padding: 96px 3% 80px;
+    }
+
+    .title {
+        margin: 50px 0 30px 0;
+    }
+
+    .home {
+        &__contents {
+            &_list {
+                &_img {
+                    width: 30%;
+                    margin-right: 10px;
+                }
+                &_box {
+                    margin-bottom: 20px;
+                }
+            }
+            &_box {
+                margin-right: 20px;
+            }
+        }
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__sub {
+            margin: 0 auto 30px;
+        }
+    }
 }
 @include mob-mid { //425px 이하 ------------------------------------------------
+    .kinds {
+        margin-top: 50px;
+
+        &__header {
+            &_bar {
+                display: none;
+            }
+            &_list {
+                &_text {
+                    padding: 30px 10px;
+                }
+            }
+        }
+    }
+    
+    .home {
+        &__sub {
+            width: auto;
+        }
+        &__contents {
+            flex-direction: column;
+
+            &_box {
+                width: 100%;
+                margin-right: 0px;
+            }
+            &_text {
+                font-size: 0.9rem;
+                line-height: 1.8rem;
+            }
+            &_list {
+                margin-top: 20px;
+                flex-direction: row;
+
+                &_box {
+                    width: 33%;
+                    margin-bottom: 0;
+                    font-size: 0.9rem;
+                    justify-content: center;
+                }
+            }
+        }
+    }
 }
 @include mob-small { //375px 이하 ------------------------------------------------
+    .kinds {
+        &__header {
+            &_list {
+                &_text {
+                    padding: 20px 7px;
+                }
+            }
+        }
+    }
 }
 // 반응형 끝 -------------------------------------------------------------------
