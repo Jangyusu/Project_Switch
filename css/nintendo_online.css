@@ -7,7 +7,8 @@ main {
   background-attachment: fixed; }
 
 .visual {
-  width: 100%; }
+  width: 100%;
+  font-size: 0; }
   .visual__title {
     display: none; }
   .visual__video {
@@ -321,5 +322,179 @@ main {
       .question__list_a_text p {
         color: #333;
         line-height: 2.5rem; }
+
+@media screen and (max-width: 1440px) {
+  .price {
+    padding: 100px 10%; }
+    .price__contents {
+      width: 100%; }
+
+  .privilege {
+    padding: 50px 10%; }
+
+  .question {
+    padding: 150px 10%; }
+    .question__list_a.active {
+      height: 400px; } }
+@media screen and (max-width: 1024px) {
+  .service {
+    padding: 100px 10% 0; }
+    .service__main::before {
+      width: 30px;
+      height: 30px;
+      left: -20px;
+      top: -10px; }
+    .service__main_title {
+      font-size: 2.125rem; }
+    .service__main_sub {
+      font-size: 1rem;
+      line-height: 1.6rem; }
+    .service__box_main_text {
+      font-size: 1.275rem; }
+    .service__box_hover {
+      padding: 80px 0 0 20px; }
+    .service__app {
+      padding: 80px 0 0 20px; }
+
+  .price__list_text_price {
+    color: #e60012;
+    font-size: 2.125rem;
+    font-weight: 800; }
+  .price__list_text_title {
+    font-size: 1rem; }
+
+  .privilege {
+    padding: 50px 0%; }
+    .privilege__text {
+      margin: 0 30px; }
+      .privilege__text_sub {
+        line-height: 1.6rem; }
+
+  .question__list_a.active {
+    height: 500px; } }
+@media screen and (max-width: 768px) {
+  .service__box {
+    height: 250px; }
+    .service__box_main {
+      height: 70px; }
+      .service__box_main_img {
+        width: 20px;
+        margin-right: 5px; }
+      .service__box_main_text {
+        font-size: 1rem; }
+    .service__box_hover {
+      padding: 30px 0 0 20px; }
+      .service__box_hover_text {
+        font-size: 1.25rem; }
+      .service__box_hover_img {
+        width: 100px; }
+
+  .price {
+    padding: 60px 10%; }
+    .price__slide {
+      width: 90%; }
+    .price__list_img {
+      width: 25%; }
+
+  .privilege {
+    flex-direction: column; }
+    .privilege__text {
+      margin: 30px 0; }
+      .privilege__text_title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 30px 0;
+        text-align: center; }
+    .privilege__detail {
+      width: 90%; }
+
+  .question {
+    padding: 60px 5%; }
+    .question__list_a.active {
+      height: 600px; } }
+@media screen and (max-width: 640px) {
+  .service {
+    padding: 100px 5% 0; }
+    .service__main_title {
+      margin-bottom: 20px; }
+    .service__main_sub {
+      font-size: .8rem; }
+    .service__box_hover_text {
+      font-size: 1.125rem; }
+
+  .price {
+    padding: 60px 5%; }
+    .price__contents {
+      margin: 50px auto; }
+    .price__list_text {
+      margin-right: 10px; }
+    .price__use a {
+      width: 250px; }
+
+  .privilege__text_title {
+    margin: 20px 0; }
+
+  .question__list_q_text {
+    line-height: 2rem; } }
+@media screen and (max-width: 425px) {
+  .visual {
+    font-size: 0;
+    padding-top: 96px;
+    background: #e41217; }
+
+  .service {
+    padding: 50px 5% 0;
+    flex-direction: column; }
+    .service__box {
+      width: 100%;
+      height: 150px; }
+      .service__box_main {
+        width: 50%; }
+
+  .price__list_img {
+    display: none; }
+  .price__list_text_title {
+    font-size: 0.8rem;
+    line-height: 1.4rem; }
+  .price__list_text_price {
+    font-size: 1.6rem; }
+  .price__list_text_month {
+    margin-bottom: 20px;
+    font-size: 1.125rem; }
+  .price__list_text_sub {
+    margin-bottom: 15px; }
+    .price__list_text_sub span {
+      font-size: 0.8r; }
+  .price__use a {
+    width: 49%; }
+
+  .privilege {
+    padding: 30px 0%; }
+    .privilege__text {
+      padding: 0 20px; }
+      .privilege__text_title {
+        font-size: 1.25rem; }
+      .privilege__text_sub {
+        text-align: center; }
+      .privilege__text_small {
+        line-height: 1.6rem; }
+
+  .question__list_qna img {
+    margin-right: 20px; }
+  .question__list_a.active {
+    height: 700px; }
+  .question__list_a_text p {
+    line-height: 2rem;
+    font-size: .8rem; }
+  .question__list_q_text {
+    line-height: 1.8rem;
+    font-size: .9rem; } }
+@media screen and (max-width: 375px) {
+  .privilege__text_title {
+    font-size: 1rem; }
+  .privilege__text_sub {
+    font-size: 0.9rem; }
+  .privilege__text_small {
+    font-size: 0.8rem; } }
 
 /*# sourceMappingURL=nintendo_online.css.map */
