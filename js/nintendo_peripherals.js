@@ -31,12 +31,12 @@ $(function () {
 
                 peripheralsAppend +=
                     `<h2 class="contents__title">주변기기</h2>
-                    <div class="contents__list">
+                    <div class="contents__list slide-up">
                         <div class="contents__list_line">
                             <span class="contents__list_line_red"></span>
                             <span class="contents__list_line_gray"></span>
                         </div>
-                        <h3 class="contents__list_title">${title}</h3>
+                        <h3 class="contents__list_title ">${title}</h3>
                         <figure class="contents__box">
                             <div class="contents__imgs">
                                 <div class="contents__imgs_first">
@@ -74,17 +74,21 @@ $(function () {
                     </div>`
             }
             $contents.append(peripheralsAppend);
+            addActive($(".contents__list").eq(0));
 
 
 
 
 
-            var $imgBox = $(".contents__imgs_first_box");
+            var $imgBox = $(".contents__imgs_first_box"),
+                $slideContents = $(".slide-up"),
+                $windowTop = $(window).height();
 
 
 
 
 
+            $(window).scroll(scrollEvent); //scroll 이벤트
             $imgBox.mouseenter(imgZoomIn); //이미지 확대 이벤트
             $imgBox.mouseleave(imgZoomOut);
             $imgBox.mousemove(imgZoomMove);
@@ -92,6 +96,23 @@ $(function () {
 
 
 
+
+            function scrollEvent() {
+                $scrollTop = $(this).scrollTop();
+                $scrollBottom = $windowTop + $scrollTop;
+
+                $slideContents.each(elementsSlide);
+            }
+
+            function elementsSlide() {
+                $slideTop = $(this).offset().top;
+
+                if ($scrollBottom > $slideTop) {
+                    addActive($(this));
+                } else {
+                    removeActive($(this))
+                }
+            }
 
             function imgZoomIn() {
                 $(this).children("img").css({
