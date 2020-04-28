@@ -1,4 +1,12 @@
 @import url(common.css);
+body {
+  background: none; }
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex; }
+
 .life, .ring, .cart, .super {
   width: 100%;
   height: 0;
@@ -8,14 +16,6 @@
   bottom: 0;
   transition: 0.7s cubic-bezier(0.76, 0, 0.24, 1);
   overflow: hidden; }
-
-body {
-  background: none; }
-
-main {
-  width: 100%;
-  height: 100vh;
-  display: flex; }
 
 .visual {
   width: 100%;

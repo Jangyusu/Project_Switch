@@ -1,3 +1,57 @@
+// software mixin --------------------------------------
+
+@mixin backBtn { //뒤로가기 버튼
+    &.active {
+        height: 100%;
+        padding: 100px 50px;
+    }
+    &__prev {
+        border-radius: 50px;
+        padding: 10px;
+        background: #fff;
+        position: absolute;
+        left: 50px;
+        top: 100px;
+
+        &_img {
+            width: 30px;
+        }
+    }    
+}
+
+@mixin introduce { // 소개 영상
+    &__introduce {
+        width: 70%;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-45%);
+        visibility: hidden;
+        opacity: 0;
+        transition: .5s;
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        &_title {
+            margin-bottom: 20px;
+            font-size: 3.125rem;
+            font-weight: 800;
+            color: #fff;
+        }
+        &_video {
+            width: 100%;
+            height: 800px;
+        }
+    }
+}
+
+// --------------------------------------------------
+
+
+
 // 반응형 mixin --------------------------------------
 
 $desktop-m-width : 1440px;
