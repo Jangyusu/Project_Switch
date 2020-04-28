@@ -150,8 +150,6 @@ main {
                 line-height: 2rem;
                 display: block;
             }
-            &_first {}
-            &_second {}
         }
         &_date {
             font-size: 1.125rem;
@@ -214,7 +212,8 @@ main {
             text-align: start;
             transform: translate(-1px);
             overflow: hidden;
-            transition: .5s;            
+            transition: .5s;
+            z-index: 2;
 
             li {
                 color: #555;
@@ -384,15 +383,209 @@ main {
 
 //반응형 시작 -------------------------------------------------------------------
 @include pc-mid { //1440px 이하 ------------------------------------------------
+    .contents {
+        padding: 120px 5% 0;
+    }
+    
+    .search {
+        padding: 120px 5% 0;
+    }
+    
+    .list {
+        padding: 30px 5% 80px;
+    }
 }
 @include tab-large { //1024px 이하 ------------------------------------------------
+    .visual {
+        background: url("../img/news/bg_m.jpg") no-repeat center/cover;
+
+        &__title {
+            display: none;
+        }
+    }
+    
+    .content {
+        &__text {
+            &_main {
+                font-size: 1.5rem;
+                line-height: 2.5rem;
+            }
+        }
+    }
+    
+    .list {
+        &__text {
+            &_main {
+                font-size: 1.25rem;
+            }
+            &_sub {
+                & small {
+                    font-size: 1rem;
+                }
+            }
+            &_date {
+                font-size: 0.9rem;
+            }
+        }
+    }
 }
 @include tab-small { //768px 이하 ------------------------------------------------
+    .visual {
+        height: 360px;
+    }
+    
+    .content {
+        flex-direction: column;
+
+        &__img {
+            width: 100%;
+        }
+        &__text {
+            width: 100%;
+            height: 300px;
+            padding: 30px 3%;
+        }
+    }
+    
+    .search {
+        padding: 60px 5% 0;
+
+        &__text {
+            &_typing {
+                width: 200px;
+                padding: 8px 13px;
+            }
+            &_result {
+                padding: 9px 25px;
+            }
+        }
+        &__reset {
+            padding: 8px 13px;
+        }
+        &__select {
+            padding: 8px 13px;
+        }
+    }
+    
+    .list {
+        padding: 20px 5% 40px;
+
+        &__text {
+            width: 600px;
+            padding: 10px 20px;
+        }
+    }
+    
+    .view {
+        margin-bottom: 50px;
+    }
 }
 @include mob-large { //640px 이하 ------------------------------------------------
+    .contents {
+        padding: 100px 5% 0;
+    }
+
+    .content {
+        &__img {
+            height: 325px;
+        }
+        &__text {
+            height: 270px;
+
+            &_main {
+                font-size: 1.25rem;
+                line-height: 2rem;
+            }
+            &_sub {
+                & small {
+                    font-size: 1rem;
+                }
+            }
+            &_date {
+                font-size: .9rem;
+            }
+        }
+    }
 }
 @include mob-mid { //425px 이하 ------------------------------------------------
+    .visual {
+        height: 260px;
+
+        &__indicator {
+            & a {
+                width: 45%;
+            }
+        }
+    }
+    
+    .contents {
+        &__title {
+            font-size: 2rem;
+        }
+    }
+    
+    .search {
+        &__box {
+            flex-direction: column;
+        }
+        &__select {
+            width: 100%;
+            margin-right: 0;
+        }
+        &__text {
+            margin-right: 0;
+        }
+    }
+    
+    .list {
+        &__box {
+            padding: 20px 0;
+            flex-wrap: wrap;
+        }
+        &__img {
+            width: 100%;
+        }
+        &__text {
+            height: 200px;
+            padding: 10px 0;
+
+            &_main {
+                font-size: 1.125rem;
+            }
+            &_sub {
+                & small {
+                    font-size: .9rem;
+                    line-height: 1.6rem;
+                }
+            }
+            &_date {
+                font-size: 0.8rem;
+            }
+        }
+    }
 }
 @include mob-small { //375px 이하 ------------------------------------------------
+    .content {
+        &__img {
+            height: 225px;
+        }
+        &__text {
+            height: 230px;
+            padding: 20px 3%;
+
+            &_main {
+                font-size: 1.125rem;
+                line-height: 1.8rem;
+            }
+            &_sub {
+                & small {
+                    font-size: .9rem;
+                }
+            }
+            &_date {
+                font-size: .8rem;
+            }
+        }
+    }
 }
 // 반응형 끝 -------------------------------------------------------------------

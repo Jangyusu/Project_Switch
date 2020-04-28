@@ -380,6 +380,9 @@ footer {
     margin: 180px 0 0 0; }
   .header__nav.active .header__nav_detail-list_link {
     font-size: 1rem;
-    padding: 10px 0; } }
+    padding: 10px 0; }
+
+  footer {
+    font-size: .8rem; } }
 
 /*# sourceMappingURL=common.css.map */

@@ -147,7 +147,8 @@ main {
       text-align: start;
       transform: translate(-1px);
       overflow: hidden;
-      transition: .5s; }
+      transition: .5s;
+      z-index: 2; }
       .search__select_list li {
         color: #555;
         line-height: 2.5rem;
@@ -270,5 +271,124 @@ main {
     font-size: 1.125rem;
     font-weight: 800;
     color: #555; }
+
+@media screen and (max-width: 1440px) {
+  .contents {
+    padding: 120px 5% 0; }
+
+  .search {
+    padding: 120px 5% 0; }
+
+  .list {
+    padding: 30px 5% 80px; } }
+@media screen and (max-width: 1024px) {
+  .visual {
+    background: url("../img/news/bg_m.jpg") no-repeat center/cover; }
+    .visual__title {
+      display: none; }
+
+  .content__text_main {
+    font-size: 1.5rem;
+    line-height: 2.5rem; }
+
+  .list__text_main {
+    font-size: 1.25rem; }
+  .list__text_sub small {
+    font-size: 1rem; }
+  .list__text_date {
+    font-size: 0.9rem; } }
+@media screen and (max-width: 768px) {
+  .visual {
+    height: 360px; }
+
+  .content {
+    flex-direction: column; }
+    .content__img {
+      width: 100%; }
+    .content__text {
+      width: 100%;
+      height: 300px;
+      padding: 30px 3%; }
+
+  .search {
+    padding: 60px 5% 0; }
+    .search__text_typing {
+      width: 200px;
+      padding: 8px 13px; }
+    .search__text_result {
+      padding: 9px 25px; }
+    .search__reset {
+      padding: 8px 13px; }
+    .search__select {
+      padding: 8px 13px; }
+
+  .list {
+    padding: 20px 5% 40px; }
+    .list__text {
+      width: 600px;
+      padding: 10px 20px; }
+
+  .view {
+    margin-bottom: 50px; } }
+@media screen and (max-width: 640px) {
+  .contents {
+    padding: 100px 5% 0; }
+
+  .content__img {
+    height: 325px; }
+  .content__text {
+    height: 270px; }
+    .content__text_main {
+      font-size: 1.25rem;
+      line-height: 2rem; }
+    .content__text_sub small {
+      font-size: 1rem; }
+    .content__text_date {
+      font-size: .9rem; } }
+@media screen and (max-width: 425px) {
+  .visual {
+    height: 260px; }
+    .visual__indicator a {
+      width: 45%; }
+
+  .contents__title {
+    font-size: 2rem; }
+
+  .search__box {
+    flex-direction: column; }
+  .search__select {
+    width: 100%;
+    margin-right: 0; }
+  .search__text {
+    margin-right: 0; }
+
+  .list__box {
+    padding: 20px 0;
+    flex-wrap: wrap; }
+  .list__img {
+    width: 100%; }
+  .list__text {
+    height: 200px;
+    padding: 10px 0; }
+    .list__text_main {
+      font-size: 1.125rem; }
+    .list__text_sub small {
+      font-size: .9rem;
+      line-height: 1.6rem; }
+    .list__text_date {
+      font-size: 0.8rem; } }
+@media screen and (max-width: 375px) {
+  .content__img {
+    height: 225px; }
+  .content__text {
+    height: 230px;
+    padding: 20px 3%; }
+    .content__text_main {
+      font-size: 1.125rem;
+      line-height: 1.8rem; }
+    .content__text_sub small {
+      font-size: .9rem; }
+    .content__text_date {
+      font-size: .8rem; } }
 
 /*# sourceMappingURL=nintendo_news.css.map */
