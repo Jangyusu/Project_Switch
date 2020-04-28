@@ -115,7 +115,8 @@ main {
     background: #fff;
     position: absolute;
     left: 50px;
-    top: 100px; }
+    top: 100px;
+    z-index: 2; }
     .life__prev_img {
       width: 30px; }
   .life__contents {
@@ -211,7 +212,8 @@ main {
     background: #fff;
     position: absolute;
     left: 50px;
-    top: 100px; }
+    top: 100px;
+    z-index: 2; }
     .ring__prev_img {
       width: 30px; }
   .ring__contents {
@@ -323,7 +325,8 @@ main {
     background: #fff;
     position: absolute;
     left: 50px;
-    top: 100px; }
+    top: 100px;
+    z-index: 2; }
     .cart__prev_img {
       width: 30px; }
   .cart__contents {
@@ -444,7 +447,8 @@ main {
     background: #fff;
     position: absolute;
     left: 50px;
-    top: 100px; }
+    top: 100px;
+    z-index: 2; }
     .super__prev_img {
       width: 30px; }
   .super__contents {
@@ -549,5 +553,256 @@ main {
     .super__introduce_video {
       width: 100%;
       height: 800px; }
+
+@media screen and (max-width: 1440px) {
+  .life__contents {
+    width: 95%; }
+    .life__contents_title {
+      font-size: 3rem; }
+    .life__contents_top_main_img {
+      width: 500px; }
+    .life__contents_bottom_main_img {
+      width: 500px; }
+  .life__introduce {
+    width: 95%; }
+
+  .ring__contents {
+    width: 95%; }
+  .ring__introduce {
+    width: 95%; }
+
+  .cart__contents {
+    width: 95%; }
+  .cart__introduce {
+    width: 95%; }
+
+  .super__introduce {
+    width: 95%; } }
+@media screen and (max-width: 1024px) {
+  .life__contents {
+    padding: 40px 30px; }
+    .life__contents_title {
+      font-size: 2rem; }
+    .life__contents_top_main_title {
+      font-size: .9rem;
+      line-height: 1.8rem; }
+    .life__contents_top_main_img {
+      width: 350px; }
+    .life__contents_top_sub {
+      padding: 30px 0; }
+      .life__contents_top_sub_img {
+        width: 160px; }
+    .life__contents_bottom_main_title {
+      font-size: .9rem;
+      line-height: 1.8rem; }
+    .life__contents_bottom_main_img {
+      width: 350px; }
+    .life__contents_bottom_sub {
+      padding: 30px 0; }
+      .life__contents_bottom_sub_img {
+        width: 160px; }
+  .life__introduce_video {
+    width: 100%;
+    height: 500px; }
+
+  .ring__contents_list_box {
+    width: 180px;
+    height: 180px;
+    margin: 0px 20px 60px 0; }
+  .ring__introduce_video {
+    width: 100%;
+    height: 500px; }
+
+  .cart__contents_list_img {
+    width: 80px; }
+  .cart__contents_list_box:hover::after {
+    display: none; }
+  .cart__introduce_video {
+    width: 100%;
+    height: 500px; }
+
+  .super__contents_list {
+    height: 500px; }
+  .super__introduce_video {
+    width: 100%;
+    height: 500px; } }
+@media screen and (max-width: 768px) {
+  .visual__contents_btn {
+    width: 170px;
+    height: 80px;
+    margin-right: 40px; }
+
+  .life__contents_top_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .life__contents_top_sub {
+    padding: 20px 0; }
+  .life__contents_bottom_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .life__contents_bottom_sub {
+    padding: 20px 0; }
+
+  .ring__contents {
+    padding: 30px 30px; }
+    .ring__contents_list_box {
+      width: 150px;
+      height: 150px; }
+    .ring__contents_list_img {
+      width: 150px; }
+
+  .cart__contents_title {
+    font-size: 2.125rem; }
+
+  .super__contents_list_text {
+    padding: 40px 0 0 40px; }
+    .super__contents_list_text_title {
+      width: 350px; }
+      .super__contents_list_text_title::after {
+        width: 450px; } }
+@media screen and (max-width: 640px) {
+  main {
+    flex-direction: column; }
+
+  .life__contents_title {
+    margin-bottom: 10px;
+    font-size: 1.5rem; }
+  .life__contents_bottom_sub {
+    padding: 0; }
+
+  .ring__contents_title {
+    font-size: 2.125rem; }
+  .ring__contents_list_box {
+    width: 120px;
+    height: 120px; }
+  .ring__contents_list_img {
+    width: 120px; }
+
+  .cart__contents {
+    padding: 30px 10px; }
+    .cart__contents_title {
+      margin-bottom: 20px; }
+
+  .super__contents_title {
+    font-size: 2.125rem; }
+  .super__contents_list_box {
+    padding-left: 0; }
+  .super__contents_list_text {
+    padding: 25px 0 0 20px; }
+    .super__contents_list_text_title {
+      width: 250px;
+      font-size: 2rem; }
+      .super__contents_list_text_title::after {
+        width: 320px;
+        height: 10px; }
+    .super__contents_list_text_sub {
+      font-size: 1rem; } }
+@media screen and (max-width: 425px) {
+  .visual__contents_btn {
+    width: 120px;
+    height: 60px;
+    margin-right: 20px; }
+
+  .life__contents {
+    padding: 40px 10px; }
+    .life__contents_title {
+      font-size: 1.25rem; }
+    .life__contents_top {
+      flex-direction: column; }
+      .life__contents_top_main_title {
+        display: none; }
+      .life__contents_top_main_img {
+        width: 300px; }
+      .life__contents_top_sub {
+        padding: 0; }
+        .life__contents_top_sub_img {
+          width: 100px; }
+    .life__contents_bottom {
+      flex-direction: column-reverse; }
+      .life__contents_bottom_main_title {
+        display: none; }
+      .life__contents_bottom_main_img {
+        width: 300px; }
+      .life__contents_bottom_sub_img {
+        width: 100px; }
+  .life__prev {
+    left: 20px; }
+    .life__prev_img {
+      width: 25px; }
+  .life__introduce_title {
+    font-size: 2rem; }
+
+  .ring__contents {
+    padding: 30px 0; }
+    .ring__contents_list_box {
+      width: 80px;
+      height: 80px; }
+    .ring__contents_list_img {
+      width: 80px; }
+    .ring__contents_list_text {
+      font-size: 1rem; }
+  .ring__prev {
+    left: 20px; }
+    .ring__prev_img {
+      width: 25px; }
+  .ring__introduce_title {
+    font-size: 2rem; }
+
+  .cart__contents {
+    padding: 30px 0; }
+    .cart__contents_title {
+      font-size: 1.5rem; }
+    .cart__contents_list_box {
+      margin: 7px; }
+    .cart__contents_list_img {
+      width: 60px; }
+  .cart__prev {
+    left: 20px; }
+    .cart__prev_img {
+      width: 25px; }
+  .cart__introduce_title {
+    font-size: 2rem; }
+
+  .super__contents_title {
+    margin-bottom: 20px;
+    font-size: 1.5rem; }
+  .super__contents_list {
+    height: 400px; }
+    .super__contents_list_text_title {
+      width: 180px;
+      margin-bottom: 30px;
+      font-size: 1.75rem; }
+      .super__contents_list_text_title::after {
+        width: 250px;
+        height: 7px; }
+    .super__contents_list_text_sub {
+      font-size: .9rem; }
+  .super__prev {
+    left: 20px; }
+    .super__prev_img {
+      width: 25px; }
+  .super__introduce_title {
+    font-size: 2rem; }
+
+  .life__prev {
+    left: 20px; }
+    .life__prev_img {
+      width: 25px; }
+  .life__introduce_title {
+    font-size: 2rem; } }
+@media screen and (max-width: 375px) {
+  .life__contents_title {
+    font-size: 1.125rem; }
+
+  .ring__contents_title {
+    font-size: 1.75rem; }
+  .ring__contents_list_box {
+    width: 180px;
+    height: 180px;
+    margin: 0px 10px 60px 0; } }
 
 /*# sourceMappingURL=nintendo_software.css.map */

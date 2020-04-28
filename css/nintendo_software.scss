@@ -585,16 +585,523 @@ main {
 
 //반응형 시작 -------------------------------------------------------------------
 @include pc-mid { //1440px 이하 ------------------------------------------------
+    .life {
+        &__contents {
+            width: 95%;
+
+            &_title {
+                font-size: 3rem;
+            }
+            &_top {
+                &_main {
+                    &_img {
+                        width: 500px;
+                    }
+                }
+            }
+            &_bottom {
+                &_main {
+                    &_img {
+                        width: 500px;
+                    }
+                }
+            }
+        }
+        &__introduce {
+            width: 95%;
+        }
+    }
     
+    .ring {
+        &__contents {
+            width: 95%;
+        }
+        &__introduce {
+            width: 95%;
+        }
+    }
+    
+    .cart {
+        &__contents {
+            width: 95%;
+        }
+        &__introduce {
+            width: 95%;
+        }
+    }
+    
+    .super {
+        &__introduce {
+            width: 95%;
+        }
+    }
 }
 @include tab-large { //1024px 이하 ------------------------------------------------
+    .life {
+        &__contents {
+            padding: 40px 30px;
+
+            &_title {
+                font-size: 2rem;
+            }
+            &_top {
+                &_main {
+                    &_title {
+                        font-size: .9rem;
+                        line-height: 1.8rem;
+                    }
+                    &_img {
+                        width: 350px;
+                    }
+                }
+                &_sub {
+                    padding: 30px 0;
+
+                    &_img {
+                        width: 160px;
+                    }
+                }
+            }
+            &_bottom {
+                &_main {
+                    &_title {
+                        font-size: .9rem;
+                        line-height: 1.8rem;
+                    }
+                    &_img {
+                        width: 350px;
+                    }
+                }
+                &_sub {
+                    padding: 30px 0;
+
+                    &_img {
+                        width: 160px;
+                    }
+                }
+            }
+        }
+        &__introduce {
+            &_video {
+                width: 100%;
+                height: 500px;
+            }
+        }
+    }
+    
+    .ring {
+        &__contents {
+            &_list {
+                &_box {
+                    width: 180px;
+                    height: 180px;
+                    margin: 0px 20px 60px 0;
+                }
+            }
+        }
+        &__introduce {
+            &_video {
+                width: 100%;
+                height: 500px;
+            }
+        }
+    }
+    
+    .cart {
+        &__contents {
+            &_list {
+                &_img {
+                    width: 80px;
+                }
+                &_box:hover::after {
+                    display: none;
+                }
+            }
+        }
+        &__introduce {
+            &_video {
+                width: 100%;
+                height: 500px;
+            }
+        }
+    }
+    
+    .super {
+        &__contents {
+            &_list {
+                height: 500px;
+            }
+        }
+        &__introduce {
+            &_video {
+                width: 100%;
+                height: 500px;
+            }
+        }
+    }
 }
 @include tab-small { //768px 이하 ------------------------------------------------
+    .visual {
+        &__contents {
+            &_btn {
+                width: 170px;
+                height: 80px;
+                margin-right: 40px;
+            }
+        }
+    }
+
+    .life {
+        &__contents {
+            &_top {
+                &_main {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                &_sub {
+                    padding: 20px 0;
+                }
+            }
+            &_bottom {
+                &_main {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                &_sub {
+                    padding: 20px 0;
+                }
+            }
+        }
+    }
+    
+    .ring {
+        &__contents {
+            padding: 30px 30px;
+
+            &_list {
+                &_box {
+                    width: 150px;
+                    height: 150px;
+                }
+                &_img {
+                    width: 150px;
+                }
+            }
+        }
+    }
+    
+    .cart {
+        &__contents {
+            &_title {
+                font-size: 2.125rem;
+            }
+        }
+    }
+    
+    .super {
+        &__contents {
+            &_list {
+                &_text {
+                    padding: 40px 0 0 40px;
+
+                    &_title {
+                        width: 350px;
+
+                        &::after {
+                            width: 450px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 @include mob-large { //640px 이하 ------------------------------------------------
+    main {
+        flex-direction: column;
+    }
+    
+    .life {
+        &__contents {
+            &_title {
+                margin-bottom: 10px;
+                font-size: 1.5rem;
+            }
+            &_bottom {
+                &_sub {
+                    padding: 0;
+                }
+            }
+        }
+    }
+    
+    .ring {
+        &__contents {
+            &_title {
+                font-size: 2.125rem;
+            }
+            &_list {
+                &_box {
+                    width: 120px;
+                    height: 120px;
+                }
+                &_img {
+                    width: 120px;
+                }
+            }
+        }
+    }
+    
+    .cart {
+        &__contents {
+            padding: 30px 10px;
+
+            &_title {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    
+    .super {
+        &__contents {
+            &_title {
+            font-size: 2.125rem;
+            }
+            &_list {
+                &_box {
+                    padding-left: 0;
+                }
+                &_text {
+                    padding: 25px 0 0 20px;
+
+                    &_title {
+                        width: 250px;
+                        font-size: 2rem;
+
+                        &::after {
+                            width: 320px;
+                            height: 10px;
+                        }
+                    }
+                    &_sub {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
 }
 @include mob-mid { //425px 이하 ------------------------------------------------
+    .visual {
+        &__contents {
+            &_btn {
+                width: 120px;
+                height: 60px;
+                margin-right: 20px;
+            }
+        }
+    }
+    
+    .life {
+        &__contents {
+            padding: 40px 10px;
+
+            &_title {
+                font-size: 1.25rem;
+            }
+            &_top {
+                flex-direction: column;
+
+                &_main {
+                    &_title {
+                        display: none;
+                    }
+                    &_img {
+                        width: 300px;
+                    }
+                }
+                &_sub {
+                    padding: 0;
+
+                    &_img {
+                        width: 100px;
+                    }
+                }
+            }
+            &_bottom {
+                flex-direction: column-reverse;
+
+                &_main {
+                    &_title {
+                        display: none;
+                    }
+                    &_img {
+                        width: 300px;
+                    }
+                }
+                &_sub {
+                    &_img {
+                        width: 100px;
+                    }
+                }
+            }
+        }
+        &__prev {
+            left: 20px;
+
+            &_img {
+                width: 25px;
+            }
+        }
+        &__introduce {
+            &_title {
+                font-size: 2rem;
+            }
+        }
+    }
+    
+    .ring {
+        &__contents {
+            padding: 30px 0;
+
+            &_list {
+                &_box {
+                    width: 80px;
+                    height: 80px;
+                }
+                &_img {
+                    width: 80px;
+                }
+                &_text {
+                    font-size: 1rem;
+                }
+            }
+        }
+        &__prev {
+            left: 20px;
+
+            &_img {
+                width: 25px;
+            }
+        }
+        &__introduce {
+            &_title {
+                font-size: 2rem;
+            }
+        }
+    }
+    
+    .cart {
+        &__contents {
+            padding: 30px 0;
+
+            &_title {
+                font-size: 1.5rem;
+            }
+            &_list {
+                &_box {
+                    margin: 7px;
+                }
+                &_img {
+                    width: 60px;
+                }
+            }
+        }
+        &__prev {
+            left: 20px;
+
+            &_img {
+                width: 25px;
+            }
+        }
+        &__introduce {
+            &_title {
+                font-size: 2rem;
+            }
+        }
+    }
+    
+    .super {
+        &__contents {
+            &_title {
+                margin-bottom: 20px;
+                font-size: 1.5rem;
+            }
+            &_list {
+                height: 400px;
+
+                &_text {
+                    &_title {
+                        width: 180px;
+                        margin-bottom: 30px;
+                        font-size: 1.75rem;
+
+                        &::after {
+                            width: 250px;
+                            height: 7px;
+                        }
+                    }
+                    &_sub {
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+        &__prev {
+            left: 20px;
+
+            &_img {
+                width: 25px;
+            }
+        }
+        &__introduce {
+            &_title {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .life {
+        &__prev {
+            left: 20px;
+
+            &_img {
+                width: 25px;
+            }
+        }
+        &__introduce {
+            &_title {
+                font-size: 2rem;
+            }
+        }
+    }
 }
 @include mob-small { //375px 이하 ------------------------------------------------
+    .life {
+        &__contents {
+            &_title {
+                font-size: 1.125rem;
+            }
+        }
+    }
+    
+    .ring {
+        &__contents {
+            &_title {
+                font-size: 1.75rem;
+            }
+            &_list {
+                &_box {
+                    width: 180px;
+                    height: 180px;
+                    margin: 0px 10px 60px 0;
+                }
+            }
+        }
+    }
 }
 // 반응형 끝 -------------------------------------------------------------------
