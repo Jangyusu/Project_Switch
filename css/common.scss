@@ -1,10 +1,12 @@
+//import 시작 -------------------------------------------------------------------
 @import "https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap";
 @import "https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap";
+@import "mixin.scss";
+//import 끝 -------------------------------------------------------------------
 
 
 
-
-
+//common 시작 -------------------------------------------------------------------
 html, body, dl, dt {
     margin: 0;
     padding: 0;
@@ -69,11 +71,11 @@ input {
     font-weight: normal;
     box-sizing: border-box;
 }
+//common 끝 -------------------------------------------------------------------
 
 
 
-
-
+//header 시작 -------------------------------------------------------------------
 .header {
     width: 100%;
     height: 96px;
@@ -345,7 +347,11 @@ input {
         }
     }
 }
+//header 끝 -------------------------------------------------------------------
 
+
+
+//aside 시작 -------------------------------------------------------------------
 aside {
     height: calc(100% - 140px);
     position: fixed;
@@ -371,7 +377,11 @@ aside {
 ::-webkit-scrollbar {
     display: none;
 }
+//aside 끝 -------------------------------------------------------------------
 
+
+
+//footer 시작 -------------------------------------------------------------------
 footer {
     width: 100%;
     height: 250px;
@@ -381,7 +391,11 @@ footer {
     justify-content: center;
     align-items: center;
 }
+//footer 끝 -------------------------------------------------------------------
 
+
+
+//more 시작 -------------------------------------------------------------------
 .more {
     width: max-content;
     display: inline-flex;
@@ -425,7 +439,11 @@ footer {
         font-weight: 700;
     }
 }
+//more 끝 -------------------------------------------------------------------
 
+
+
+//etc 시작 -------------------------------------------------------------------
 .loading {
     display: none;
 }
@@ -450,66 +468,15 @@ footer {
         opacity: 1;
     }
 }
+//etc 끝 -------------------------------------------------------------------
 
 
 
-
-
-
-// 반응형 mixin --------------------------------------
-
-$desktop-m-width : 1440px;
-$tablet-l-width : 1024px;
-$tablet-s-width : 768px;
-$mob-l-width : 640px;
-$mob-m-width : 425px;
-$mob-s-width : 375px;
- 
-// -------------------------------------------------- 
-
-// PC large
-@mixin pc-mid {
-	@media screen and (max-width: #{$desktop-m-width}) {
-		@content;
-	}
-}
-// 태블릿 large
-@mixin tab-large {
-	@media screen and (max-width: #{$tablet-l-width}) {
-		@content;
-	}
-}
-// 태블릿 small
-@mixin tab-small {
-	@media screen and (max-width: #{$tablet-s-width}) {
-		@content;
-	}
-}
-// 모바일 large
-@mixin mob-large {
-	@media screen and (max-width: #{$mob-l-width}) {
-		@content;
-	}
-}
-// 모바일 mid
-@mixin mob-mid {
-	@media screen and (max-width: #{$mob-m-width}) {
-		@content;
-	}
-}
-// 모바일 small
-@mixin mob-small {
-	@media screen and (max-width: #{$mob-s-width}) {
-		@content;
-	}
-}
-
-// --------------------------------------------------
-
-@include pc-mid {
+//반응형 시작 -------------------------------------------------------------------
+@include pc-mid { //1440px 이하 ------------------------------------------------
      
 }
-@include tab-large {
+@include tab-large { //1024px 이하 ------------------------------------------------
     .header {
         &.active {
             transform: translateY(0);
@@ -544,13 +511,13 @@ $mob-s-width : 375px;
         height: 150px;
     }
 }
-@include tab-small {
+@include tab-small { //768px 이하 ------------------------------------------------
 
 }
-@include mob-large {
+@include mob-large { //640px 이하 ------------------------------------------------
      
 }
-@include mob-mid {
+@include mob-mid { //425px 이하 ------------------------------------------------
     .header {
         padding: 0 30px;
 
@@ -579,7 +546,7 @@ $mob-s-width : 375px;
         display: none;
     }
 }
-@include mob-small {
+@include mob-small { //375px 이하 ------------------------------------------------
     .header {
         &__nav.active {
             .header {
@@ -607,5 +574,4 @@ $mob-s-width : 375px;
         font-size: .8rem;
     }
 }
-
-// -------------------------------------------------- 
+//반응형 끝 -------------------------------------------------------------------

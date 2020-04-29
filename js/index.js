@@ -173,6 +173,12 @@ $(function () {
             $visualControl.click(visualControl); //visual 컨트롤
             $(".visual").on("mousedown touchstart", visualStart); //visual 마우스, 터치시작
             $(".visual").on("mouseup touchend", visualEnd); //visual 마우스, 터치끝
+            $(".visual__text a").mouseenter(clearSlide); //visual 더보기 마우스 오버시 슬라이드 멈춤
+            $(".visual__text a").mouseleave(function () { //visual 더보기 마우스 리브시 슬라이드 재시작
+                if ($(".visual__controls_button_play").attr("src") == "img/pause.png") {
+                    visualSlide();
+                }
+            })
 
             $aboutSwitchList.hover(aboutSwitchenter, aboutSwitchleave) //aboutSwitch 마우스 엔터/리브
 
@@ -242,7 +248,7 @@ $(function () {
                             visualSlide();
                         } else { //일시정지
                             target.src = "img/play.png";
-                            clearInterval(visualSlideInter);
+                            clearSlide();
                         };
                     };
 
@@ -259,7 +265,7 @@ $(function () {
 
                     setTimeout(function () {
                         visualBln = true;
-                    }, 1200);
+                    }, 1500);
                 }
             }
             background($visual, "visual0", 0);
@@ -270,6 +276,10 @@ $(function () {
                 }, 5000);
             }
             visualSlide();
+
+            function clearSlide() {
+                clearInterval(visualSlideInter);
+            }
 
             function aboutSwitchenter() {
                 background($aboutSwitch, "ABOUT_SWITCH0", $(this).index());
