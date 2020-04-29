@@ -39,6 +39,7 @@ main {
     transition: .7s cubic-bezier(0.87, 0, 0.13, 1);
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 
     &:hover {
         flex: 2;

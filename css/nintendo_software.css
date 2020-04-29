@@ -23,7 +23,8 @@ main {
   flex: 1;
   transition: 0.7s cubic-bezier(0.87, 0, 0.13, 1);
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  cursor: pointer; }
   .visual:hover {
     flex: 2; }
     .visual:hover::before {

@@ -30,12 +30,20 @@ $(function () {
             }
 
             function visual(e) {
+                $(this).css({
+                    cursor: "auto"
+                })
+
                 addActive($(".visual"));
                 removeActive($(this));
 
                 addActive($(this).find(".visual__contents"));
 
                 if ($(e.target).hasClass("visual__contents_home")) { //홈으로 버튼
+                    $(".visual").css({
+                        cursor: "pointer"
+                    })
+
                     removeActive($(".visual"));
                     removeActive($(this).find(".visual__contents"));
                 }
@@ -101,7 +109,7 @@ $(function () {
                 }
 
                 function backBtn(targets) { //컨텐츠 뒤로가기 버튼
-                    if ($(e.target).hasClass(`${targets}__prev`) || $(e.target).hasClass(`${targets}__prev_img`)) {// 동물의숲 뒤로가기 버튼
+                    if ($(e.target).hasClass(`${targets}__prev`) || $(e.target).hasClass(`${targets}__prev_img`)) {
                         removeActive($(".visual__content"));
                         removeHide($(".visual__contents"));
                     }
