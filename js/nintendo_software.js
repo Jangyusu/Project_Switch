@@ -63,18 +63,17 @@ $(function () {
 
 
 
-
-                if ($(e.target).hasClass("visual__cart_detail_close") || $(e.target).hasClass("visual__cart_detail_close_img")) { //마리오카트 상세보기 on/off
-                    $(".visual__cart_detail").removeClass("active");
+                if ($(e.target).hasClass("cart__detail_close") || $(e.target).hasClass("cart__detail_close_img")) { //마리오카트 상세보기 on/off
+                    $(".cart__detail").removeClass("active");
                 }
 
-                if ($(e.target).hasClass("visual__cart_menu_box")) { //마리오카트 상세보기 변경
+                if ($(e.target).hasClass("cart__contents_list_box")) { //마리오카트 상세보기 변경
                     var cartIndex = $(e.target).index();
 
-                    $(".visual__cart_detail_title").html(`${cartData[cartIndex].name}`);
-                    $(".visual__cart_detail_text").html(`${cartData[cartIndex].sub}`);
-                    $(".visual__cart_detail_img").attr("src", cartData[cartIndex].img);
-                    $(".visual__cart_detail").addClass("active");
+                    $(".cart__detail_title").html(`${cartData[cartIndex].name}`);
+                    $(".cart__detail_text").html(`${cartData[cartIndex].sub}`);
+                    $(".cart__detail_img").attr("src", cartData[cartIndex].img);
+                    $(".cart__detail").addClass("active");
                 }
 
                 function firstMenu(targets) { //컨텐츠 첫번째 메뉴

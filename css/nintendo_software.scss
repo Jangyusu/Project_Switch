@@ -385,10 +385,18 @@ main {
             flex-wrap: wrap;
             justify-content: center;
 
+            @for $i from 1 to 24 {
+                &_box:nth-of-type(#{$i}) {
+                    background: url("../img/software/02/img_detail0#{$i}.png") no-repeat center / cover;
+                }
+            }
+
             &_box {
+                width: 150px;
+                height: 150px;
                 position: relative;
                 cursor: pointer;
-                margin: 15px;
+                margin: 15px;                
 
                 &::after {
                     content: "";
@@ -708,16 +716,6 @@ main {
     }
     
     .cart {
-        &__contents {
-            &_list {
-                &_img {
-                    width: 80px;
-                }
-                &_box:hover::after {
-                    display: none;
-                }
-            }
-        }
         &__introduce {
             &_video {
                 width: 100%;
@@ -796,12 +794,33 @@ main {
     
     .cart {
         &__contents {
+            padding: 30px 0;
+
             &_title {
                 font-size: 2.125rem;
+                margin-bottom: 20px;
+            }
+            &_list {
+                &_box {
+                    width: 80px;
+                    height: 80px;
+
+                    &:hover::after {
+                        display: none;
+                    }
+                }
+            }            
+        }
+        &__detail {
+            &_title {
+                font-size: 2rem;
+            }
+            &_img {
+                width: 35%;
             }
         }
     }
-    
+
     .super {
         &__contents {
             &_list {
@@ -862,6 +881,14 @@ main {
 
             &_title {
                 margin-bottom: 20px;
+                font-size: 2rem;
+            }
+            &_list {
+                &_box {
+                    width: 70px;
+                    height: 70px;
+                    margin: 10px;
+                }
             }
         }
     }
@@ -1004,10 +1031,7 @@ main {
             }
             &_list {
                 &_box {
-                    margin: 7px;
-                }
-                &_img {
-                    width: 60px;
+                    margin: 5px;
                 }
             }
         }
@@ -1088,8 +1112,22 @@ main {
             }
         }
     }
+
+    .cart {
+        &__contents {
+            &_title {
+                font-size: 1.25rem;
+            }
+            &_list {
+                &_box {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
     
-    .ring {
+    .ring {n
         &__contents {
             &_title {
                 font-size: 1.75rem;

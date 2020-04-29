@@ -48,72 +48,72 @@
         {
             "name": "트리플대시버섯",
             "sub": "3개의 대시버섯이 카트 주위를 돕니다",
-            "img": "img/software/02/img_detail10.png"
+            "img": "img/software/02/img_detail010.png"
         },
         {
             "name": "황금대시버섯",
             "sub": "일정 시간 동안 L버튼을 누를 때마다 대시버섯을 사용합니다.",
-            "img": "img/software/02/img_detail11.png"
+            "img": "img/software/02/img_detail011.png"
         },
         {
             "name": "킬러",
             "sub": "일정 시간 동안 킬러로 변신하여 고속으로 자동 주행합니다.",
-            "img": "img/software/02/img_detail12.png"
+            "img": "img/software/02/img_detail012.png"
         },
         {
             "name": "징오징오",
             "sub": "자신보다 앞서가는 카트 전체에 먹물을 뿌려서 일정 시간 동안 시야를 가립니다.",
-            "img": "img/software/02/img_detail13.png"
+            "img": "img/software/02/img_detail013.png"
         },
         {
             "name": "번개",
             "sub": "라이벌들에게 번개를 떨어뜨려서 아이템을 없앱니다.<br>번개에 맞은 라이벌들은 일정 시간 동안 작아지고 속도가 느려집니다.",
-            "img": "img/software/02/img_detail14.png"
+            "img": "img/software/02/img_detail014.png"
         },
         {
             "name": "슈퍼스타",
             "sub": "일정 시간 동안 무적이 되며, 속도도 빨라집니다.<br>부딪힌 카트는 뒤집어집니다.",
-            "img": "img/software/02/img_detail15.png"
+            "img": "img/software/02/img_detail015.png"
         },
         {
             "name": "파이어플라워",
             "sub": "일정 시간 동안 L버튼을 누를 때마다 파이어볼을 던집니다.<br>파이어볼에 맞은 카트는 스핀합니다.",
-            "img": "img/software/02/img_detail16.png"
+            "img": "img/software/02/img_detail016.png"
         },
         {
             "name": "부메랑플라워",
             "sub": "최대 3번 부메랑을 던집니다.<br>부메랑에 맞은 카트는 스핀합니다.",
-            "img": "img/software/02/img_detail17.png"
+            "img": "img/software/02/img_detail017.png"
         },
         {
             "name": "뻐끔플라워",
             "sub": "일정 시간 동안 카트 앞에 뻐끔플라워가 생깁니다.<br>무언가를 물면 그 힘으로 카트가 잠깐 동안 대시합니다.",
-            "img": "img/software/02/img_detail18.png"
+            "img": "img/software/02/img_detail018.png"
         },
         {
             "name": "슈퍼경적",
             "sub": "시끄러운 경적 소리로 주위의 카트나 아이템을 날려 버립니다.",
-            "img": "img/software/02/img_detail19.png"
+            "img": "img/software/02/img_detail019.png"
         },
         {
             "name": "미라클8",
             "sub": "8개의 아이템이 카트 주위를 돕니다.<br>L버튼을 눌러 카트 앞에 있는 아이템을 사용합니다.",
-            "img": "img/software/02/img_detail20.png"
+            "img": "img/software/02/img_detail020.png"
         },
         {
             "name": "코인",
             "sub": "코인이 2개 늘어납니다. 갖고 있는 코인의 수가 많을수록 카트가 빨라집니다.",
-            "img": "img/software/02/img_detail21.png"
+            "img": "img/software/02/img_detail021.png"
         },
         {
             "name": "깃털",
             "sub": "카트가 높이 점프해서 바나나가 등껍질을 뛰어넘을 수 있습니다.",
-            "img": "img/software/02/img_detail22.png"
+            "img": "img/software/02/img_detail022.png"
         },
         {
             "name": "부끄부끄",
             "sub": "일정 시간 동안 카트가 투명해져서 바나나가 등껍질을 통과할 수 있게 됩니다.<br>또한 라이벌의 아이템을 빼앗기도 합니다.",
-            "img": "img/software/02/img_detail23.png"
+            "img": "img/software/02/img_detail023.png"
         }
     ]
 }
