@@ -169,6 +169,36 @@ main {
     }
 }
 //컨텐츠 끝 -------------------------------------------------------------------
+
+
+
+//page-top 시작 -------------------------------------------------------------------
+.page-top {
+    width: 48px;
+    height: 48px;
+    background: #f00;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+    &__img {
+        width: 24px;
+    }
+}
+//page-top 끝 -------------------------------------------------------------------
+
+
+
 //메인 끝 -------------------------------------------------------------------
 
 
@@ -215,6 +245,7 @@ main {
             font-size: 3rem;
         }
     }
+
     .contents {
         margin: 50px auto 0;
 
@@ -224,10 +255,19 @@ main {
             }
         }
     }
+
+    .page-top {
+        width: 32px;
+        height: 32px;
+
+        &__img {
+            width: 16px;
+        }
+    }
 }
 @include mob-mid { //425px 이하 ------------------------------------------------
     main {
-        padding: 96px 12% 0;
+        padding: 96px 10% 0;
     }
     
     .contents {
@@ -265,6 +305,11 @@ main {
                 margin: 0 auto 30px;
             }
         }
+    }
+
+    .page-top {
+        right: 0;
+        bottom: 0;
     }
 }
 @include mob-small { //375px 이하 ------------------------------------------------

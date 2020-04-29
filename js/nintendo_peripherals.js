@@ -82,7 +82,9 @@ $(function () {
 
             var $imgBox = $(".contents__imgs_first_box"),
                 $slideContents = $(".slide-up"),
-                $windowTop = $(window).height();
+                $windowTop = $(window).height(),
+                $scrollTop,
+                $pageTopBtn = $(".page-top");
 
 
 
@@ -92,16 +94,27 @@ $(function () {
             $imgBox.mouseenter(imgZoomIn); //이미지 확대 이벤트
             $imgBox.mouseleave(imgZoomOut);
             $imgBox.mousemove(imgZoomMove);
+            $pageTopBtn.click(pageTop);
 
 
 
 
+
+            function pageTop() {                
+                $(window).scrollTop(0);
+            }
 
             function scrollEvent() {
                 $scrollTop = $(this).scrollTop();
                 $scrollBottom = $windowTop + $scrollTop;
 
                 $slideContents.each(elementsSlide);
+
+                if ($scrollTop > $windowTop) {
+                    addActive($pageTopBtn);
+                } else {
+                    removeActive($pageTopBtn);
+                }
             }
 
             function elementsSlide() {
