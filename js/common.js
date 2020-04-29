@@ -1,5 +1,5 @@
 $(function () {
-    $.ajaxSetup({
+    $.ajaxSetup({ //IE브라우저 캐시 사용하지 않음
         cache: false
     });
 
