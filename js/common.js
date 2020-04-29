@@ -80,7 +80,7 @@ $(function () {
             var $docHeight = $(document).height() - ($(window).height());
 
             $scrollBar.css({
-                "top": `${$(window).scrollTop() / $docHeight * 100}%`
+                "top": ($(window).scrollTop() / $docHeight * 100) + "%"
             })
         }
 
