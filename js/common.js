@@ -71,8 +71,8 @@ $(function () {
 
             function detaileTime(time) {
                 $(".header__nav_detail-list").css({
-                    transition: `${time}s`
-                })
+                    transition: time + "s"
+                });
             }
         }
 
