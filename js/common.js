@@ -1,7 +1,7 @@
 $(function () {
-    $("header").load("common/header.html");
-    $("footer").load("common/footer.html");
-    $("aside").load("common/aside.html");
+    $("header").load("common/header.html?" + new Date().getTime()); //header 로드
+    $("footer").load("common/footer.html?" + new Date().getTime()); //footer 로드
+    $("aside").load("common/aside.html?" + new Date().getTime()); //aside 로드
 
     setTimeout(function () { //html 로드 후 실행
         //start
