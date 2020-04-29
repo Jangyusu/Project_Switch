@@ -19,6 +19,7 @@ $(function () {
             $(".search__select").click(searchSelect); //검색 유형 on/off
             $(".search__select_list li").click(searchSelected); //검색 유형 선택
             $(".search__text_result").click(result); //검색 버튼
+            $(".search__text_typing").keydown(enterResult);
             $(".search__reset").click(reset); //검색 버튼
 
             $(".view").click(listAdd); //리스트 추가
@@ -72,6 +73,17 @@ $(function () {
 
                 var $result = $(".list__text_main:contains(" + text + ")");
                 $result.parent().parent().show();
+
+                if ($(".list").css("height").replace(/[^0-9]/g, "") <= 110) {
+                    alert("검색결과가 없습니다.");
+                    reset();
+                }
+            }
+
+            function enterResult() {
+                if (event.keyCode == 13) {
+                    result();
+                }
             }
 
             function reset() {
