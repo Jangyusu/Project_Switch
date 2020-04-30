@@ -1,4 +1,4 @@
-$(function () {
+$(function () { //문서 로드 후 실행
     $.ajaxSetup({ //IE브라우저 캐시 사용하지 않음
         cache: false
     });
@@ -24,19 +24,19 @@ $(function () {
 
         $(window).scroll(headerScroll); //스크롤시 헤더 on/off
         $burgerButton.click(burgerMenu); //버거메뉴 on/off
-        $language.click(languageChange); //언어 변경
-        $(window).scroll(scrollSlide); //스크롤 바 변경
+        $language.click(languageChange); //메인페이지 언어 변경
+        $(window).scroll(scrollSlide); //스크롤 바 움직임
 
 
 
 
 
-        function languageChange() {
+        function languageChange() { //메인페이지 언어 변경
             $language.removeClass("active");
             $(this).addClass("active");
         }
 
-        function headerScroll() {
+        function headerScroll() { //스크롤시 헤더 on/off
             lastScroll = $(this).scrollTop();
 
             if (lastScroll > firstScroll) { //아래로 스크롤
@@ -48,12 +48,12 @@ $(function () {
             firstScroll = lastScroll;
         }
 
-        function burgerMenu() {
+        function burgerMenu() { //버거메뉴 on/off
             $burgerButton.toggleClass("active");
             $nav.toggleClass("active");
             $(".header__nav_list").toggleClass("flex");
 
-            $nav.on('scroll touchmove mousewheel', function (e) {
+            $nav.on('scroll touchmove mousewheel', function (e) { //버거메뉴 on시 스크롤 막기
                 e.preventDefault();
                 e.stopPropagation();
                 return false;
@@ -61,22 +61,22 @@ $(function () {
 
             $scrollBar.toggleClass("active");
 
-            if (!$nav.hasClass("active")) {
+            if (!$nav.hasClass("active")) { //버거메뉴 on/off시 transition 변경
                 detaileTime(0);
 
                 setTimeout(function () {
                     detaileTime(.3);
-                }, 300)
-            }
+                }, 300);
 
-            function detaileTime(time) {
-                $(".header__nav_detail-list").css({
-                    transition: time + "s"
-                });
+                function detaileTime(time) {
+                    $(".header__nav_detail-list").css({
+                        transition: time + "s"
+                    });
+                };
             }
         }
 
-        function scrollSlide() {
+        function scrollSlide() {  //스크롤 바 움직임
             var $docHeight = $(document).height() - ($(window).height());
 
             $scrollBar.css({
