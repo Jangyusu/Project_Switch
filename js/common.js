@@ -1,8 +1,4 @@
 $(function () { //문서 로드 후 실행
-    $.ajaxSetup({ //IE브라우저 캐시 사용하지 않음
-        cache: false
-    });
-
     $("header").load("common/header.html"); //header 로드
     $("footer").load("common/footer.html"); //footer 로드
     $("aside").load("common/aside.html"); //aside 로드
@@ -32,25 +28,25 @@ $(function () { //문서 로드 후 실행
 
 
         function languageChange() { //메인페이지 언어 변경
-            $language.removeClass("active");
-            $(this).addClass("active");
+            removeActive($language);
+            addActive($(this));
         }
 
         function headerScroll() { //스크롤시 헤더 on/off
             lastScroll = $(this).scrollTop();
 
             if (lastScroll > firstScroll) { //아래로 스크롤
-                $header.addClass("active");
+                addActive($header);
             } else { //위로 스크롤
-                $header.removeClass("active");
+                removeActive($header);
             }
 
             firstScroll = lastScroll;
         }
 
         function burgerMenu() { //버거메뉴 on/off
-            $burgerButton.toggleClass("active");
-            $nav.toggleClass("active");
+            toggleActive($burgerButton);
+            toggleActive($nav);
             $(".header__nav_list").toggleClass("flex");
 
             $nav.on('scroll touchmove mousewheel', function (e) { //버거메뉴 on시 스크롤 막기
@@ -59,7 +55,7 @@ $(function () { //문서 로드 후 실행
                 return false;
             });
 
-            $scrollBar.toggleClass("active");
+            toggleActive($scrollBar);
 
             if (!$nav.hasClass("active")) { //버거메뉴 on/off시 transition 변경
                 detaileTime(0);
