@@ -1,9 +1,9 @@
-$(function () {
+$(function () { //문서 로드 후 실행
     $.ajax({
         url: 'data/data.json',
         dataType: 'json',
         type: 'get',
-        success: function (data) {
+        success: function (data) { //josn파일 로드 성공 후 실행
             //start
 
             var softwareData = data.software,
@@ -33,8 +33,6 @@ $(function () {
 
 
 
-
-
             $.each(softwareData, function () { //visual html 추가
                 title = this.ko.title,
                     device = this.ko.device,
@@ -53,7 +51,7 @@ $(function () {
             $visual.append(visualAppend);
             addActive($visual.find(".visual__text").eq(0));
 
-            $.each(howToPlayData, function () {  //how to play Html 추가
+            $.each(howToPlayData, function () { //howtoplay Html 추가
                 img = this.ko.img,
                     alt = this.ko.alt,
                     mode = this.ko.mode,
@@ -68,7 +66,7 @@ $(function () {
             });
             $howToPlay.append(howToPlayAppend);
 
-            $.each(aboutSwitchData, function () {  //about switch Html 추가
+            $.each(aboutSwitchData, function () { //aboutswitch Html 추가
                 number = this.ko.number,
                     name = this.ko.name,
                     subName = this.ko.subName,
@@ -166,34 +164,32 @@ $(function () {
 
 
 
-
-
             $(window).scroll(scrollEvent); //scroll 이벤트
+
             $visualTotal.text("0" + softwareData.length); //visual 총 갯수
             $visualControl.click(visualControl); //visual 컨트롤
             $(".visual").on("mousedown touchstart", visualStart); //visual 마우스, 터치시작
             $(".visual").on("mouseup touchend", visualEnd); //visual 마우스, 터치끝
-            $(".visual__text a").mouseenter(clearSlide); //visual 더보기 마우스 오버시 슬라이드 멈춤
-            $(".visual__text a").mouseleave(function () { //visual 더보기 마우스 리브시 슬라이드 재시작
-                if ($(".visual__controls_button_play").attr("src") == "img/pause.png") {
-                    visualSlide();
-                }
-            })
+            $(".visual__text a").hover(clearSlide, visualSlideMouse); //visual 더보기 마우스 엔터/리브
 
             $aboutSwitchList.hover(aboutSwitchenter, aboutSwitchleave) //aboutSwitch 마우스 엔터/리브
 
 
 
+            function visualSlideMouse() { //visual 더보기 마우스 리브시 슬라이드 재시작
+                if ($(".visual__controls_button_play").attr("src") == "img/pause.png") {
+                    visualSlide();
+                }
+            }
 
-
-            function scrollEvent() {
+            function scrollEvent() { //scroll 이벤트
                 $scrollTop = $(this).scrollTop();
                 $scrollBottom = $windowTop + $scrollTop;
 
                 $slideContents.each(elementsSlide);
             }
 
-            function elementsSlide() {
+            function elementsSlide() { //scroll시 해당 요소 슬라이드
                 $slideTop = $(this).offset().top;
 
                 if ($scrollBottom - 200 > $slideTop) {
@@ -220,7 +216,7 @@ $(function () {
                 }
             }
 
-            function visualControl(e) {
+            function visualControl(e) { //visual 컨트롤
                 if (visualBln == true) {
                     visualBln = false;
 
@@ -252,7 +248,7 @@ $(function () {
                         };
                     };
 
-                    function change() {
+                    function change() { //슬라이드 변경
                         removeActive($visualList);
                         background($visual, "visual0", visualIndex);
 
@@ -270,38 +266,38 @@ $(function () {
             }
             background($visual, "visual0", 0);
 
-            function visualSlide() { //visual slide
-                visualSlideInter = setInterval(function () { //visual 슬라이드
+            function visualSlide() { //visual 슬라이드 재생
+                visualSlideInter = setInterval(function () {
                     $visualRight.click();
                 }, 5000);
             }
             visualSlide();
 
-            function clearSlide() {
+            function clearSlide() { //visual 슬라이드 정지
                 clearInterval(visualSlideInter);
             }
 
-            function aboutSwitchenter() {
+            function aboutSwitchenter() { //aboutSwitch 호버시
                 background($aboutSwitch, "ABOUT_SWITCH0", $(this).index());
 
                 removeActive($aboutSwitchList);
                 addActive($(this));
             }
 
-            function aboutSwitchleave() {
+            function aboutSwitchleave() { //aboutSwitch 리브시
                 background($aboutSwitch, "ABOUT_SWITCH0", 0);
 
                 removeActive($aboutSwitchList);
                 addActive($aboutSwitchList.eq(0));
             }
 
-            function background(target, link, Index) {
+            function background(target, link, Index) { //css background url 변경(img폴더 내)
                 target.css({
                     "background": "url(img/" + link + Index + ".jpg)", "background-repeat": "no-repeat", "background-position": "center", "background-size": "cover"
                 });
             }
 
-            function backgroundUrl(target, url) {
+            function backgroundUrl(target, url) { //css background url 변경(img폴더 외)
                 target.css({
                     "background": "url(" + url + ")", "background-repeat": "no-repeat", "background-position": "center", "background-size": "cover"
                 });
