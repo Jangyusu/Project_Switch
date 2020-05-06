@@ -1,9 +1,9 @@
-$(function () {
+$(function () { //문서 로드 후 실행
     $.ajax({
         url: 'data/nintendo_peripherals.json',
         dataType: 'json',
         type: 'get',
-        success: function (data) {
+        success: function (data) { //josn파일 로드 성공 후 실행
             //start
 
             var $contents = $(".contents"),
@@ -12,15 +12,11 @@ $(function () {
 
 
 
-
-
             $.each(peripheralsData, addContent); //contens 추가
 
 
 
-
-
-            function addContent() {
+            function addContent() { //contens 추가
                 var title = this.ko.title,
                     firstImg = this.ko.firstImg,
                     secondImg = this.ko.secondImg,
@@ -78,8 +74,6 @@ $(function () {
 
 
 
-
-
             var $imgBox = $(".contents__imgs_first_box"),
                 $slideContents = $(".slide-up"),
                 $windowTop = $(window).height(),
@@ -88,23 +82,18 @@ $(function () {
 
 
 
-
-
             $(window).scroll(scrollEvent); //scroll 이벤트
-            $imgBox.mouseenter(imgZoomIn); //이미지 확대 이벤트
-            $imgBox.mouseleave(imgZoomOut);
-            $imgBox.mousemove(imgZoomMove);
-            $pageTopBtn.click(pageTop);
+            $imgBox.hover(imgZoomIn, imgZoomOut); //이미지 확대/축소
+            $imgBox.mousemove(imgZoomMove); //이미지 확대 후 이미지
+            $pageTopBtn.click(pageTop); //최상단으로 이동
 
 
 
-
-
-            function pageTop() {                
+            function pageTop() { //최상단으로 이동
                 $(window).scrollTop(0);
             }
 
-            function scrollEvent() {
+            function scrollEvent() { //scroll 이벤트
                 $scrollTop = $(this).scrollTop();
                 $scrollBottom = $windowTop + $scrollTop;
 
@@ -117,7 +106,7 @@ $(function () {
                 }
             }
 
-            function elementsSlide() {
+            function elementsSlide() { //각 요소 슬라이드 업
                 $slideTop = $(this).offset().top;
 
                 if ($scrollBottom > $slideTop) {
@@ -127,19 +116,19 @@ $(function () {
                 }
             }
 
-            function imgZoomIn() {
+            function imgZoomIn() { //이미지 확대
                 $(this).children("img").css({
                     "transform": "scale(2)"
                 })
             }
 
-            function imgZoomOut() {
+            function imgZoomOut() { //이미지 축소
                 $(this).children("img").css({
                     "transform": "scale(1)"
                 })
             }
 
-            function imgZoomMove(e) {
+            function imgZoomMove(e) { //이미지 확대 후 이미지
                 $(this).children("img").css({
                     'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 + '%'
                 });

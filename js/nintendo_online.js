@@ -1,4 +1,4 @@
-$(function () {
+$(function () { //문서 로드 후 실행
     //start
 
     var priceBln = true,
@@ -9,24 +9,26 @@ $(function () {
 
 
 
-
-
-    $("header").mouseenter(headerRemove);
-    $("header").mouseleave(headerAdd);
-    $(window).scroll(scrollHeader);
+    $("header").hover(headerRemove, headerAdd); //헤더 엔터/리브
+    $(window).scroll(scrollHeader); //스크롤 관련 이벤트
 
     $priceList.clone().appendTo(".price__list"); //슬라이드 리스트 추가
-    $priceList.mouseenter(priceEnter); //슬라이드 컨텐츠 엔터
-    $priceList.mouseleave(priceLeave); //슬라이드 컨텐츠 리브                
+    $priceList.hover(priceEnter, priceLeave); //슬라이드 엔터/리브
     $(".price__ind").click(priceSlide); //슬라이드 클릭
 
     $(".question__list_q").click(tabBox); //질문 탭
 
 
 
+    function scrollHeader() { //스크롤 관련 이벤트
+        headerRemove();
 
+        if ($(this).scrollTop() == 0) {
+            headerAdd();
+        }
+    }
 
-    function headerAdd() {
+    function headerAdd() { //Header online Class 추가
         $("header").addClass("online");
 
         if (!$(window).scrollTop() == 0) {
@@ -35,19 +37,11 @@ $(function () {
     }
     headerAdd();
 
-    function headerRemove() {
+    function headerRemove() { //Header online Class 제거
         $("header").removeClass("online");
     }
 
-    function scrollHeader() {
-        headerRemove();
-
-        if ($(this).scrollTop() == 0) {
-            headerAdd();
-        }
-    }
-
-    function tabBox() {
+    function tabBox() { //질문 탭
         if (tabBln) {
             tabBln = false;
             var $answer = $(this).next();
@@ -64,20 +58,20 @@ $(function () {
         }
     }
 
-    function priceEnter() {
+    function priceEnter() { //슬라이드 엔터
         addActive($priceList);
         removeActive($(this));
 
         clearInterval(autoSlideInter);
     }
 
-    function priceLeave() {
+    function priceLeave() { //슬라이드 리브
         removeActive($priceList);
 
         autoSlide();
     }
 
-    function priceSlide(e) {
+    function priceSlide(e) { //슬라이드 클릭
         if (priceBln) {
             priceBln = false;
 
@@ -116,14 +110,14 @@ $(function () {
         }
     }
     var autoSlideInter;
-    var autoSlide = function () {
+    var autoSlide = function () { //자동 슬라이드
         autoSlideInter = setInterval(function () {
             $(".price__ind").trigger("click");
         }, 3000)
     }
     autoSlide();
 
-    function slideEffect(time) {
+    function slideEffect(time) { //슬라이드 시 위치 및 시간
         $(".price__list").css({
             transition: time,
             transform: `translate(${-priceCount * 50}%)`

@@ -141,8 +141,6 @@ $(function () { //문서 로드 후 실행
 
 
 
-
-
             var $visualCurrent = $(".visual__controls_num_current"),
                 $visualList = $(".visual__text"),
                 $visualTotal = $(".visual__controls_num_total"),

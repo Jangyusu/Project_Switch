@@ -1,4 +1,4 @@
-$(function () {
+$(function () { //문서 로드 후 실행
     //start
 
     var $kindsList = $(".kinds__header_list_text"),
@@ -19,23 +19,20 @@ $(function () {
 
 
 
-
-
     $kindsList.click(kindsSelected); //리스트 클릭
     $kindsControls.click(kindsControl); //앞뒷면 클릭
-    $homeList.mouseenter(homeTextShow); //homeList 엔터
-    $homeList.mouseleave(homeTextHide); //homeList 리브
+    $homeList.hover(homeTextShow, homeTextHide); //homeList 엔터/리브
 
 
 
-
-
-    function kindsSelected() {
+    function kindsSelected() { //리스트 클릭
         removeActive($kindsList);
         addActive($(this));
 
         $kindsBar.width($(this).width() + 80);
-        $kindsBar.offset({ left: $(this).offset().left })
+        $kindsBar.offset({
+            left: $(this).offset().left
+        })
 
         findAttr($kindsFront, "img", "img/features-and-specifications/bg_switch_device_tab_ov.gif");
         findAttr($kindsBack, "img", "img/features-and-specifications/bg_switch_device_tab.gif");
@@ -44,9 +41,9 @@ $(function () {
         $selectNum = 01;
         changeImg();
     }
-    $kindsBar.width($kindsList.eq(0).width() + 80); //초기값
+    $kindsBar.width($kindsList.eq(0).width() + 80); //바 초기값
 
-    function kindsControl(e) {
+    function kindsControl(e) { //앞뒷면 클릭
         $target = $(e.target);
 
         findAttr($(this), "img", "img/features-and-specifications/bg_switch_device_tab_ov.gif");
@@ -56,21 +53,23 @@ $(function () {
         changeImg();
     }
 
-    function changeImg() {
-        $kindsImg.attr({ src: `img/features-and-specifications/img_switch_device_spec_detail${$select}_${$selectNum}.jpg` });
-    }
-    changeImg();
-
-    function homeTextShow() {
+    function homeTextShow() {  //homeList 엔터
         $homeText.text(`${homeTextList[$(this).index()]}`);
         addActive($homeText);
     }
 
-    function homeTextHide() {
+    function homeTextHide() { //homeList 리브
         removeActive($homeText);
     }
 
-    function findAttr(target, find, link) {
+    function changeImg() { //kinds Img 변경
+        $kindsImg.attr({
+            src: `img/features-and-specifications/img_switch_device_spec_detail${$select}_${$selectNum}.jpg`
+        });
+    }
+    changeImg();
+
+    function findAttr(target, find, link) { //src추출 후 이미지 변경
         target.find(find).attr({ src: link });
     }
 

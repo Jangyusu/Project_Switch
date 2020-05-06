@@ -16,14 +16,10 @@ $(function () { //문서 로드 후 실행
 
 
 
-
-
         $(window).scroll(headerScroll); //스크롤시 헤더 on/off
         $burgerButton.click(burgerMenu); //버거메뉴 on/off
         $language.click(languageChange); //메인페이지 언어 변경
         $(window).scroll(scrollSlide); //스크롤 바 움직임
-
-
 
 
 

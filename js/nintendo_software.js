@@ -1,22 +1,19 @@
-$(function () {
+$(function () { //문서 로드 후 실행
     $.ajax({
         url: 'data/nintendo_software.json',
         dataType: 'json',
         type: 'get',
-        success: function (data) {
+        success: function (data) { //josn파일 로드 성공 후 실행
             //start
 
             var cartData = data.cart;
 
-            $("header").mouseenter(headerRemove);
-            $("header").mouseleave(headerAdd);
+            $("header").hover(headerRemove, headerAdd); //헤더 엔터/리브
             $(".visual").click(visual); //화면 클릭 이벤트
 
 
 
-
-
-            function headerAdd() {
+            function headerAdd() { //Header online Class 추가
                 $("header").addClass("online");
 
                 if (!$(window).scrollTop() == 0) {
@@ -25,11 +22,11 @@ $(function () {
             }
             headerAdd();
 
-            function headerRemove() {
+            function headerRemove() { //Header online Class 제거
                 $("header").removeClass("online");
             }
 
-            function visual(e) {
+            function visual(e) { //화면 클릭 이벤트
                 $(this).css({
                     cursor: "auto"
                 })
@@ -66,8 +63,6 @@ $(function () {
 
                 imgChange("top"); //동물의숲 상단 이미지 변경
                 imgChange("bottom"); //동물의숲 하단 이미지 변경
-
-
 
 
 
@@ -132,7 +127,7 @@ $(function () {
                     superSlide();
                 }, t * 5000);
 
-                function superSlideCss(time) {
+                function superSlideCss(time) { //자동 슬라이드 위치 및 시간
                     $(".super__contents_list_box").css({
                         transform: `translate(-${superIndex * 100}%)`,
                         transition: time
