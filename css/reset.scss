@@ -1,0 +1,66 @@
+//reset 시작 -------------------------------------------------------------------
+html, body, dl, dt {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    background: url("../img/background_grid.png") fixed;
+}
+
+span, em, strong, a {
+    display: inline-block;
+}
+
+p, span, small, figcaption, li, h1, h2, h3, h4, h5, h6 {
+    word-break: keep-all;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+dt, dd {
+    display: inline-block;
+}
+
+em {
+    font-style: normal;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+}
+
+img {
+    font-size: 0;
+    vertical-align: top;
+    display: inline-block;
+}
+
+button {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+input {
+    border: 0;
+    background: transparent;
+    outline: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nanum Gothic', 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #000;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+//reset 끝 -------------------------------------------------------------------
