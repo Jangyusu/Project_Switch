@@ -21,7 +21,8 @@ main {
 
     &__img {
         width: 100%;
-        background: no-repeat center / cover;
+        -moz-background: no-repeat center / cover;
+        -webkit-background: no-repeat  / cover;
         display: flex;
         flex-direction: row-reverse;
         position: relative;
