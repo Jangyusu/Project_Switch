@@ -26,11 +26,12 @@
 * Mobile
 
 ### 웹 사이트 예시
-![page_main](https://github.com/Jangyusu/project_portfolio/blob/master/readme/img/index_01.jpg)
-![page_main](https://github.com/Jangyusu/project_portfolio/blob/master/readme/img/menu_01.jpg)
-![page_main](https://github.com/Jangyusu/project_portfolio/blob/master/readme/img/work_04.jpg)
-![page_main](https://github.com/Jangyusu/project_portfolio/blob/master/readme/img/about_01.jpg)
-![page_main](https://github.com/Jangyusu/project_portfolio/blob/master/readme/img/contact_01.jpg)
+![page_main](https://jangyusu.github.io/Project_Switch/readme/img/index_01.jpg)
+![page_main](https://jangyusu.github.io/Project_Switch/readme/img/lineup_01.jpg)
+![page_main](https://jangyusu.github.io/Project_Switch/readme/img/peripherals_01.jpg)
+![page_main](https://jangyusu.github.io/Project_Switch/readme/img/online_01.jpg)
+![page_main](https://jangyusu.github.io/Project_Switch/readme/img/software_01.jpg)
+![page_main](https://jangyusu.github.io/Project_Switch/readme/img/news_01.jpg)
 
 ## 상세 설명
 ### 주요 코드
