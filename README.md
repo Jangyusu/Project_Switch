@@ -27,11 +27,11 @@
 
 ### 웹 사이트 예시
 ![page_main](https://github.com/Jangyusu/Project_Switch/blob/master/readme/img/index_01.jpg)
-![page_main](https://jangyusu.github.io/Project_Switch/blob/master/readme/img/lineup_01.jpg)
-![page_main](https://jangyusu.github.io/Project_Switch/blob/master/readme/img/peripherals_01.jpg)
-![page_main](https://jangyusu.github.io/Project_Switch/blob/master/readme/img/online_01.jpg)
-![page_main](https://jangyusu.github.io/Project_Switch/blob/master/readme/img/software_01.jpg)
-![page_main](https://jangyusu.github.io/Project_Switch/blob/master/readme/img/news_01.jpg)
+![page_main](https://github.com/Jangyusu/Project_Switch/blob/master/readme/img/lineup_01.jpg)
+![page_main](https://github.com/Jangyusu/Project_Switch/blob/master/readme/img/peripherals_01.jpg)
+![page_main](https://github.com/Jangyusu/Project_Switch/blob/master/readme/img/online_01.jpg)
+![page_main](https://github.com/Jangyusu/Project_Switch/blob/master/readme/img/software_01.jpg)
+![page_main](https://github.com/Jangyusu/Project_Switch/blob/master/readme/img/news_01.jpg)
 
 ## 상세 설명
 ### 주요 코드
