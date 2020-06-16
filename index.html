@@ -1,118 +1,113 @@
 <!DOCTYPE html>
 <html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Nintendo</title>
+        <link href="css/style.css" type="text/css" rel="stylesheet" />
+        <link rel="icon" href="img/favicon.png" type="image/png" />
+        <script src="https://kit.fontawesome.com/60a06f6dc3.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/util.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/index.js"></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Nintendo</title>
-    <link href="css/style.css" type="text/css" rel="stylesheet" />
-    <link rel="icon" href="img/favicon.png" type="image/png" />
-    <script src="https://kit.fontawesome.com/60a06f6dc3.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/util.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/index.js"></script>
-</head>
-
-<body>
-    <!-- 헤더 시작 -->
-    <header class="header"></header>
-    <!-- 헤더 끝 -->
-    <!-- 메인 시작 -->
-    <main>
-        <!-- 비주얼 시작 -->
-        <div class="visual">
-            <figure class="visual__img">
-                <div class="visual__controls">
-                    <p class="visual__controls_num"><span class="visual__controls_num_current">01</span><span
-                            class="visual__controls_num_total"></span></p>
-                    <div class="visual__controls_button">
-                        <input type="image" src="img/left_arrow.png" class="visual__controls_button_prev">
-                        <input type="image" src="img/pause.png" class="visual__controls_button_play">
-                        <input type="image" src="img/right_arrow.png" class="visual__controls_button_next">
+    <body>
+        <!-- 헤더 시작 -->
+        <header class="header"></header>
+        <!-- 헤더 끝 -->
+        <!-- 메인 시작 -->
+        <main>
+            <!-- 비주얼 시작 -->
+            <div class="visual">
+                <figure class="visual__img">
+                    <div class="visual__controls">
+                        <p class="visual__controls_num"><span class="visual__controls_num_current">01</span><span class="visual__controls_num_total"></span></p>
+                        <div class="visual__controls_button">
+                            <input type="image" src="img/left_arrow.png" alt="left arrow" class="visual__controls_button_prev" />
+                            <input type="image" src="img/pause.png" alt="pause" class="visual__controls_button_play" />
+                            <input type="image" src="img/right_arrow.png" alt="right arrow" class="visual__controls_button_next" />
+                        </div>
                     </div>
-                </div>
-            </figure>
-        </div>
-        <!-- 비주얼 끝 -->
-        <!-- howToPlay 시작 -->
-        <section class="how-to-play">
-            <h2 class="how-to-play__title slide-up">HOW TO PLAY</h2>
-            <ul class="how-to-play__list slide-up"></ul>
-        </section>
-        <!-- howToPlay 끝 -->
-        <!-- aboutSwitch 시작 -->
-        <section class="about-switch">
-            <h2 class="about-switch__title slide-up">ABOUT SWITCH</h2>
-            <p class="about-switch__sub slide-up">「Nintendo Switch™」은 플레이 장면에 맞추어 형태를 바꾸는 게임기로<br>언제, 어디에서나, 마음 가는대로,
-                자유로운 스타일로 게임을 즐길 수 있습니다.</p>
-            <ul class="about-switch__list"></ul>
-        </section>
-        <!-- aboutSwitch 끝 -->
-        <!-- JoyCon 시작 -->
-        <section class="joy-con">
-            <h2 class="joy-con__title">JOY CON</h2>
-            <div class="joy-con__box">
-                <p class="joy-con__box_title slide-up">「Joy-Con」이 초대하는 새로운 오락의 세계</p>
-                <small class="joy-con__box_sub slide-up">「Joy-Con」은 세로 잡기, 가로 잡기 외에도<br>양손에 하나씩 잡는 플레이 스타일이나 2개 잡기로도 조작할
-                    수 있습니다.</small>
-                <a href="nintendo_peripherals.html" target="_blank" class="more slide-up">
-                    <span class="more__line"></span>
-                    <p class="more__text">더보기</p>
-                </a>
-                <img src="img/joy_con.png" alt="nintendo switch" class="joy-con__box_img slide-up">
+                </figure>
             </div>
-        </section>
-        <!-- joyCon 끝 -->
-        <!-- software 시작 -->
-        <section class="software">
-            <h2 class="software__title slide-up">SOFTWARE</h2>
-            <div class="software__list">
-                <div class="software__text">
-                    <p class="software__text_title slide-up">Nintendo <span>Switch</span><span>Game</span> Software</p>
-                    <small class="software__text_sub slide-up">※한국에서 발매 및 발매일이 미정인 소프트웨어의 이미지가 일부 포함되어 있습니다.</small>
-                    <a href="nintendo_software.html" target="_blank" class="more slide-up">
+            <!-- 비주얼 끝 -->
+            <!-- howToPlay 시작 -->
+            <section class="how-to-play">
+                <h2 class="how-to-play__title slide-up">HOW TO PLAY</h2>
+                <ul class="how-to-play__list slide-up"></ul>
+            </section>
+            <!-- howToPlay 끝 -->
+            <!-- aboutSwitch 시작 -->
+            <section class="about-switch">
+                <h2 class="about-switch__title slide-up">ABOUT SWITCH</h2>
+                <p class="about-switch__sub slide-up">「Nintendo Switch™」은 플레이 장면에 맞추어 형태를 바꾸는 게임기로<br />언제, 어디에서나, 마음 가는대로, 자유로운 스타일로 게임을 즐길 수 있습니다.</p>
+                <ul class="about-switch__list"></ul>
+            </section>
+            <!-- aboutSwitch 끝 -->
+            <!-- JoyCon 시작 -->
+            <section class="joy-con">
+                <h2 class="joy-con__title">JOY CON</h2>
+                <div class="joy-con__box">
+                    <p class="joy-con__box_title slide-up">「Joy-Con」이 초대하는 새로운 오락의 세계</p>
+                    <small class="joy-con__box_sub slide-up">「Joy-Con」은 세로 잡기, 가로 잡기 외에도<br />양손에 하나씩 잡는 플레이 스타일이나 2개 잡기로도 조작할 수 있습니다.</small>
+                    <a href="nintendo_peripherals.html" target="_blank" class="more slide-up">
                         <span class="more__line"></span>
                         <p class="more__text">더보기</p>
                     </a>
+                    <img src="img/joy_con.png" alt="nintendo switch" class="joy-con__box_img slide-up" />
                 </div>
+            </section>
+            <!-- joyCon 끝 -->
+            <!-- software 시작 -->
+            <section class="software">
+                <h2 class="software__title slide-up">SOFTWARE</h2>
+                <div class="software__list">
+                    <div class="software__text">
+                        <p class="software__text_title slide-up">Nintendo <span>Switch</span><span>Game</span> Software</p>
+                        <small class="software__text_sub slide-up">※한국에서 발매 및 발매일이 미정인 소프트웨어의 이미지가 일부 포함되어 있습니다.</small>
+                        <a href="nintendo_software.html" target="_blank" class="more slide-up">
+                            <span class="more__line"></span>
+                            <p class="more__text">더보기</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- software 끝 -->
+            <!-- news 시작 -->
+            <section class="news">
+                <h2 class="news__title slide-up">NEWS</h2>
+                <ul class="news__list slide-up"></ul>
+                <a href="nintendo_news.html" target="_blank" class="more">
+                    <span class="more__line"></span>
+                    <p class="more__text">더보기</p>
+                </a>
+            </section>
+            <!-- news 끝 -->
+            <!-- 펀 시작 -->
+            <div class="fun">
+                <img src="img/software/02/chara_01.png" alt="cart" class="fun__img" />
+                <img src="img/software/02/chara_02.png" alt="cart" class="fun__img" />
+                <img src="img/software/02/chara_03.png" alt="cart" class="fun__img" />
+                <img src="img/software/02/chara_04.png" alt="cart" class="fun__img" />
+                <img src="img/software/02/chara_05.png" alt="cart" class="fun__img" />
+                <img src="img/software/02/chara_06.png" alt="cart" class="fun__img" />
+                <img src="img/software/02/chara_07.png" alt="cart" class="fun__img" />
+                <img src="img/software/02/chara_08.png" alt="cart" class="fun__img" />
+                <img src="img/software/02/chara_09.png" alt="cart" class="fun__img" />
+                <img src="img/software/02/chara_10.png" alt="cart" class="fun__img" />
             </div>
-        </section>
-        <!-- software 끝 -->
-        <!-- news 시작 -->
-        <section class="news">
-            <h2 class="news__title slide-up">NEWS</h2>
-            <ul class="news__list slide-up"></ul>
-            <a href="nintendo_news.html" target="_blank" class="more">
-                <span class="more__line"></span>
-                <p class="more__text">더보기</p>
-            </a>
-        </section>
-        <!-- news 끝 -->
-        <!-- 펀 시작 -->
-        <div class="fun">
-            <img src="img/software/02/chara_01.png" alt="cart" class="fun__img">
-            <img src="img/software/02/chara_02.png" alt="cart" class="fun__img">
-            <img src="img/software/02/chara_03.png" alt="cart" class="fun__img">
-            <img src="img/software/02/chara_04.png" alt="cart" class="fun__img">
-            <img src="img/software/02/chara_05.png" alt="cart" class="fun__img">
-            <img src="img/software/02/chara_06.png" alt="cart" class="fun__img">
-            <img src="img/software/02/chara_07.png" alt="cart" class="fun__img">
-            <img src="img/software/02/chara_08.png" alt="cart" class="fun__img">
-            <img src="img/software/02/chara_09.png" alt="cart" class="fun__img">
-            <img src="img/software/02/chara_10.png" alt="cart" class="fun__img">
-        </div>
-        <!-- 펀 끝 -->
-    </main>
-    <!-- 메인 끝 -->
-    <!-- 어사이드 시작 -->
-    <aside></aside>
-    <!-- 어사이드 끝 -->
-    <!-- 푸터 시작 -->
-    <footer></footer>
-    <!-- 푸터 끝 -->
-    <div class="loading"></div>
-</body>
-
+            <!-- 펀 끝 -->
+        </main>
+        <!-- 메인 끝 -->
+        <!-- 어사이드 시작 -->
+        <aside></aside>
+        <!-- 어사이드 끝 -->
+        <!-- 푸터 시작 -->
+        <footer></footer>
+        <!-- 푸터 끝 -->
+        <div class="loading"></div>
+    </body>
 </html>
